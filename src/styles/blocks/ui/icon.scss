@@ -1,0 +1,87 @@
+.icon {
+    position: relative;
+    cursor: pointer;
+    max-height: 1.875rem;
+    max-width: 1.875rem;
+    transition: all .3s;
+    .neon-svg {
+        transition: all .3s;
+        transform: none;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include wh_100;
+    }
+    svg {
+        @include wh_100;
+        transition: all .3s;
+    }
+    &_message {
+        transition: all .3s;
+        @include mobile{
+            display: none;
+        }
+        &:active {
+            svg {
+                path {
+                    stroke: $l-blue;
+                }
+            }
+        }
+    }
+    &_user {
+        &:active {
+            svg {
+                path {
+                    stroke: $pink;
+                }
+            }
+        }
+    }
+    &_map {
+        &:active {
+            svg {
+                path {
+                    stroke: $green;
+                }
+            }
+        }
+    }
+    &_shop {
+        &:active {
+            svg {
+                path {
+                    stroke: $l-blue;
+                }
+            }
+        }
+    }
+    &_wallet {
+        &:active {
+            svg {
+                path {
+                    stroke: $pink;
+                }
+            }
+        }
+    }
+    &_users {
+        &:active {
+            svg {
+                path {
+                    stroke: $green;
+                }
+            }
+        }
+    }
+    &_undo {
+        &:active {
+            svg {
+                path {
+                    stroke: $l-blue;
+                }
+            }
+        }
+    }
+}

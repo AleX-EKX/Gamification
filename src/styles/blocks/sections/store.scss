@@ -1,0 +1,193 @@
+.store-section{
+    &__container{
+        &__info-block{
+            @include df_fdc;
+            gap: 2.5rem;
+            &__top-block{
+                display: flex;
+                gap: 2.5rem;
+                padding-top: 2.5rem;
+                @include mobile{
+                    // flex-direction: column;
+                    flex-wrap: wrap;
+                    gap: 0.833rem;
+                }
+                .big-content-block{
+                    display: flex;
+                    gap: 2.5rem;
+                    @include mobile{
+                        gap: 0.833rem;
+                        
+                    }
+                    &__info-block{
+                        position: relative;
+                        @include mobile{
+                            border: 1.5px solid #FFFFFF;
+                            max-width: 14rem;
+                        }
+                        img{
+                            pointer-events: none;
+                            max-width: 37.5rem;
+                            width: 100%;
+                            aspect-ratio: 2 / 1.5;
+                            @include mobile{
+                                max-width: 14.167rem;
+                                aspect-ratio: 2 / 2;
+                            }
+                        }
+                        &__description{
+                            position: absolute;
+                            left: 1.25rem;
+                            bottom: 0.625rem;
+                            @include df_jb_ac;
+                            width: 92%;
+                            color: black;
+                            @include heading_3;
+                            @include mobile{
+                                color: white;
+                                position: static;
+                                flex-direction: column;
+                                width: 100%;
+                                .price-product-block{
+                                    svg{
+                                        width: 1.25rem;
+                                        height: 1.25rem;
+                                    }
+                                }
+                            }
+                            &__name{
+                                text-align: center
+                            }
+                        }
+                    }
+                }
+                .small-content-block{
+                    @include df_fdc;
+                    gap: 2.5rem;
+                    flex: 1;
+                    max-height: 28.125rem;
+                    @include mobile{
+                        flex-direction: row;
+                        gap: 0.833rem;
+                    }
+                    &__info-block{
+                        @include df_fdc;
+                        gap: 0.625rem;
+                        max-width: 23.75rem;
+                        width: 100%;
+                        border: 1.5px solid #FFFFFF;
+                        height: 100%;
+                        @include mobile{
+                            max-width: 14rem;
+                        }
+                        img{
+                            max-width: 23.75rem;
+                            width: 100%;
+                            aspect-ratio: 2 / 0.7;
+                            object-fit: cover;
+                            @include mobile{
+                                aspect-ratio: 1/1;
+                            }
+                        }
+                        &__description{
+                            @include df_fdc;
+                            gap: 0.75rem;
+                            color: white;
+                            @include text_1;
+                            padding: 0 0.625rem;
+                            padding-bottom: 0.313rem;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            &__bottom-block{
+                display: flex;
+                gap: 2.5rem;
+                flex-wrap: wrap;
+                @include mobile{
+                    gap: 0.833rem;
+                }
+                .store-additions{
+                    max-width: 15.188rem;
+                    width: 100%;
+                    border: 1.5px solid #FFFFFF;
+                    @include df_fdc;
+                    gap: 0.875rem;
+                    @include mobile{
+                        max-width: 14rem;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                    &__info-block{
+                        text-align: center;
+                        color: white;
+                        @include text_1;
+                        @include df_fdc;    
+                        gap: 2rem;
+                        
+                        padding: 0 0.625rem;
+                        padding-bottom: 0.313rem;
+                        &__text{
+
+                        }
+                        .price-product-block{
+                            display: flex;
+                            gap: .75rem;
+                            &__price{
+
+                            }
+                        }
+                    }
+                }
+                
+            }
+            &__team-block{
+                @include df_fdc;
+                gap: 2.5rem;
+                .team-store{
+                    color: white;
+                    @include text_1;
+                    display: flex;
+                    gap: 2.5rem;
+                    @include mobile{
+                        flex-direction: column;
+                        gap: 0.833rem;
+                    }
+                    &__info-block{
+                        border: 1.5px solid #FFFFFF;
+                        width: max-content;
+                        padding: 1.25rem;
+                        @include df_ac;
+                        gap: 2.5rem;
+                        @include mobile{
+                            flex-direction: column;
+                            width: auto;
+                            align-items: baseline;
+                        }
+                        &__text{
+                            max-width: 17.063rem;
+                        }
+                    }
+                }
+            }
+            &__game-block{
+                @include df_fdc;
+                gap: 2.5rem;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+}
+.team-store-title{
+    @include heading_2;
+    color: white;
+}
+.price-product-block{
+    @include df_ac;
+    gap: .75rem;
+    &__price{
+
+    }
+}

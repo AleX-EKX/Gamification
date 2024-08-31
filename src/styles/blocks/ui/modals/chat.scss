@@ -1,0 +1,246 @@
+.sidebar-block.open {
+    right: 0;
+}
+.chat-block.open {
+    right: 0;
+}
+.jc-sb{
+    justify-content: space-between;
+    height: 100%;
+    @include mobile{
+        padding: 0 !important;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        .shadow{
+            display: block !important;
+            filter: drop-shadow(0rem 0rem 0rem #00F2F6) !important;
+        }
+    }
+    
+}
+.chat-block{
+    @include mobile{
+        position: relative !important;
+        height: 100%;
+        width: 100%;
+    }
+}
+.sidebar-block{
+    @include mobile{
+        margin-top: 10.333rem;
+    }
+}
+.sidebar-block,.chat-block{
+    position: fixed;
+    right: -66.375rem; 
+    top: 0;
+    // width: max-content;
+    width: 100%;
+    max-width: 64.375rem;
+    height: 100%;
+    transition: right 0.5s ease; 
+    z-index: 1000; 
+    border: 1px solid #00F2F6;
+    box-shadow: -.5rem 1rem 2.25rem -0.75rem #00F2F6;
+    @include mobile{
+        border: none;
+        box-shadow: none;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        background: #5846CC80;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        filter: blur(5px);
+        @include mobile{
+            background: none;
+        }
+        
+    }
+    &__info-block{
+        @include df_fdc;
+        gap: 3.75rem;
+        background: #5846CC80;
+        // border: 1px solid #00F2F6;
+        border-top: none;
+        // box-shadow: -.5rem 1rem 2.25rem -0.75rem #00F2F6;
+        @include mobile{
+            padding: 0 1.25rem;
+            gap: 1.667rem;
+            border: none;
+            box-shadow: none;
+            background: none;
+        }
+        .shadow{
+            filter: drop-shadow(-0.313rem 0.3rem 0.5rem #00F2F6);
+            @include mobile{
+                display: none;
+            }
+        }
+        &__header{
+            color: white;
+            @include heading_3;
+            @include df_ac_jcsb;
+            padding: 1.563rem;
+            padding-bottom: 0.438rem;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 2% 100%, 0% 75%);
+            &::before{
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 2% 100%, 0% 75%);
+                background: rgba(88, 70, 204, 1);
+            }
+            @include mobile{
+                padding: 1rem;
+            }
+        }
+        &__message{
+            @include df_ac;
+            gap: 1.875rem;
+            padding: 1.563rem;
+            border: 1px solid #FFFFFF;
+            @include mobile{
+                position: absolute;
+                bottom: 6.333rem;
+                width: 93%;
+            }
+            svg{
+                cursor: pointer;
+                &:hover{
+                    path{
+                        pointer-events: none;
+                        stroke: #00F2F6;
+                    }
+                }
+                
+            }
+            .label-message{
+                max-width: 100%;
+                @include mobile{
+                    display: flex;
+                }
+                input{
+                    &::placeholder{
+                        color: white;
+                    }
+                }
+                &__info-block{
+                    @include df_ac;
+                    gap: 1.25rem;
+                    
+                }
+            }
+        }
+        &__body{
+            @include df_fdc;
+            gap: 2.813rem;
+            padding: 0 1.5rem;
+            .link-project{
+                max-width: max-content;
+            }
+            @include mobile{
+                padding: 0;
+                gap: 1.667rem;
+            }
+            &__tasks{
+                display: flex;
+                gap: 1.563rem;
+                flex-wrap: wrap;
+                
+                .task-block{
+                    max-width: 29.875rem;
+                    // width: 100%;
+                    @include df_ac;
+                    gap: 2.5rem;
+                    background: #5B73DDB2;
+                    border: 1px solid #FFFFFF;
+                    padding: 1.25rem;
+                    @include mobile{
+                        // width: 100%;
+                        gap: 0.833rem;
+                    }
+                    &__info-block{
+                        display: flex;
+                        gap: 2.5rem;
+                        &__description{
+                            color: white;
+                            @include df_fdc_jcsb;
+                            gap: 2.5rem;
+                            &__title{
+                                @include heading_3;
+                                @include df_ac_jcsb;
+                            }
+                            &__profit{
+                                @include df_ac;
+                                gap: 1.563rem;
+                                &__content{
+                                    display: flex;
+                                    gap: 1.563rem;
+                                    @include mobile{
+                                        gap:1.25rem;
+                                    }
+                                    .departments-block{
+                                        padding: 0.313rem;
+                                        @include df_ac_jcsb;
+                                        gap: 0.938rem;
+                                        border-radius: 0.313rem;
+                                    }
+                                }
+                            }
+                        }
+                        &__other{
+                            @include df_fdc_jcsb;
+                            .circle{
+                                position: relative;
+                                .circle-one{
+                                    position: absolute;
+                                    right: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            button{
+                width: max-content;
+                margin-bottom: 1rem;
+            }
+        }
+        &__mobile-block{
+            @include df_fdc;
+            gap: 1.667rem;
+            color: white;
+            .title{
+                @include heading_1;
+            }
+            .sidebar-mobile-block{
+                @include df_fdc;
+                gap: 1.667rem;
+                &__name{
+                    @include heading_2;
+                }
+                &__info-block{
+                    padding: 0.833rem 0;
+                    @include df_fdc;
+                    gap: 1.667rem;
+                    .text{
+                        @include heading_3;
+                    }
+                    &__participants{
+                        @include df_fdc;
+                        gap: 1.25rem;
+                        .user-block{
+                            @include df_ac;
+                            gap: 1.25rem;
+                            .name-user{
+                                @include text_1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

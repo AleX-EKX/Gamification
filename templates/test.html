@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+
+<body class="theme-light">
+    
+    <header></header>
+    
+    <main>
+
+        <div class="header-nav">
+            <nav class="header-nav__nav-panel">
+                <ul>
+                    <li>
+                        <div class="icon icon_user">
+                            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                                <path d="M19.7916 21.875V19.7917C19.7916 18.6866 19.3526 17.6268 18.5712 16.8454C17.7898 16.064 16.73 15.625 15.6249 15.625H9.37492C8.26985 15.625 7.21004 16.064 6.42864 16.8454C5.64724 17.6268 5.20825 18.6866 5.20825 19.7917V21.875" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.4999 11.4583C14.8011 11.4583 16.6666 9.59287 16.6666 7.29168C16.6666 4.9905 14.8011 3.12502 12.4999 3.12502C10.1987 3.12502 8.33325 4.9905 8.33325 7.29168C8.33325 9.59287 10.1987 11.4583 12.4999 11.4583Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg width="1.875rem" height="2.125rem" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                                <g filter="url(#filter0_f_543_5712)">
+                                <path d="M23.75 28.25V25.75C23.75 24.4239 23.2232 23.1521 22.2855 22.2145C21.3479 21.2768 20.0761 20.75 18.75 20.75H11.25C9.92392 20.75 8.65215 21.2768 7.71447 22.2145C6.77678 23.1521 6.25 24.4239 6.25 25.75V28.25" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 15.75C17.7614 15.75 20 13.5114 20 10.75C20 7.98858 17.7614 5.75 15 5.75C12.2386 5.75 10 7.98858 10 10.75C10 13.5114 12.2386 15.75 15 15.75Z" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <path d="M23.75 28.25V25.75C23.75 24.4239 23.2232 23.1521 22.2855 22.2145C21.3479 21.2768 20.0761 20.75 18.75 20.75H11.25C9.92392 20.75 8.65215 21.2768 7.71447 22.2145C6.77678 23.1521 6.25 24.4239 6.25 25.75V28.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 15.75C17.7614 15.75 20 13.5114 20 10.75C20 7.98858 17.7614 5.75 15 5.75C12.2386 5.75 10 7.98858 10 10.75C10 13.5114 12.2386 15.75 15 15.75Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                 <filter id="filter0_f_543_5712" x="-4" y="-2" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5712"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <a href="#">Профиль</a>
+                    </li>
+                    <li>
+                        <div class="icon icon_map">
+                            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                                <path d="M3.125 6.25L9.375 3.125L15.625 6.25L21.875 3.125V18.75L15.625 21.875L9.375 18.75L3.125 21.875V6.25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.375 3.125V18.75" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.625 6.25V21.875" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg width="2.125rem" height="2.125rem" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                                <g filter="url(#filter0_f_543_5715)">
+                                <path d="M5.75 9.5L13.25 5.75L20.75 9.5L28.25 5.75V24.5L20.75 28.25L13.25 24.5L5.75 28.25V9.5Z" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.25 5.75V24.5" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20.75 9.5V28.25" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <path d="M5.75 9.5L13.25 5.75L20.75 9.5L28.25 5.75V24.5L20.75 28.25L13.25 24.5L5.75 28.25V9.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.25 5.75V24.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20.75 9.5V28.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                <filter id="filter0_f_543_5715" x="-2" y="-2" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5715"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <a href="#">Карта</a>
+                    </li>
+                    <li>
+                        <div class="icon icon_shop">
+                            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                                <g clip-path="url(#clip0_371_1665)">
+                                <path d="M8.33341 22.9167C8.90871 22.9167 9.37508 22.4503 9.37508 21.875C9.37508 21.2997 8.90871 20.8333 8.33341 20.8333C7.75812 20.8333 7.29175 21.2997 7.29175 21.875C7.29175 22.4503 7.75812 22.9167 8.33341 22.9167Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.7917 22.9167C20.367 22.9167 20.8333 22.4503 20.8333 21.875C20.8333 21.2997 20.367 20.8333 19.7917 20.8333C19.2164 20.8333 18.75 21.2997 18.75 21.875C18.75 22.4503 19.2164 22.9167 19.7917 22.9167Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2.1355 2.13541H4.21883L6.98966 15.0729C7.09131 15.5467 7.35495 15.9703 7.7352 16.2707C8.11545 16.5711 8.58852 16.7295 9.073 16.7187H19.2605C19.7346 16.718 20.1943 16.5555 20.5637 16.2582C20.933 15.9608 21.1898 15.5464 21.2917 15.0833L23.0105 7.34374H5.33341" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_371_1665">
+                                <rect width="25" height="25" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <svg width="2.25rem" height="2.25rem" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                                <g filter="url(#filter0_f_543_5718)">
+                                <path d="M13 30.5C13.6904 30.5 14.25 29.9404 14.25 29.25C14.25 28.5596 13.6904 28 13 28C12.3096 28 11.75 28.5596 11.75 29.25C11.75 29.9404 12.3096 30.5 13 30.5Z" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M26.75 30.5C27.4404 30.5 28 29.9404 28 29.25C28 28.5596 27.4404 28 26.75 28C26.0596 28 25.5 28.5596 25.5 29.25C25.5 29.9404 26.0596 30.5 26.75 30.5Z" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.5625 5.5625H8.0625L11.3875 21.0875C11.5095 21.6561 11.8258 22.1643 12.2821 22.5248C12.7384 22.8853 13.3061 23.0754 13.8875 23.0625H26.1125C26.6815 23.0616 27.2331 22.8666 27.6763 22.5098C28.1195 22.153 28.4277 21.6557 28.55 21.1L30.6125 11.8125H9.4" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <path d="M13 30.5C13.6904 30.5 14.25 29.9404 14.25 29.25C14.25 28.5596 13.6904 28 13 28C12.3096 28 11.75 28.5596 11.75 29.25C11.75 29.9404 12.3096 30.5 13 30.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M26.75 30.5C27.4404 30.5 28 29.9404 28 29.25C28 28.5596 27.4404 28 26.75 28C26.0596 28 25.5 28.5596 25.5 29.25C25.5 29.9404 26.0596 30.5 26.75 30.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.5625 5.5625H8.0625L11.3875 21.0875C11.5095 21.6561 11.8258 22.1643 12.2821 22.5248C12.7384 22.8853 13.3061 23.0754 13.8875 23.0625H26.1125C26.6815 23.0616 27.2331 22.8666 27.6763 22.5098C28.1195 22.153 28.4277 21.6557 28.55 21.1L30.6125 11.8125H9.4" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                <filter id="filter0_f_543_5718" x="-1" y="-1" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5718"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <a href="#">Магазин</a>
+                    </li>
+                    <li>
+                        <div class="icon icon_wallet">
+                            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                                <path d="M20.8334 12.5V8.33332H6.25008C5.69755 8.33332 5.16764 8.11383 4.77694 7.72313C4.38624 7.33243 4.16675 6.80252 4.16675 6.24999C4.16675 5.10416 5.10425 4.16666 6.25008 4.16666H18.7501V8.33332" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.16675 6.24998V18.75C4.16675 19.8958 5.10425 20.8333 6.25008 20.8333H20.8334V16.6667" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18.7501 12.5C18.1975 12.5 17.6676 12.7195 17.2769 13.1102C16.8862 13.5009 16.6667 14.0308 16.6667 14.5833C16.6667 15.7292 17.6042 16.6667 18.7501 16.6667H22.9167V12.5H18.7501Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg width="2.125rem" height="2rem" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                                <g filter="url(#filter0_f_543_5721)">
+                                <path d="M26 16V11H8.5C7.83696 11 7.20107 10.7366 6.73223 10.2678C6.26339 9.79893 6 9.16304 6 8.5C6 7.125 7.125 6 8.5 6H23.5V11" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 8.5V23.5C6 24.875 7.125 26 8.5 26H26V21" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23.5 16C22.837 16 22.2011 16.2634 21.7322 16.7322C21.2634 17.2011 21 17.837 21 18.5C21 19.875 22.125 21 23.5 21H28.5V16H23.5Z" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <path d="M26 16V11H8.5C7.83696 11 7.20107 10.7366 6.73223 10.2678C6.26339 9.79893 6 9.16304 6 8.5C6 7.125 7.125 6 8.5 6H23.5V11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 8.5V23.5C6 24.875 7.125 26 8.5 26H26V21" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23.5 16C22.837 16 22.2011 16.2634 21.7322 16.7322C21.2634 17.2011 21 17.837 21 18.5C21 19.875 22.125 21 23.5 21H28.5V16H23.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                <filter id="filter0_f_543_5721" x="-3" y="-3" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5721"/>
+                                </filter>
+                                </defs>
+                            </svg>              
+                        </div>
+                        <a href="#">Биржа</a>
+                    </li>
+                    <li>
+                        <div class="icon icon_users">
+                            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                                <path d="M16.6666 21.875V19.7917C16.6666 18.6866 16.2276 17.6268 15.4462 16.8454C14.6648 16.064 13.605 15.625 12.4999 15.625H6.24992C5.14485 15.625 4.08504 16.064 3.30364 16.8454C2.52224 17.6268 2.08325 18.6866 2.08325 19.7917V21.875" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.37492 11.4583C11.6761 11.4583 13.5416 9.59285 13.5416 7.29167C13.5416 4.99048 11.6761 3.125 9.37492 3.125C7.07373 3.125 5.20825 4.99048 5.20825 7.29167C5.20825 9.59285 7.07373 11.4583 9.37492 11.4583Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22.9167 21.8749V19.7915C22.9161 18.8683 22.6088 17.9715 22.0432 17.2419C21.4776 16.5122 20.6856 15.9911 19.7917 15.7603" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16.6667 3.26028C17.563 3.48976 18.3574 4.01101 18.9247 4.74186C19.492 5.4727 19.7999 6.37157 19.7999 7.29674C19.7999 8.22192 19.492 9.12078 18.9247 9.85163C18.3574 10.5825 17.563 11.1037 16.6667 11.3332" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg width="2.25rem" height="2.125rem" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                                <g filter="url(#filter0_f_543_5724)">
+                                <path d="M23 28.25V25.75C23 24.4239 22.4732 23.1521 21.5355 22.2145C20.5979 21.2768 19.3261 20.75 18 20.75H10.5C9.17392 20.75 7.90215 21.2768 6.96447 22.2145C6.02678 23.1521 5.5 24.4239 5.5 25.75V28.25" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.25 15.75C17.0114 15.75 19.25 13.5114 19.25 10.75C19.25 7.98858 17.0114 5.75 14.25 5.75C11.4886 5.75 9.25 7.98858 9.25 10.75C9.25 13.5114 11.4886 15.75 14.25 15.75Z" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M30.5 28.2499V25.7499C30.4992 24.642 30.1304 23.5658 29.4517 22.6902C28.773 21.8147 27.8227 21.1893 26.75 20.9124" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23 5.91235C24.0755 6.18773 25.0288 6.81323 25.7095 7.69024C26.3903 8.56725 26.7598 9.64589 26.7598 10.7561C26.7598 11.8663 26.3903 12.945 25.7095 13.822C25.0288 14.699 24.0755 15.3245 23 15.5999" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <path d="M23 28.25V25.75C23 24.4239 22.4732 23.1521 21.5355 22.2145C20.5979 21.2768 19.3261 20.75 18 20.75H10.5C9.17392 20.75 7.90215 21.2768 6.96447 22.2145C6.02678 23.1521 5.5 24.4239 5.5 25.75V28.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.25 15.75C17.0114 15.75 19.25 13.5114 19.25 10.75C19.25 7.98858 17.0114 5.75 14.25 5.75C11.4886 5.75 9.25 7.98858 9.25 10.75C9.25 13.5114 11.4886 15.75 14.25 15.75Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M30.5 28.2499V25.7499C30.4992 24.642 30.1304 23.5658 29.4517 22.6902C28.773 21.8147 27.8227 21.1893 26.75 20.9124" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23 5.91235C24.0755 6.18773 25.0288 6.81323 25.7095 7.69024C26.3903 8.56725 26.7598 9.64589 26.7598 10.7561C26.7598 11.8663 26.3903 12.945 25.7095 13.822C25.0288 14.699 24.0755 15.3245 23 15.5999" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                <filter id="filter0_f_543_5724" x="-1" y="-2" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5724"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <a href="#">Игроки</a>
+                    </li>
+                </ul>
+                <a class="header-nav__undo-btn">
+                    <div class="icon icon_undo">
+                        <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                            <path d="M9.37508 14.5833L4.16675 9.37499L9.37508 4.16666" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.16675 9.375H15.1042C15.8566 9.375 16.6016 9.52319 17.2967 9.81111C17.9918 10.099 18.6234 10.521 19.1554 11.053C19.6874 11.585 20.1094 12.2166 20.3973 12.9117C20.6852 13.6068 20.8334 14.3518 20.8334 15.1042C20.8334 15.8565 20.6852 16.6015 20.3973 17.2966C20.1094 17.9917 19.6874 18.6233 19.1554 19.1553C18.6234 19.6873 17.9918 20.1093 17.2967 20.3972C16.6016 20.6851 15.8566 20.8333 15.1042 20.8333H11.4584" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg width="2rem" height="2rem" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                            <g filter="url(#filter0_f_543_5729)">
+                            <path d="M12.25 18.5L6 12.25L12.25 6" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 12.25H19.125C20.0278 12.25 20.9218 12.4278 21.7559 12.7733C22.5901 13.1188 23.348 13.6252 23.9864 14.2636C24.6248 14.902 25.1312 15.6599 25.4767 16.4941C25.8222 17.3282 26 18.2222 26 19.125C26 20.0278 25.8222 20.9218 25.4767 21.7559C25.1312 22.5901 24.6248 23.348 23.9864 23.9864C23.348 24.6248 22.5901 25.1312 21.7559 25.4767C20.9218 25.8222 20.0278 26 19.125 26H14.75" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <path d="M12.25 18.5L6 12.25L12.25 6" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 12.25H19.125C20.0278 12.25 20.9218 12.4278 21.7559 12.7733C22.5901 13.1188 23.348 13.6252 23.9864 14.2636C24.6248 14.902 25.1312 15.6599 25.4767 16.4941C25.8222 17.3282 26 18.2222 26 19.125C26 20.0278 25.8222 20.9218 25.4767 21.7559C25.1312 22.5901 24.6248 23.348 23.9864 23.9864C23.348 24.6248 22.5901 25.1312 21.7559 25.4767C20.9218 25.8222 20.0278 26 19.125 26H14.75" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                            <filter id="filter0_f_543_5729" x="-3" y="-3" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5729"/>
+                            </filter>
+                            </defs>
+                        </svg>                
+                    </div>
+                    <span>Выход</span>
+                </a>
+            </nav>
+
+        </div>
+
+        <div class="notification-icon notification-icon_blue">
+            <div class="notification-icon__icon">
+                <svg width="7" height="24" viewBox="0 0 7 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.656 15.224L0.664 0.599998H6.616L5.624 15.224H1.656ZM3.64 23.256C2.744 23.256 2.008 22.968 1.432 22.392C0.856 21.816 0.568 21.1333 0.568 20.344C0.568 19.5333 0.856 18.8613 1.432 18.328C2.008 17.7733 2.744 17.496 3.64 17.496C4.55733 17.496 5.29333 17.7733 5.848 18.328C6.424 18.8613 6.712 19.5333 6.712 20.344C6.712 21.1333 6.424 21.816 5.848 22.392C5.29333 22.968 4.55733 23.256 3.64 23.256Z" fill="#4A4A4A"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="dropdown-item">
+            <a>Выбрать проект
+                <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 1L8.63523 8.61091C8.83277 8.82162 9.16723 8.82162 9.36477 8.61091L16.5 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <div class="dropdown-item__content">
+                <a href="" class="dropdown-item__content__button">Кнопка</a>
+                <hr>
+                <a href="" class="dropdown-item__content__button">Кнопка</a>
+                <hr>
+                <a href="" class="dropdown-item__content__button">Кнопка</a>
+                <hr>
+                <a href="" class="dropdown-item__content__button">Кнопка</a>
+                <hr>
+                <a href="" class="dropdown-item__content__button">Кнопка</a>
+            </div>
+        </div>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+        <div class="accordion-item">
+            <div class="accordion-item__header">
+                Текст который видно
+            </div>
+            <div class="accordion-item__body">
+                <div class="accordion-item__content">
+                    Ваш контент
+                </div>
+            </div>
+        </div>
+
+        <!-- /////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+        <div class="modal" data-type="Your-modal-name" data-modal-state="close">
+            <div class="modal__inset"></div>
+            <div class="modal__dialog">
+                <div class="modal__content">
+        
+                    <div class="modal__content__header">
+                        <div class="modal__content__header__title">Название модального окна</div>
+                        <button type="button" class="btn-modal-close" data-bs-dismiss="modal" aria-label="Закрыть">
+                            Закрыть модальное окно
+                        </button>
+                    </div>
+        
+                    <div class="modal__content__body">
+                        Контент модального окна
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        
+        <button class="open-modal" data-type-modal="Your-modal-name">
+            Содержимое кнопки
+        </button>
+
+         <div style="background-color: gray;">
+        <button class="button button_size_password button_password">ENTER</button>
+        <button class="button button_size_other button_use">button_use</button>
+        <button class="button button_size_other button_spend">button_spend</button>
+        <button class="button button_size_other button_look">button_look</button>
+        <button class="button button_size_other button_tasks">button_tasks</button>
+        <div style="padding-left: 3rem;">
+            <button class=" button button_icon">
+                <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.00043 11.0002L4.00082 7.24956C4.58515 6.5191 4.58512 5.4812 4.00075 4.75077L1.00016 1.00024" stroke="#00F2F6" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+        
+    </div>
+
+        <!-- //////////////////////////////////////////////////// -->
+
+        <div style="display: flex; gap: 2rem; " class="pt-pl">
+
+            <div class="avatar">
+                <div class="avatar__lines"></div>
+                <div class="avatar__lines__small"></div>
+                <div class="avatar__lines__polosa-tr"></div>
+                <div class="avatar__lines__polosa-l"></div>
+                <div class="avatar__lines__polosa-lb"></div>
+                <div class="avatar__lines__polosa-rb"></div>
+            </div>
+        
+            <!-- -------------------------- -->
+    
+            <div class="avatar">
+                <div class="avatar__lines"></div>
+                <div class="avatar__lines__small"></div>
+                <button class="add__avatar">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.744 15V0.599998H9.168V15H5.744ZM0.0800002 9.4V6.2H14.832V9.4H0.0800002Z" fill="white"/>
+                    </svg>
+                </button>
+                            
+                <div class="avatar__lines__polosa-tr"></div>
+                <div class="avatar__lines__polosa-l"></div>
+                <div class="avatar__lines__polosa-lb"></div>
+                <div class="avatar__lines__polosa-rb"></div>
+            </div>
+    
+        <!-- -------------------------- -->
+    
+            <div class="avatar">
+                <div class="avatar__lines"></div>
+                <div class="avatar__lines__small"></div>
+                <!-- <button class="add__avatar">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.744 15V0.599998H9.168V15H5.744ZM0.0800002 9.4V6.2H14.832V9.4H0.0800002Z" fill="white"/>
+                    </svg>
+                </button> -->
+                <img src="/src/assets/img/avatar.png" alt="">
+    
+                <div class="avatar__lines__polosa-tr"></div>
+                <div class="avatar__lines__polosa-l"></div>
+                <div class="avatar__lines__polosa-lb"></div>
+                <div class="avatar__lines__polosa-rb"></div>
+            </div>
+        </div>
+
+        <form action="search" class="search-form">
+            <input type="text" class="input input_search" placeholder="Поиск">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.4">
+                <path d="M21 21L17.5001 17.5M20 11.5C20 16.1944 16.1944 20 11.5 20C6.80558 20 3 16.1944 3 11.5C3 6.80558 6.80558 3 11.5 3C16.1944 3 20 6.80558 20 11.5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+            </svg>
+        </form>
+
+
+        <div class="icon icon_message">
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                <path d="M21.875 15.625C21.875 16.1775 21.6555 16.7074 21.2648 17.0981C20.8741 17.4888 20.3442 17.7083 19.7917 17.7083H7.29167L3.125 21.875V5.2083C3.125 4.65577 3.34449 4.12586 3.73519 3.73516C4.12589 3.34446 4.6558 3.12497 5.20833 3.12497H19.7917C20.3442 3.12497 20.8741 3.34446 21.2648 3.73516C21.6555 4.12586 21.875 4.65577 21.875 5.2083V15.625Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="2.125rem" height="2.125rem" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                <g filter="url(#filter0_f_543_5709)">
+                <path d="M28.25 20.75C28.25 21.413 27.9866 22.0489 27.5178 22.5178C27.0489 22.9866 26.413 23.25 25.75 23.25H10.75L5.75 28.25V8.25C5.75 7.58696 6.01339 6.95107 6.48223 6.48223C6.95107 6.01339 7.58696 5.75 8.25 5.75H25.75C26.413 5.75 27.0489 6.01339 27.5178 6.48223C27.9866 6.95107 28.25 7.58696 28.25 8.25V20.75Z" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <path d="M28.25 20.75C28.25 21.413 27.9866 22.0489 27.5178 22.5178C27.0489 22.9866 26.413 23.25 25.75 23.25H10.75L5.75 28.25V8.25C5.75 7.58696 6.01339 6.95107 6.48223 6.48223C6.95107 6.01339 7.58696 5.75 8.25 5.75H25.75C26.413 5.75 27.0489 6.01339 27.5178 6.48223C27.9866 6.95107 28.25 7.58696 28.25 8.25V20.75Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                <filter id="filter0_f_543_5709" x="-2" y="-2" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5709"/>
+                </filter>
+                </defs>
+            </svg>
+        </div>
+        <div class="icon icon_user">
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                <path d="M19.7916 21.875V19.7917C19.7916 18.6866 19.3526 17.6268 18.5712 16.8454C17.7898 16.064 16.73 15.625 15.6249 15.625H9.37492C8.26985 15.625 7.21004 16.064 6.42864 16.8454C5.64724 17.6268 5.20825 18.6866 5.20825 19.7917V21.875" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.4999 11.4583C14.8011 11.4583 16.6666 9.59287 16.6666 7.29168C16.6666 4.9905 14.8011 3.12502 12.4999 3.12502C10.1987 3.12502 8.33325 4.9905 8.33325 7.29168C8.33325 9.59287 10.1987 11.4583 12.4999 11.4583Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="1.875rem" height="2.125rem" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                <g filter="url(#filter0_f_543_5712)">
+                <path d="M23.75 28.25V25.75C23.75 24.4239 23.2232 23.1521 22.2855 22.2145C21.3479 21.2768 20.0761 20.75 18.75 20.75H11.25C9.92392 20.75 8.65215 21.2768 7.71447 22.2145C6.77678 23.1521 6.25 24.4239 6.25 25.75V28.25" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15 15.75C17.7614 15.75 20 13.5114 20 10.75C20 7.98858 17.7614 5.75 15 5.75C12.2386 5.75 10 7.98858 10 10.75C10 13.5114 12.2386 15.75 15 15.75Z" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <path d="M23.75 28.25V25.75C23.75 24.4239 23.2232 23.1521 22.2855 22.2145C21.3479 21.2768 20.0761 20.75 18.75 20.75H11.25C9.92392 20.75 8.65215 21.2768 7.71447 22.2145C6.77678 23.1521 6.25 24.4239 6.25 25.75V28.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15 15.75C17.7614 15.75 20 13.5114 20 10.75C20 7.98858 17.7614 5.75 15 5.75C12.2386 5.75 10 7.98858 10 10.75C10 13.5114 12.2386 15.75 15 15.75Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                 <filter id="filter0_f_543_5712" x="-4" y="-2" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5712"/>
+                </filter>
+                </defs>
+            </svg>
+        </div>
+        <div class="icon icon_map">
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                <path d="M3.125 6.25L9.375 3.125L15.625 6.25L21.875 3.125V18.75L15.625 21.875L9.375 18.75L3.125 21.875V6.25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.375 3.125V18.75" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15.625 6.25V21.875" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="2.125rem" height="2.125rem" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                <g filter="url(#filter0_f_543_5715)">
+                <path d="M5.75 9.5L13.25 5.75L20.75 9.5L28.25 5.75V24.5L20.75 28.25L13.25 24.5L5.75 28.25V9.5Z" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.25 5.75V24.5" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.75 9.5V28.25" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <path d="M5.75 9.5L13.25 5.75L20.75 9.5L28.25 5.75V24.5L20.75 28.25L13.25 24.5L5.75 28.25V9.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13.25 5.75V24.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.75 9.5V28.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                <filter id="filter0_f_543_5715" x="-2" y="-2" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5715"/>
+                </filter>
+                </defs>
+            </svg>
+        </div>
+        <div class="icon icon_shop">
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                <g clip-path="url(#clip0_371_1665)">
+                <path d="M8.33341 22.9167C8.90871 22.9167 9.37508 22.4503 9.37508 21.875C9.37508 21.2997 8.90871 20.8333 8.33341 20.8333C7.75812 20.8333 7.29175 21.2997 7.29175 21.875C7.29175 22.4503 7.75812 22.9167 8.33341 22.9167Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19.7917 22.9167C20.367 22.9167 20.8333 22.4503 20.8333 21.875C20.8333 21.2997 20.367 20.8333 19.7917 20.8333C19.2164 20.8333 18.75 21.2997 18.75 21.875C18.75 22.4503 19.2164 22.9167 19.7917 22.9167Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2.1355 2.13541H4.21883L6.98966 15.0729C7.09131 15.5467 7.35495 15.9703 7.7352 16.2707C8.11545 16.5711 8.58852 16.7295 9.073 16.7187H19.2605C19.7346 16.718 20.1943 16.5555 20.5637 16.2582C20.933 15.9608 21.1898 15.5464 21.2917 15.0833L23.0105 7.34374H5.33341" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_371_1665">
+                <rect width="25" height="25" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>
+            <svg width="2.25rem" height="2.25rem" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                <g filter="url(#filter0_f_543_5718)">
+                <path d="M13 30.5C13.6904 30.5 14.25 29.9404 14.25 29.25C14.25 28.5596 13.6904 28 13 28C12.3096 28 11.75 28.5596 11.75 29.25C11.75 29.9404 12.3096 30.5 13 30.5Z" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M26.75 30.5C27.4404 30.5 28 29.9404 28 29.25C28 28.5596 27.4404 28 26.75 28C26.0596 28 25.5 28.5596 25.5 29.25C25.5 29.9404 26.0596 30.5 26.75 30.5Z" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5.5625 5.5625H8.0625L11.3875 21.0875C11.5095 21.6561 11.8258 22.1643 12.2821 22.5248C12.7384 22.8853 13.3061 23.0754 13.8875 23.0625H26.1125C26.6815 23.0616 27.2331 22.8666 27.6763 22.5098C28.1195 22.153 28.4277 21.6557 28.55 21.1L30.6125 11.8125H9.4" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <path d="M13 30.5C13.6904 30.5 14.25 29.9404 14.25 29.25C14.25 28.5596 13.6904 28 13 28C12.3096 28 11.75 28.5596 11.75 29.25C11.75 29.9404 12.3096 30.5 13 30.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M26.75 30.5C27.4404 30.5 28 29.9404 28 29.25C28 28.5596 27.4404 28 26.75 28C26.0596 28 25.5 28.5596 25.5 29.25C25.5 29.9404 26.0596 30.5 26.75 30.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5.5625 5.5625H8.0625L11.3875 21.0875C11.5095 21.6561 11.8258 22.1643 12.2821 22.5248C12.7384 22.8853 13.3061 23.0754 13.8875 23.0625H26.1125C26.6815 23.0616 27.2331 22.8666 27.6763 22.5098C28.1195 22.153 28.4277 21.6557 28.55 21.1L30.6125 11.8125H9.4" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                <filter id="filter0_f_543_5718" x="-1" y="-1" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5718"/>
+                </filter>
+                </defs>
+            </svg>
+        </div>
+        <div class="icon icon_wallet">
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                <path d="M20.8334 12.5V8.33332H6.25008C5.69755 8.33332 5.16764 8.11383 4.77694 7.72313C4.38624 7.33243 4.16675 6.80252 4.16675 6.24999C4.16675 5.10416 5.10425 4.16666 6.25008 4.16666H18.7501V8.33332" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4.16675 6.24998V18.75C4.16675 19.8958 5.10425 20.8333 6.25008 20.8333H20.8334V16.6667" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.7501 12.5C18.1975 12.5 17.6676 12.7195 17.2769 13.1102C16.8862 13.5009 16.6667 14.0308 16.6667 14.5833C16.6667 15.7292 17.6042 16.6667 18.7501 16.6667H22.9167V12.5H18.7501Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="2.125rem" height="2rem" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                <g filter="url(#filter0_f_543_5721)">
+                <path d="M26 16V11H8.5C7.83696 11 7.20107 10.7366 6.73223 10.2678C6.26339 9.79893 6 9.16304 6 8.5C6 7.125 7.125 6 8.5 6H23.5V11" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 8.5V23.5C6 24.875 7.125 26 8.5 26H26V21" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M23.5 16C22.837 16 22.2011 16.2634 21.7322 16.7322C21.2634 17.2011 21 17.837 21 18.5C21 19.875 22.125 21 23.5 21H28.5V16H23.5Z" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <path d="M26 16V11H8.5C7.83696 11 7.20107 10.7366 6.73223 10.2678C6.26339 9.79893 6 9.16304 6 8.5C6 7.125 7.125 6 8.5 6H23.5V11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 8.5V23.5C6 24.875 7.125 26 8.5 26H26V21" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M23.5 16C22.837 16 22.2011 16.2634 21.7322 16.7322C21.2634 17.2011 21 17.837 21 18.5C21 19.875 22.125 21 23.5 21H28.5V16H23.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                <filter id="filter0_f_543_5721" x="-3" y="-3" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5721"/>
+                </filter>
+                </defs>
+            </svg>              
+        </div>
+        <div class="icon icon_users">
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                <path d="M16.6666 21.875V19.7917C16.6666 18.6866 16.2276 17.6268 15.4462 16.8454C14.6648 16.064 13.605 15.625 12.4999 15.625H6.24992C5.14485 15.625 4.08504 16.064 3.30364 16.8454C2.52224 17.6268 2.08325 18.6866 2.08325 19.7917V21.875" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.37492 11.4583C11.6761 11.4583 13.5416 9.59285 13.5416 7.29167C13.5416 4.99048 11.6761 3.125 9.37492 3.125C7.07373 3.125 5.20825 4.99048 5.20825 7.29167C5.20825 9.59285 7.07373 11.4583 9.37492 11.4583Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22.9167 21.8749V19.7915C22.9161 18.8683 22.6088 17.9715 22.0432 17.2419C21.4776 16.5122 20.6856 15.9911 19.7917 15.7603" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.6667 3.26028C17.563 3.48976 18.3574 4.01101 18.9247 4.74186C19.492 5.4727 19.7999 6.37157 19.7999 7.29674C19.7999 8.22192 19.492 9.12078 18.9247 9.85163C18.3574 10.5825 17.563 11.1037 16.6667 11.3332" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="2.25rem" height="2.125rem" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                <g filter="url(#filter0_f_543_5724)">
+                <path d="M23 28.25V25.75C23 24.4239 22.4732 23.1521 21.5355 22.2145C20.5979 21.2768 19.3261 20.75 18 20.75H10.5C9.17392 20.75 7.90215 21.2768 6.96447 22.2145C6.02678 23.1521 5.5 24.4239 5.5 25.75V28.25" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.25 15.75C17.0114 15.75 19.25 13.5114 19.25 10.75C19.25 7.98858 17.0114 5.75 14.25 5.75C11.4886 5.75 9.25 7.98858 9.25 10.75C9.25 13.5114 11.4886 15.75 14.25 15.75Z" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M30.5 28.2499V25.7499C30.4992 24.642 30.1304 23.5658 29.4517 22.6902C28.773 21.8147 27.8227 21.1893 26.75 20.9124" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M23 5.91235C24.0755 6.18773 25.0288 6.81323 25.7095 7.69024C26.3903 8.56725 26.7598 9.64589 26.7598 10.7561C26.7598 11.8663 26.3903 12.945 25.7095 13.822C25.0288 14.699 24.0755 15.3245 23 15.5999" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <path d="M23 28.25V25.75C23 24.4239 22.4732 23.1521 21.5355 22.2145C20.5979 21.2768 19.3261 20.75 18 20.75H10.5C9.17392 20.75 7.90215 21.2768 6.96447 22.2145C6.02678 23.1521 5.5 24.4239 5.5 25.75V28.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.25 15.75C17.0114 15.75 19.25 13.5114 19.25 10.75C19.25 7.98858 17.0114 5.75 14.25 5.75C11.4886 5.75 9.25 7.98858 9.25 10.75C9.25 13.5114 11.4886 15.75 14.25 15.75Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M30.5 28.2499V25.7499C30.4992 24.642 30.1304 23.5658 29.4517 22.6902C28.773 21.8147 27.8227 21.1893 26.75 20.9124" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M23 5.91235C24.0755 6.18773 25.0288 6.81323 25.7095 7.69024C26.3903 8.56725 26.7598 9.64589 26.7598 10.7561C26.7598 11.8663 26.3903 12.945 25.7095 13.822C25.0288 14.699 24.0755 15.3245 23 15.5999" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                <filter id="filter0_f_543_5724" x="-1" y="-2" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5724"/>
+                </filter>
+                </defs>
+            </svg>
+        </div>
+        <div class="icon icon_undo">
+            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                <path d="M9.37508 14.5833L4.16675 9.37499L9.37508 4.16666" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4.16675 9.375H15.1042C15.8566 9.375 16.6016 9.52319 17.2967 9.81111C17.9918 10.099 18.6234 10.521 19.1554 11.053C19.6874 11.585 20.1094 12.2166 20.3973 12.9117C20.6852 13.6068 20.8334 14.3518 20.8334 15.1042C20.8334 15.8565 20.6852 16.6015 20.3973 17.2966C20.1094 17.9917 19.6874 18.6233 19.1554 19.1553C18.6234 19.6873 17.9918 20.1093 17.2967 20.3972C16.6016 20.6851 15.8566 20.8333 15.1042 20.8333H11.4584" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg width="2rem" height="2rem" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                <g filter="url(#filter0_f_543_5729)">
+                <path d="M12.25 18.5L6 12.25L12.25 6" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 12.25H19.125C20.0278 12.25 20.9218 12.4278 21.7559 12.7733C22.5901 13.1188 23.348 13.6252 23.9864 14.2636C24.6248 14.902 25.1312 15.6599 25.4767 16.4941C25.8222 17.3282 26 18.2222 26 19.125C26 20.0278 25.8222 20.9218 25.4767 21.7559C25.1312 22.5901 24.6248 23.348 23.9864 23.9864C23.348 24.6248 22.5901 25.1312 21.7559 25.4767C20.9218 25.8222 20.0278 26 19.125 26H14.75" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <path d="M12.25 18.5L6 12.25L12.25 6" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 12.25H19.125C20.0278 12.25 20.9218 12.4278 21.7559 12.7733C22.5901 13.1188 23.348 13.6252 23.9864 14.2636C24.6248 14.902 25.1312 15.6599 25.4767 16.4941C25.8222 17.3282 26 18.2222 26 19.125C26 20.0278 25.8222 20.9218 25.4767 21.7559C25.1312 22.5901 24.6248 23.348 23.9864 23.9864C23.348 24.6248 22.5901 25.1312 21.7559 25.4767C20.9218 25.8222 20.0278 26 19.125 26H14.75" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                <filter id="filter0_f_543_5729" x="-3" y="-3" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5729"/>
+                </filter>
+                </defs>
+            </svg>                
+        </div>
+    </main>
+    
+    <footer></footer>
+    
+</body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script type="module" src="../src/scripts/app.js"></script>
+</html>

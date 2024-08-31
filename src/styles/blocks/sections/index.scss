@@ -1,0 +1,62 @@
+.main-section{
+    &__container{
+        position: relative;
+        &__main-block{
+            grid-column: span 4;
+            @include df_fdc;
+            gap: 4rem;
+        }
+        &__info-block{
+            @include df_fdc;
+            gap: 1.25rem;
+            .title{
+                @include heading_1;
+                letter-spacing: -0.03em;
+                max-width: 51.563rem;
+                @include mobile{
+                    letter-spacing: -0.03em;
+                    max-width: 24.5rem;
+                }
+            }
+            .text{
+                @include text_1;
+                letter-spacing: 0.03em;
+                color: $text-primary-subdued-40;
+                max-width: 42.188rem;
+                @include mobile{
+                    max-width: 24.5rem;
+                }
+            }
+        }
+        .main-img{
+            position: absolute;
+            bottom: 3rem;
+            right: 1.813rem;
+            @include mobile{
+                position: static;
+                grid-column: span 4;
+                padding-bottom: 1.5rem;
+                padding-top: 1.5rem;
+            }
+            img{
+                max-width: 51rem;
+                width: 100%;
+            }
+        }
+    }
+}
+.btn-mobile{
+    display: none;
+    @include mobile{
+        display: flex;
+        width: 100%;
+        grid-column: span 4;
+    }
+}
+.btn-desktop{
+    display: block;
+    @include mobile{
+        display: none;
+    }
+}
+

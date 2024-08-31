@@ -1,0 +1,27 @@
+<svg width="138" height="201" viewBox="0 0 138 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="33.1997" y="126.717" width="8.65294" height="6.65611" transform="rotate(-62.8261 33.1997 126.717)" fill="#9F9F9F"/>
+<rect x="48.8618" y="144.885" width="8.65294" height="6.65611" transform="rotate(-62.8261 48.8618 144.885)" fill="#9F9F9F"/>
+<rect x="55.1265" y="130.772" width="25.1827" height="6.65611" transform="rotate(-62.8261 55.1265 130.772)" fill="#9F9F9F"/>
+<path d="M20.2081 127.585L24.259 119.694L28.8529 122.052L24.802 129.943L30.1717 133.06L27.9846 137.92L17.7779 132.088L20.2081 127.585Z" fill="#9F9F9F"/>
+<rect x="80.812" y="113.324" width="25.1827" height="4.14387" transform="rotate(-62.8261 80.812 113.324)" fill="#9F9F9F"/>
+<rect x="85.9614" y="85.8" width="16.4184" height="6.65611" transform="rotate(131.031 85.9614 85.8)" fill="#9F9F9F"/>
+<rect x="44.6138" y="106.474" width="16.4184" height="6.65611" transform="rotate(131.031 44.6138 106.474)" fill="#9F9F9F"/>
+<circle cx="97.5379" cy="132.613" r="5.21395" transform="rotate(169.513 97.5379 132.613)" fill="#9F9F9F"/>
+<circle cx="106.309" cy="148.275" r="5.21395" transform="rotate(169.513 106.309 148.275)" fill="#9F9F9F"/>
+<rect x="106.378" y="163.262" width="25.1827" height="4.14387" transform="rotate(-144.709 106.378 163.262)" fill="#9F9F9F"/>
+<rect x="93.7085" y="160.392" width="25.1827" height="4.14387" transform="rotate(34.2592 93.7085 160.392)" fill="#9F9F9F"/>
+<rect x="63.6973" y="57.1016" width="25.1827" height="4.14387" transform="rotate(-64.1189 63.6973 57.1016)" fill="#9F9F9F"/>
+<rect x="64.4575" y="44.1331" width="25.1827" height="4.14387" transform="rotate(114.849 64.4575 44.1331)" fill="#9F9F9F"/>
+<g filter="url(#filter0_f_1261_3461)">
+<path d="M131.08 181.378L71.3378 8L7 135.004L125.649 193.076L131.08 181.378Z" fill="#00F69D" fill-opacity="0.2"/>
+<path d="M131.08 181.378L71.3378 8L7 135.004L125.649 193.076L131.08 181.378Z" stroke="#00F69D" stroke-width="1.67111"/>
+</g>
+<path d="M131.08 181.378L71.3378 8L7 135.004L125.649 193.076L131.08 181.378Z" fill="#00F69D" fill-opacity="0.2" stroke="#00F69D" stroke-width="1.67111"/>
+<defs>
+<filter id="filter0_f_1261_3461" x="0.0226932" y="0.0124393" width="137.806" height="200.037" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2.92444" result="effect1_foregroundBlur_1261_3461"/>
+</filter>
+</defs>
+</svg>

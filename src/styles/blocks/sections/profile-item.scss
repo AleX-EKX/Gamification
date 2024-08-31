@@ -1,0 +1,31 @@
+.profile-item-achievements{
+    max-width: 23.063rem !important;
+    .achievements-block__info-block__text{
+        padding-left: 2rem;
+    }
+    .swiper-achievements-item{
+        padding-top: 1.25rem;
+    }
+}
+.profile-item-container{
+    .name-player{
+        color: white;
+        @include heading_2;
+    }
+}
+.quantity-item-block{
+    height: max-content;
+    width: 100%;
+    max-width: 21.6rem;
+}
+.profile-item{
+    filter: drop-shadow(0px 0px 0px transparent) !important;
+    &__shadow{
+       
+        filter: drop-shadow(0px 0px 5px #00F2F6);
+        &:nth-child(2){
+            width: 100%;
+            filter: drop-shadow(0px 0px 5px #E820E5);
+        }
+    }
+}

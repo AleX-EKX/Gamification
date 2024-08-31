@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/src/scripts/lib/swiper/swiper.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body class="theme-light">
+    <header>
+        <div class="header-section rose-clip">
+            <div class="header-section__info-block">
+                <div class="header-logo">
+                    <svg width="2.875rem" height="2.875rem" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.34731 1.34731C0 2.69462 0 4.86308 0 9.2V36.8C0 41.1369 0 43.3054 1.34731 44.6527C2.69462 46 4.86308 46 9.2 46L20.9091 46V31.7738L8.36361 24.5307L10.4545 20.9091L20.834 26.9017V14.6364H25.0158L25.0158 26.9017L35.3953 20.9091L37.4862 24.5307L25.0909 31.6871V46L36.8 46C41.1369 46 43.3054 46 44.6527 44.6527C46 43.3054 46 41.1369 46 36.8V9.2C46 4.86308 46 2.69462 44.6527 1.34731C43.3054 0 41.1369 0 36.8 0H9.2C4.86308 0 2.69462 0 1.34731 1.34731Z" fill="white"/>
+                        </svg>                               
+                    <span class="text-logo">GAMiF</span>        
+                </div>
+                <label class="search-form">
+                    <input type="text" class="input input_search" placeholder="Поиск">
+                    <svg width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.4">
+                        <path d="M21 21L17.5001 17.5M20 11.5C20 16.1944 16.1944 20 11.5 20C6.80558 20 3 16.1944 3 11.5C3 6.80558 6.80558 3 11.5 3C16.1944 3 20 6.80558 20 11.5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                    </svg>
+                </label>
+                
+            </div>
+            <div class="icon icon_message">
+                <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                    <path d="M21.875 15.625C21.875 16.1775 21.6555 16.7074 21.2648 17.0981C20.8741 17.4888 20.3442 17.7083 19.7917 17.7083H7.29167L3.125 21.875V5.2083C3.125 4.65577 3.34449 4.12586 3.73519 3.73516C4.12589 3.34446 4.6558 3.12497 5.20833 3.12497H19.7917C20.3442 3.12497 20.8741 3.34446 21.2648 3.73516C21.6555 4.12586 21.875 4.65577 21.875 5.2083V15.625Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg width="2.125rem" height="2.125rem" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg task-svg">
+                    <g filter="url(#filter0_f_543_5709)">
+                    <path d="M28.25 20.75C28.25 21.413 27.9866 22.0489 27.5178 22.5178C27.0489 22.9866 26.413 23.25 25.75 23.25H10.75L5.75 28.25V8.25C5.75 7.58696 6.01339 6.95107 6.48223 6.48223C6.95107 6.01339 7.58696 5.75 8.25 5.75H25.75C26.413 5.75 27.0489 6.01339 27.5178 6.48223C27.9866 6.95107 28.25 7.58696 28.25 8.25V20.75Z" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <path d="M28.25 20.75C28.25 21.413 27.9866 22.0489 27.5178 22.5178C27.0489 22.9866 26.413 23.25 25.75 23.25H10.75L5.75 28.25V8.25C5.75 7.58696 6.01339 6.95107 6.48223 6.48223C6.95107 6.01339 7.58696 5.75 8.25 5.75H25.75C26.413 5.75 27.0489 6.01339 27.5178 6.48223C27.9866 6.95107 28.25 7.58696 28.25 8.25V20.75Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                    <filter id="filter0_f_543_5709" x="-2" y="-2" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                    <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5709"/>
+                    </filter>
+                    </defs>
+                </svg>
+            </div>
+            <div class="burger-block mobile">
+                <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.8242 21.5322L18.3243 18.0322M20.8242 12.0322C20.8242 16.7266 17.0186 20.5322 12.3242 20.5322C7.6298 20.5322 3.82422 16.7266 3.82422 12.0322C3.82422 7.33781 7.6298 3.53223 12.3242 3.53223C17.0186 3.53223 20.8242 7.33781 20.8242 12.0322Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                <svg width="1.5rem" height="1.5rem" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.99072 13.0322H21.6574" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4.99072 6.78223H21.6574" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4.99072 19.2822H21.6574" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="header-section__polosa-tr polosa polosa_rose"></div>
+            <div class="header-section__polosa-bl polosa polosa_rose"></div>
+        </div>
+        <div class="header-nav">
+            <nav class="header-nav__nav-panel">
+                <ul>
+                    <li>
+                        <div class="icon icon_user">
+                            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                                <path d="M19.7916 21.875V19.7917C19.7916 18.6866 19.3526 17.6268 18.5712 16.8454C17.7898 16.064 16.73 15.625 15.6249 15.625H9.37492C8.26985 15.625 7.21004 16.064 6.42864 16.8454C5.64724 17.6268 5.20825 18.6866 5.20825 19.7917V21.875" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.4999 11.4583C14.8011 11.4583 16.6666 9.59287 16.6666 7.29168C16.6666 4.9905 14.8011 3.12502 12.4999 3.12502C10.1987 3.12502 8.33325 4.9905 8.33325 7.29168C8.33325 9.59287 10.1987 11.4583 12.4999 11.4583Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg width="1.875rem" height="2.125rem" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                                <g filter="url(#filter0_f_543_5712)">
+                                <path d="M23.75 28.25V25.75C23.75 24.4239 23.2232 23.1521 22.2855 22.2145C21.3479 21.2768 20.0761 20.75 18.75 20.75H11.25C9.92392 20.75 8.65215 21.2768 7.71447 22.2145C6.77678 23.1521 6.25 24.4239 6.25 25.75V28.25" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 15.75C17.7614 15.75 20 13.5114 20 10.75C20 7.98858 17.7614 5.75 15 5.75C12.2386 5.75 10 7.98858 10 10.75C10 13.5114 12.2386 15.75 15 15.75Z" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <path d="M23.75 28.25V25.75C23.75 24.4239 23.2232 23.1521 22.2855 22.2145C21.3479 21.2768 20.0761 20.75 18.75 20.75H11.25C9.92392 20.75 8.65215 21.2768 7.71447 22.2145C6.77678 23.1521 6.25 24.4239 6.25 25.75V28.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 15.75C17.7614 15.75 20 13.5114 20 10.75C20 7.98858 17.7614 5.75 15 5.75C12.2386 5.75 10 7.98858 10 10.75C10 13.5114 12.2386 15.75 15 15.75Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                 <filter id="filter0_f_543_5712" x="-4" y="-2" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5712"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <a class="link-page" href="profile.html">Профиль</a>
+                    </li>
+                    <li>
+                        <div class="icon icon_map">
+                            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                                <path d="M3.125 6.25L9.375 3.125L15.625 6.25L21.875 3.125V18.75L15.625 21.875L9.375 18.75L3.125 21.875V6.25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.375 3.125V18.75" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.625 6.25V21.875" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg width="2.125rem" height="2.125rem" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                                <g filter="url(#filter0_f_543_5715)">
+                                <path d="M5.75 9.5L13.25 5.75L20.75 9.5L28.25 5.75V24.5L20.75 28.25L13.25 24.5L5.75 28.25V9.5Z" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.25 5.75V24.5" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20.75 9.5V28.25" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <path d="M5.75 9.5L13.25 5.75L20.75 9.5L28.25 5.75V24.5L20.75 28.25L13.25 24.5L5.75 28.25V9.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.25 5.75V24.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20.75 9.5V28.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                <filter id="filter0_f_543_5715" x="-2" y="-2" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5715"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <a class="link-page" href="map.html">Карта</a>
+                    </li>
+                    <li>
+                        <div class="icon icon_shop">
+                            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                                <g clip-path="url(#clip0_371_1665)">
+                                <path d="M8.33341 22.9167C8.90871 22.9167 9.37508 22.4503 9.37508 21.875C9.37508 21.2997 8.90871 20.8333 8.33341 20.8333C7.75812 20.8333 7.29175 21.2997 7.29175 21.875C7.29175 22.4503 7.75812 22.9167 8.33341 22.9167Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.7917 22.9167C20.367 22.9167 20.8333 22.4503 20.8333 21.875C20.8333 21.2997 20.367 20.8333 19.7917 20.8333C19.2164 20.8333 18.75 21.2997 18.75 21.875C18.75 22.4503 19.2164 22.9167 19.7917 22.9167Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2.1355 2.13541H4.21883L6.98966 15.0729C7.09131 15.5467 7.35495 15.9703 7.7352 16.2707C8.11545 16.5711 8.58852 16.7295 9.073 16.7187H19.2605C19.7346 16.718 20.1943 16.5555 20.5637 16.2582C20.933 15.9608 21.1898 15.5464 21.2917 15.0833L23.0105 7.34374H5.33341" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_371_1665">
+                                <rect width="25" height="25" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <svg width="2.25rem" height="2.25rem" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                                <g filter="url(#filter0_f_543_5718)">
+                                <path d="M13 30.5C13.6904 30.5 14.25 29.9404 14.25 29.25C14.25 28.5596 13.6904 28 13 28C12.3096 28 11.75 28.5596 11.75 29.25C11.75 29.9404 12.3096 30.5 13 30.5Z" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M26.75 30.5C27.4404 30.5 28 29.9404 28 29.25C28 28.5596 27.4404 28 26.75 28C26.0596 28 25.5 28.5596 25.5 29.25C25.5 29.9404 26.0596 30.5 26.75 30.5Z" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.5625 5.5625H8.0625L11.3875 21.0875C11.5095 21.6561 11.8258 22.1643 12.2821 22.5248C12.7384 22.8853 13.3061 23.0754 13.8875 23.0625H26.1125C26.6815 23.0616 27.2331 22.8666 27.6763 22.5098C28.1195 22.153 28.4277 21.6557 28.55 21.1L30.6125 11.8125H9.4" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <path d="M13 30.5C13.6904 30.5 14.25 29.9404 14.25 29.25C14.25 28.5596 13.6904 28 13 28C12.3096 28 11.75 28.5596 11.75 29.25C11.75 29.9404 12.3096 30.5 13 30.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M26.75 30.5C27.4404 30.5 28 29.9404 28 29.25C28 28.5596 27.4404 28 26.75 28C26.0596 28 25.5 28.5596 25.5 29.25C25.5 29.9404 26.0596 30.5 26.75 30.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.5625 5.5625H8.0625L11.3875 21.0875C11.5095 21.6561 11.8258 22.1643 12.2821 22.5248C12.7384 22.8853 13.3061 23.0754 13.8875 23.0625H26.1125C26.6815 23.0616 27.2331 22.8666 27.6763 22.5098C28.1195 22.153 28.4277 21.6557 28.55 21.1L30.6125 11.8125H9.4" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                <filter id="filter0_f_543_5718" x="-1" y="-1" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5718"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <a class="link-page" href="store.html">Магазин</a>
+                    </li>
+                    <li>
+                        <div class="icon icon_wallet">
+                            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                                <path d="M20.8334 12.5V8.33332H6.25008C5.69755 8.33332 5.16764 8.11383 4.77694 7.72313C4.38624 7.33243 4.16675 6.80252 4.16675 6.24999C4.16675 5.10416 5.10425 4.16666 6.25008 4.16666H18.7501V8.33332" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.16675 6.24998V18.75C4.16675 19.8958 5.10425 20.8333 6.25008 20.8333H20.8334V16.6667" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18.7501 12.5C18.1975 12.5 17.6676 12.7195 17.2769 13.1102C16.8862 13.5009 16.6667 14.0308 16.6667 14.5833C16.6667 15.7292 17.6042 16.6667 18.7501 16.6667H22.9167V12.5H18.7501Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg width="2.125rem" height="2rem" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                                <g filter="url(#filter0_f_543_5721)">
+                                <path d="M26 16V11H8.5C7.83696 11 7.20107 10.7366 6.73223 10.2678C6.26339 9.79893 6 9.16304 6 8.5C6 7.125 7.125 6 8.5 6H23.5V11" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 8.5V23.5C6 24.875 7.125 26 8.5 26H26V21" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23.5 16C22.837 16 22.2011 16.2634 21.7322 16.7322C21.2634 17.2011 21 17.837 21 18.5C21 19.875 22.125 21 23.5 21H28.5V16H23.5Z" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <path d="M26 16V11H8.5C7.83696 11 7.20107 10.7366 6.73223 10.2678C6.26339 9.79893 6 9.16304 6 8.5C6 7.125 7.125 6 8.5 6H23.5V11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 8.5V23.5C6 24.875 7.125 26 8.5 26H26V21" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23.5 16C22.837 16 22.2011 16.2634 21.7322 16.7322C21.2634 17.2011 21 17.837 21 18.5C21 19.875 22.125 21 23.5 21H28.5V16H23.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                <filter id="filter0_f_543_5721" x="-3" y="-3" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5721"/>
+                                </filter>
+                                </defs>
+                            </svg>              
+                        </div>
+                        <a class="link-page" href="exchanges.html">Биржа</a>
+                    </li>
+                    <li>
+                        <div class="icon icon_users">
+                            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                                <path d="M16.6666 21.875V19.7917C16.6666 18.6866 16.2276 17.6268 15.4462 16.8454C14.6648 16.064 13.605 15.625 12.4999 15.625H6.24992C5.14485 15.625 4.08504 16.064 3.30364 16.8454C2.52224 17.6268 2.08325 18.6866 2.08325 19.7917V21.875" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.37492 11.4583C11.6761 11.4583 13.5416 9.59285 13.5416 7.29167C13.5416 4.99048 11.6761 3.125 9.37492 3.125C7.07373 3.125 5.20825 4.99048 5.20825 7.29167C5.20825 9.59285 7.07373 11.4583 9.37492 11.4583Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22.9167 21.8749V19.7915C22.9161 18.8683 22.6088 17.9715 22.0432 17.2419C21.4776 16.5122 20.6856 15.9911 19.7917 15.7603" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16.6667 3.26028C17.563 3.48976 18.3574 4.01101 18.9247 4.74186C19.492 5.4727 19.7999 6.37157 19.7999 7.29674C19.7999 8.22192 19.492 9.12078 18.9247 9.85163C18.3574 10.5825 17.563 11.1037 16.6667 11.3332" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg width="2.25rem" height="2.125rem" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                                <g filter="url(#filter0_f_543_5724)">
+                                <path d="M23 28.25V25.75C23 24.4239 22.4732 23.1521 21.5355 22.2145C20.5979 21.2768 19.3261 20.75 18 20.75H10.5C9.17392 20.75 7.90215 21.2768 6.96447 22.2145C6.02678 23.1521 5.5 24.4239 5.5 25.75V28.25" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.25 15.75C17.0114 15.75 19.25 13.5114 19.25 10.75C19.25 7.98858 17.0114 5.75 14.25 5.75C11.4886 5.75 9.25 7.98858 9.25 10.75C9.25 13.5114 11.4886 15.75 14.25 15.75Z" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M30.5 28.2499V25.7499C30.4992 24.642 30.1304 23.5658 29.4517 22.6902C28.773 21.8147 27.8227 21.1893 26.75 20.9124" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23 5.91235C24.0755 6.18773 25.0288 6.81323 25.7095 7.69024C26.3903 8.56725 26.7598 9.64589 26.7598 10.7561C26.7598 11.8663 26.3903 12.945 25.7095 13.822C25.0288 14.699 24.0755 15.3245 23 15.5999" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <path d="M23 28.25V25.75C23 24.4239 22.4732 23.1521 21.5355 22.2145C20.5979 21.2768 19.3261 20.75 18 20.75H10.5C9.17392 20.75 7.90215 21.2768 6.96447 22.2145C6.02678 23.1521 5.5 24.4239 5.5 25.75V28.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.25 15.75C17.0114 15.75 19.25 13.5114 19.25 10.75C19.25 7.98858 17.0114 5.75 14.25 5.75C11.4886 5.75 9.25 7.98858 9.25 10.75C9.25 13.5114 11.4886 15.75 14.25 15.75Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M30.5 28.2499V25.7499C30.4992 24.642 30.1304 23.5658 29.4517 22.6902C28.773 21.8147 27.8227 21.1893 26.75 20.9124" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23 5.91235C24.0755 6.18773 25.0288 6.81323 25.7095 7.69024C26.3903 8.56725 26.7598 9.64589 26.7598 10.7561C26.7598 11.8663 26.3903 12.945 25.7095 13.822C25.0288 14.699 24.0755 15.3245 23 15.5999" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                <filter id="filter0_f_543_5724" x="-1" y="-2" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5724"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <a class="link-page" href="players.html">Игроки</a>
+                    </li>
+                </ul>
+                <a class="header-nav__undo-btn">
+                    <div class="icon icon_undo">
+                        <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                            <path d="M9.37508 14.5833L4.16675 9.37499L9.37508 4.16666" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.16675 9.375H15.1042C15.8566 9.375 16.6016 9.52319 17.2967 9.81111C17.9918 10.099 18.6234 10.521 19.1554 11.053C19.6874 11.585 20.1094 12.2166 20.3973 12.9117C20.6852 13.6068 20.8334 14.3518 20.8334 15.1042C20.8334 15.8565 20.6852 16.6015 20.3973 17.2966C20.1094 17.9917 19.6874 18.6233 19.1554 19.1553C18.6234 19.6873 17.9918 20.1093 17.2967 20.3972C16.6016 20.6851 15.8566 20.8333 15.1042 20.8333H11.4584" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg width="2rem" height="2rem" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                            <g filter="url(#filter0_f_543_5729)">
+                            <path d="M12.25 18.5L6 12.25L12.25 6" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 12.25H19.125C20.0278 12.25 20.9218 12.4278 21.7559 12.7733C22.5901 13.1188 23.348 13.6252 23.9864 14.2636C24.6248 14.902 25.1312 15.6599 25.4767 16.4941C25.8222 17.3282 26 18.2222 26 19.125C26 20.0278 25.8222 20.9218 25.4767 21.7559C25.1312 22.5901 24.6248 23.348 23.9864 23.9864C23.348 24.6248 22.5901 25.1312 21.7559 25.4767C20.9218 25.8222 20.0278 26 19.125 26H14.75" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <path d="M12.25 18.5L6 12.25L12.25 6" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 12.25H19.125C20.0278 12.25 20.9218 12.4278 21.7559 12.7733C22.5901 13.1188 23.348 13.6252 23.9864 14.2636C24.6248 14.902 25.1312 15.6599 25.4767 16.4941C25.8222 17.3282 26 18.2222 26 19.125C26 20.0278 25.8222 20.9218 25.4767 21.7559C25.1312 22.5901 24.6248 23.348 23.9864 23.9864C23.348 24.6248 22.5901 25.1312 21.7559 25.4767C20.9218 25.8222 20.0278 26 19.125 26H14.75" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                            <filter id="filter0_f_543_5729" x="-3" y="-3" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5729"/>
+                            </filter>
+                            </defs>
+                        </svg>                
+                    </div>
+                    <span>Выход</span>
+                </a>
+            </nav>
+            <div class="header-nav__polosa-bl polosa polosa_rose"></div>
+        </div>
+    </header>
+
+    <div class="popup-project popup">
+        <div class="popup-project__info-block experience-block rose-clip rose-clip_yellow">
+            <div class="popup-project__info-block__polosa-tl polosa polosa_yellow"></div>
+            <div class="popup-project__info-block__polosa-tr polosa polosa_yellow"></div>
+            <span class="title">Название проекта</span>
+            <span class="title">Описание проекта мб(что будет, про что и тд)</span>
+            <div class="parallelogram-container">
+                <div class="parallelogram project"></div>
+                <div class="parallelogram project"></div>
+            </div>
+            <a href="map-item.html" class="button button_size_other button_tasks">Посмотреть</a>
+        </div>
+    </div>
+
+    <div class="sidebar-block">
+        <div class="sidebar-block__info-block">
+            <div class="sidebar-block__info-block__mobile-block mobile">
+                <span class="title">Мои задачи</span>
+                <div class="sidebar-mobile-block">
+                    <span class="sidebar-mobile-block__name">Название проекта</span>
+                    <div class="sidebar-mobile-block__info-block">
+                        <span class="text">Участники</span>
+                        <div class="sidebar-mobile-block__info-block__participants">
+                            <div class="user-block">
+                                <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                </svg> 
+                                <span class="name-user">Участник</span>
+                            </div>
+                            <div class="user-block">
+                                <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                </svg> 
+                                <span class="name-user">Участник</span>
+                            </div>
+                            <div class="user-block">
+                                <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                </svg> 
+                                <span class="name-user">Участник</span>
+                            </div>
+                            <div class="user-block">
+                                <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                </svg> 
+                                <span class="name-user">Участник</span>
+                            </div>
+                            <div class="user-block">
+                                <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                </svg> 
+                                <span class="name-user">Участник</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="shadow">
+                <div class="sidebar-block__info-block__header rose-clip rose-clip_blue">
+                    <svg class="return-svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.75 17.5L25 11.25L18.75 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25 11.25H11.875C10.0516 11.25 8.30295 11.9743 7.01364 13.2636C5.72433 14.553 5 16.3016 5 18.125C5 19.0278 5.17783 19.9218 5.52333 20.7559C5.86883 21.5901 6.37524 22.348 7.01364 22.9864C8.30295 24.2757 10.0516 25 11.875 25H16.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                
+                    <span class="">Мои задачи</span>
+                    <svg width="1.875rem" height="1.875rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 16.25C15.6904 16.25 16.25 15.6904 16.25 15C16.25 14.3096 15.6904 13.75 15 13.75C14.3096 13.75 13.75 14.3096 13.75 15C13.75 15.6904 14.3096 16.25 15 16.25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 7.5C15.6904 7.5 16.25 6.94036 16.25 6.25C16.25 5.55964 15.6904 5 15 5C14.3096 5 13.75 5.55964 13.75 6.25C13.75 6.94036 14.3096 7.5 15 7.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 25C15.6904 25 16.25 24.4404 16.25 23.75C16.25 23.0596 15.6904 22.5 15 22.5C14.3096 22.5 13.75 23.0596 13.75 23.75C13.75 24.4404 14.3096 25 15 25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                
+                </div>
+            </div>
+            <div class="sidebar-block__info-block__body">
+                <div class="sidebar-block__info-block__body__tasks">
+                    <div class="task-block">
+                        <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.6257 2.58325H9.37565C8.80035 2.58325 8.33398 3.04962 8.33398 3.62492V5.70825C8.33398 6.28355 8.80035 6.74992 9.37565 6.74992H15.6257C16.2009 6.74992 16.6673 6.28355 16.6673 5.70825V3.62492C16.6673 3.04962 16.2009 2.58325 15.6257 2.58325Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.668 4.66675H18.7513C19.3038 4.66675 19.8337 4.88624 20.2244 5.27694C20.6151 5.66764 20.8346 6.19755 20.8346 6.75008V21.3334C20.8346 21.8859 20.6151 22.4159 20.2244 22.8066C19.8337 23.1973 19.3038 23.4167 18.7513 23.4167H6.2513C5.69877 23.4167 5.16886 23.1973 4.77816 22.8066C4.38746 22.4159 4.16797 21.8859 4.16797 21.3334V6.75008C4.16797 6.19755 4.38746 5.66764 4.77816 5.27694C5.16886 4.88624 5.69877 4.66675 6.2513 4.66675H8.33464" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.5 11.9583H16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.5 17.1667H16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.33398 11.9583H8.34398" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.33398 17.1667H8.34398" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                        
+                        <div class="task-block__info-block">
+                            <div class="task-block__info-block__description">
+                                <div class="task-block__info-block__description__title">
+                                    <span>Название задачи</span>
+                                    <svg class="message-svg" width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.875 11.9792C21.8786 13.3541 21.5574 14.7103 20.9375 15.9375C20.2025 17.4081 19.0727 18.645 17.6744 19.5097C16.2762 20.3744 14.6648 20.8327 13.0208 20.8334C11.646 20.8369 10.2897 20.5157 9.0625 19.8959L3.125 21.875L5.10417 15.9375C4.4843 14.7103 4.16308 13.3541 4.16667 11.9792C4.1673 10.3352 4.62564 8.72383 5.49033 7.3256C6.35503 5.92737 7.59193 4.7975 9.0625 4.06253C10.2897 3.44267 11.646 3.12145 13.0208 3.12503H13.5417C15.7129 3.24481 17.7636 4.16124 19.3012 5.69884C20.8388 7.23644 21.7552 9.28717 21.875 11.4584V11.9792Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </div>
+                                <div class="task-block__info-block__description__profit">
+                                    <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12.5" cy="12.5" r="11.5" stroke="white" stroke-width="2"/>
+                                        <path d="M7 13.5789L10.3249 17.0311C10.7898 17.5138 11.5887 17.4115 11.917 16.8272L18 6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                    </svg> 
+                                    <div class="task-block__info-block__description__profit__content">
+                                        <div class="departments-block b-rose">
+                                            <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.5013 20.8334C14.7114 20.8334 16.8311 19.9554 18.3939 18.3926C19.9567 16.8298 20.8346 14.7102 20.8346 12.5001C20.8346 10.2899 19.9567 8.17033 18.3939 6.60752C16.8311 5.04472 14.7114 4.16675 12.5013 4.16675C10.2912 4.16675 8.17155 5.04472 6.60875 6.60752C5.04594 8.17033 4.16797 10.2899 4.16797 12.5001C4.16797 14.7102 5.04594 16.8298 6.60875 18.3926C8.17155 19.9554 10.2912 20.8334 12.5013 20.8334Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12.5013 14.5834C13.0538 14.5834 13.5837 14.3639 13.9744 13.9732C14.3651 13.5825 14.5846 13.0526 14.5846 12.5001C14.5846 11.9475 14.3651 11.4176 13.9744 11.0269C13.5837 10.6362 13.0538 10.4167 12.5013 10.4167C11.9488 10.4167 11.4189 10.6362 11.0282 11.0269C10.6375 11.4176 10.418 11.9475 10.418 12.5001C10.418 13.0526 10.6375 13.5825 11.0282 13.9732C11.4189 14.3639 11.9488 14.5834 12.5013 14.5834Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12.5 2.08325V4.16659" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12.5 22.9166V20.8333" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.7096 21.5208L16.668 19.7188" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M11.4596 10.698L7.29297 3.47925" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M21.5208 17.7084L19.7188 16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M3.47852 7.29175L5.2806 8.33341" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M14.584 12.5H22.9173" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M2.08398 12.5H4.16732" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M21.5208 7.29175L19.7188 8.33341" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M3.47852 17.7084L5.2806 16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.7096 3.47925L16.668 5.28133" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M11.4596 14.302L7.29297 21.5208" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span class="departments-block__text">Дизайн</span>                                       
+                                        </div>
+                                        <div class="departments-block b-yellow">
+                                            <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                            </svg>                                              
+                                            <span class="departments-block__text">25 TP</span>                                       
+                                        </div>
+                                    </div>                                   
+                                </div>
+                            </div>
+                            <div class="task-block__info-block__other">
+                                <svg width="1.563rem" height="1.563rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 16.25C15.6904 16.25 16.25 15.6904 16.25 15C16.25 14.3096 15.6904 13.75 15 13.75C14.3096 13.75 13.75 14.3096 13.75 15C13.75 15.6904 14.3096 16.25 15 16.25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 7.5C15.6904 7.5 16.25 6.94036 16.25 6.25C16.25 5.55964 15.6904 5 15 5C14.3096 5 13.75 5.55964 13.75 6.25C13.75 6.94036 14.3096 7.5 15 7.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 25C15.6904 25 16.25 24.4404 16.25 23.75C16.25 23.0596 15.6904 22.5 15 22.5C14.3096 22.5 13.75 23.0596 13.75 23.75C13.75 24.4404 14.3096 25 15 25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>     
+                                <div class="circle">
+                                    <svg class="circle-one" width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                    </svg> 
+                                    <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                    </svg> 
+                                </div>                           
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-block">
+                        <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.6257 2.58325H9.37565C8.80035 2.58325 8.33398 3.04962 8.33398 3.62492V5.70825C8.33398 6.28355 8.80035 6.74992 9.37565 6.74992H15.6257C16.2009 6.74992 16.6673 6.28355 16.6673 5.70825V3.62492C16.6673 3.04962 16.2009 2.58325 15.6257 2.58325Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.668 4.66675H18.7513C19.3038 4.66675 19.8337 4.88624 20.2244 5.27694C20.6151 5.66764 20.8346 6.19755 20.8346 6.75008V21.3334C20.8346 21.8859 20.6151 22.4159 20.2244 22.8066C19.8337 23.1973 19.3038 23.4167 18.7513 23.4167H6.2513C5.69877 23.4167 5.16886 23.1973 4.77816 22.8066C4.38746 22.4159 4.16797 21.8859 4.16797 21.3334V6.75008C4.16797 6.19755 4.38746 5.66764 4.77816 5.27694C5.16886 4.88624 5.69877 4.66675 6.2513 4.66675H8.33464" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.5 11.9583H16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.5 17.1667H16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.33398 11.9583H8.34398" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.33398 17.1667H8.34398" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                        
+                        <div class="task-block__info-block">
+                            <div class="task-block__info-block__description">
+                                <div class="task-block__info-block__description__title">
+                                    <span>Название задачи</span>
+                                    <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.875 11.9792C21.8786 13.3541 21.5574 14.7103 20.9375 15.9375C20.2025 17.4081 19.0727 18.645 17.6744 19.5097C16.2762 20.3744 14.6648 20.8327 13.0208 20.8334C11.646 20.8369 10.2897 20.5157 9.0625 19.8959L3.125 21.875L5.10417 15.9375C4.4843 14.7103 4.16308 13.3541 4.16667 11.9792C4.1673 10.3352 4.62564 8.72383 5.49033 7.3256C6.35503 5.92737 7.59193 4.7975 9.0625 4.06253C10.2897 3.44267 11.646 3.12145 13.0208 3.12503H13.5417C15.7129 3.24481 17.7636 4.16124 19.3012 5.69884C20.8388 7.23644 21.7552 9.28717 21.875 11.4584V11.9792Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </div>
+                                <div class="task-block__info-block__description__profit">
+                                    <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12.5" cy="12.5" r="11.5" stroke="white" stroke-width="2"/>
+                                        <path d="M7 13.5789L10.3249 17.0311C10.7898 17.5138 11.5887 17.4115 11.917 16.8272L18 6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                    </svg> 
+                                    <div class="task-block__info-block__description__profit__content">
+                                        <div class="departments-block b-rose">
+                                            <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.5013 20.8334C14.7114 20.8334 16.8311 19.9554 18.3939 18.3926C19.9567 16.8298 20.8346 14.7102 20.8346 12.5001C20.8346 10.2899 19.9567 8.17033 18.3939 6.60752C16.8311 5.04472 14.7114 4.16675 12.5013 4.16675C10.2912 4.16675 8.17155 5.04472 6.60875 6.60752C5.04594 8.17033 4.16797 10.2899 4.16797 12.5001C4.16797 14.7102 5.04594 16.8298 6.60875 18.3926C8.17155 19.9554 10.2912 20.8334 12.5013 20.8334Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12.5013 14.5834C13.0538 14.5834 13.5837 14.3639 13.9744 13.9732C14.3651 13.5825 14.5846 13.0526 14.5846 12.5001C14.5846 11.9475 14.3651 11.4176 13.9744 11.0269C13.5837 10.6362 13.0538 10.4167 12.5013 10.4167C11.9488 10.4167 11.4189 10.6362 11.0282 11.0269C10.6375 11.4176 10.418 11.9475 10.418 12.5001C10.418 13.0526 10.6375 13.5825 11.0282 13.9732C11.4189 14.3639 11.9488 14.5834 12.5013 14.5834Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12.5 2.08325V4.16659" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12.5 22.9166V20.8333" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.7096 21.5208L16.668 19.7188" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M11.4596 10.698L7.29297 3.47925" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M21.5208 17.7084L19.7188 16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M3.47852 7.29175L5.2806 8.33341" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M14.584 12.5H22.9173" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M2.08398 12.5H4.16732" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M21.5208 7.29175L19.7188 8.33341" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M3.47852 17.7084L5.2806 16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.7096 3.47925L16.668 5.28133" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M11.4596 14.302L7.29297 21.5208" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span class="departments-block__text">Дизайн</span>                                       
+                                        </div>
+                                        <div class="departments-block b-yellow">
+                                            <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                            </svg>                                              
+                                            <span class="departments-block__text">25 TP</span>                                       
+                                        </div>
+                                    </div>                                   
+                                </div>
+                            </div>
+                            <div class="task-block__info-block__other">
+                                <svg width="1.563rem" height="1.563rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 16.25C15.6904 16.25 16.25 15.6904 16.25 15C16.25 14.3096 15.6904 13.75 15 13.75C14.3096 13.75 13.75 14.3096 13.75 15C13.75 15.6904 14.3096 16.25 15 16.25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 7.5C15.6904 7.5 16.25 6.94036 16.25 6.25C16.25 5.55964 15.6904 5 15 5C14.3096 5 13.75 5.55964 13.75 6.25C13.75 6.94036 14.3096 7.5 15 7.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 25C15.6904 25 16.25 24.4404 16.25 23.75C16.25 23.0596 15.6904 22.5 15 22.5C14.3096 22.5 13.75 23.0596 13.75 23.75C13.75 24.4404 14.3096 25 15 25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>     
+                                <div class="circle">
+                                    <svg class="circle-one" width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                    </svg> 
+                                    <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                    </svg> 
+                                </div>                           
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="manager.html" class="link-project button button_size_other button_tasks">К задачам</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="chat-block">
+        <div class="sidebar-block__info-block jc-sb">
+            <div class="shadow">
+                <div class="sidebar-block__info-block__header rose-clip rose-clip_blue">
+                    <svg class="return-svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.75 17.5L25 11.25L18.75 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25 11.25H11.875C10.0516 11.25 8.30295 11.9743 7.01364 13.2636C5.72433 14.553 5 16.3016 5 18.125C5 19.0278 5.17783 19.9218 5.52333 20.7559C5.86883 21.5901 6.37524 22.348 7.01364 22.9864C8.30295 24.2757 10.0516 25 11.875 25H16.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                
+                    <span class="">Чат</span>
+                    <svg width="1.875rem" height="1.875rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 16.25C15.6904 16.25 16.25 15.6904 16.25 15C16.25 14.3096 15.6904 13.75 15 13.75C14.3096 13.75 13.75 14.3096 13.75 15C13.75 15.6904 14.3096 16.25 15 16.25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 7.5C15.6904 7.5 16.25 6.94036 16.25 6.25C16.25 5.55964 15.6904 5 15 5C14.3096 5 13.75 5.55964 13.75 6.25C13.75 6.94036 14.3096 7.5 15 7.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 25C15.6904 25 16.25 24.4404 16.25 23.75C16.25 23.0596 15.6904 22.5 15 22.5C14.3096 22.5 13.75 23.0596 13.75 23.75C13.75 24.4404 14.3096 25 15 25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                
+                </div>
+            </div>   
+            <div class="sidebar-block__info-block__message">
+                <svg width="1.875rem" height="1.875rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5 16.25C13.0368 16.9676 13.7217 17.5614 14.5082 17.9911C15.2947 18.4208 16.1644 18.6764 17.0583 18.7404C17.9522 18.8044 18.8495 18.6754 19.6892 18.3622C20.5289 18.049 21.2914 17.5588 21.925 16.925L25.675 13.175C26.8135 11.9962 27.4435 10.4174 27.4292 8.7787C27.415 7.13997 26.7577 5.57239 25.5989 4.41359C24.4401 3.25479 22.8725 2.59748 21.2338 2.58324C19.595 2.569 18.0163 3.19897 16.8375 4.33746L14.6875 6.47496" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17.4998 13.75C16.9629 13.0324 16.2781 12.4386 15.4916 12.0089C14.7051 11.5792 13.8354 11.3236 12.9414 11.2596C12.0475 11.1956 11.1503 11.3246 10.3106 11.6378C9.47088 11.951 8.70837 12.4412 8.07476 13.075L4.32476 16.825C3.18627 18.0038 2.55631 19.5826 2.57055 21.2213C2.58479 22.86 3.24209 24.4276 4.4009 25.5864C5.5597 26.7452 7.12727 27.4025 8.766 27.4168C10.4047 27.431 11.9835 26.801 13.1623 25.6625L15.2998 23.525" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <label class="search-form label-message" for="message">
+                    <input type="text" class="input input_search" placeholder="Напишите текст">
+                    <div class="label-message__info-block">
+                        <svg width="1.875rem" height="1.875rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 17.5C10 17.5 11.875 20 15 20C18.125 20 20 17.5 20 17.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.25 11.25H11.2625" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18.75 11.25H18.7625" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg class="send-svg neon-svg" width="1.875rem" height="1.875rem" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 17.7795C1.44772 17.7795 1 18.2273 1 18.7795V29.4664C1 30.1887 1.74229 30.6728 2.40326 30.3815L26.6542 19.6946C27.6442 19.2584 27.3328 17.7795 26.251 17.7795H2Z" stroke="white" stroke-width="2"/>
+                            <path d="M1 13.2203V2.53347C1 1.81117 1.74229 1.32711 2.40326 1.61839L26.6542 12.3053C27.6442 12.7415 27.3328 14.2203 26.251 14.2203H2C1.44772 14.2203 1 13.7726 1 13.2203Z" stroke="white" stroke-width="2"/>
+                        </svg>                        
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="map-section">
+            <div class="map-section__container container_v2">
+                <div class="title-block desktop">
+                    <div class="title-block__contnent">
+                        <span class="text-title">Магазин</span>
+                        <div class="title-block__contnent__info-block">
+                            <img src="/src/assets/img/title-img.png" alt="">
+                            <div class="balance">9000 <span class="factor">х 1.3</span></div>
+                        </div>
+                    </div>
+                    <button class="btn btn-theme mobile" id="select">
+                        <svg width="1.875rem" height="1.875rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle id="circle" cx="15" cy="15" r="15" transform="rotate(-90 15 15)" fill="#1C1917"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="dropdown-item mobile">
+                    <a>Выбрать проект
+                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1L8.63523 8.61091C8.83277 8.82162 9.16723 8.82162 9.36477 8.61091L16.5 1" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <div class="dropdown-item__content">
+                        <a href="" class="dropdown-item__content__button">Бригадир</a>
+                        <hr>
+                        <a href="" class="dropdown-item__content__button">Бригадир</a>
+                        <hr>
+                        <a href="" class="dropdown-item__content__button">Бригадир</a>
+                        <hr>
+                        <a href="" class="dropdown-item__content__button">Бригадир</a>
+                        <hr>
+                        <a href="" class="dropdown-item__content__button">Бригадир</a>
+                    </div>
+                </div>
+                <div class="map-section__container__info-block">
+                    <div class="map-section__container__info-block__projects show-map">
+                        <a href="map-item.html" class="project-block project-management">
+                            <img src="/src/assets/img/391.png" alt="">
+                            <span class="text">Бригадир</span>
+                        </a>
+                        <div class="project-block project-sales">
+                            <img src="/src/assets/img/391.png" alt="">
+                            <span class="text">Бригадир</span>
+                        </div>
+                        <div class="project-block project-development">
+                            <img src="/src/assets/img/391.png" alt="">
+                            <span class="text">Бригадир</span>
+                        </div>
+                        <div class="project-block project-design">
+                            <span class="new-project">+</span>
+                            <span class="text">Какой-то проект</span>
+                        </div>
+                        <div class="project-block add-project">
+                            <span class="add-project__text">+ добавить проект</span>
+                        </div>
+                        
+                    </div>
+                    <div class="map-section__container__info-block__map">
+                        <div class="map-section__container__info-block__map__polosa-t polosa polosa_green desktop"></div>
+                        <div class="map-block">
+                            <div class="map-block__vector">
+
+                                <svg class="p-absolute map-15" width="6.625rem" height="5.25rem" viewBox="0 0 106 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="66.3457" y="53.9724" width="8.65294" height="6.65611" transform="rotate(10.6138 66.3457 53.9724)" fill="#9F9F9F"/>
+                                    <path d="M61.8114 41.7677L70.5298 43.4014L69.5787 48.477L60.8603 46.8432L59.4037 52.8784L54.1216 52.1673L56.8029 40.7216L61.8114 41.7677Z" fill="#9F9F9F"/>
+                                    <rect x="89.0029" y="59.1433" width="16.4184" height="6.65611" transform="rotate(-155.529 89.0029 59.1433)" fill="#9F9F9F"/>
+                                    <rect x="22.4922" y="30.7927" width="8.65294" height="6.65611" transform="rotate(10.6138 22.4922 30.7927)" fill="#9F9F9F"/>
+                                    <path d="M17.9579 18.588L26.6763 20.2217L25.7252 25.2973L17.0068 23.6635L15.5502 29.6987L10.2681 28.9876L12.9494 17.5419L17.9579 18.588Z" fill="#9F9F9F"/>
+                                    <rect x="45.1494" y="35.9634" width="16.4184" height="6.65611" transform="rotate(-155.529 45.1494 35.9634)" fill="#9F9F9F"/>
+                                    <circle cx="39.9545" cy="43.6832" r="5.21395" transform="rotate(87.3202 39.9545 43.6832)" fill="#9F9F9F"/>
+                                    <circle cx="57.5013" cy="63.7364" r="5.21395" transform="rotate(87.3202 57.5013 63.7364)" fill="#9F9F9F"/>
+                                    <circle cx="40.7899" cy="59.5587" r="5.21395" transform="rotate(87.3202 40.7899 59.5587)" fill="#9F9F9F"/>
+                                    <path class="path" d="M54.915 83.3022C10.4634 62.5804 0.464589 19.8 1.02163 1L104.631 52.8044C97.9461 63.8338 80.1209 68.2622 72.0438 69.0978L63.6883 73.2756L54.915 83.3022Z" fill="black" fill-opacity="0.3" stroke="#1C1917" stroke-width="0.835556"/>
+                                </svg>
+                                    
+                                <svg class="p-absolute map-14" width="7.75rem" height="12.875rem" viewBox="0 0 124 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.1094 141.103L15.1604 133.212L19.7543 135.57L15.7034 143.461L21.0731 146.578L18.886 151.438L8.67929 145.606L11.1094 141.103Z" fill="#9F9F9F"/>
+                                    <path d="M26.7716 148.621L30.8225 140.729L35.4164 143.088L31.3655 150.979L36.7352 154.095L34.5481 158.956L24.3414 153.123L26.7716 148.621Z" fill="#9F9F9F"/>
+                                    <path d="M34.9156 93.4907L38.9665 85.5996L43.5605 87.9579L39.5095 95.849L44.8792 98.9654L42.6921 103.826L32.4854 97.9933L34.9156 93.4907Z" fill="#9F9F9F"/>
+                                    <rect x="47.9375" y="153.061" width="25.1827" height="6.65611" transform="rotate(-62.8261 47.9375 153.061)" fill="#9F9F9F"/>
+                                    <rect x="34.1245" y="180.626" width="25.1827" height="6.65611" transform="rotate(-62.8261 34.1245 180.626)" fill="#9F9F9F"/>
+                                    <rect x="75.0186" y="97.0312" width="8.65294" height="6.65611" transform="rotate(97.934 75.0186 97.0312)" fill="#9F9F9F"/>
+                                    <circle cx="58.37" cy="83.4855" r="5.21395" transform="rotate(87.3202 58.37 83.4855)" fill="#9F9F9F"/>
+                                    <rect x="71.2593" y="115.199" width="8.65294" height="6.65611" transform="rotate(97.934 71.2593 115.199)" fill="#9F9F9F"/>
+                                    <circle cx="54.6117" cy="101.653" r="5.21395" transform="rotate(87.3202 54.6117 101.653)" fill="#9F9F9F"/>
+                                    <rect x="44.9478" y="122.717" width="8.65294" height="6.65611" transform="rotate(97.934 44.9478 122.717)" fill="#9F9F9F"/>
+                                    <circle cx="28.2992" cy="109.171" r="5.21395" transform="rotate(87.3202 28.2992 109.171)" fill="#9F9F9F"/>
+                                    <rect x="72.604" y="8.79297" width="8.65294" height="6.65611" transform="rotate(27.0251 72.604 8.79297)" fill="#9F9F9F"/>
+                                    <rect x="68.1689" y="15.3857" width="8.65294" height="16.4184" transform="rotate(27.0251 68.1689 15.3857)" fill="#9F9F9F"/>
+                                    <path d="M59.6519 32.3281L67.36 36.2599L64.0835 42.6833L73.833 51.8904L71.1361 59.8633L52.9443 45.4783L59.6519 32.3281Z" fill="#9F9F9F"/>
+                                    <rect x="95.9453" y="22.9036" width="8.65294" height="6.65611" transform="rotate(27.0251 95.9453 22.9036)" fill="#9F9F9F"/>
+                                    <rect x="91.5103" y="29.4961" width="8.65294" height="16.4184" transform="rotate(27.0251 91.5103 29.4961)" fill="#9F9F9F"/>
+                                    <path d="M82.9927 46.4382L90.7008 50.37L87.4244 56.7934L97.1739 66.0005L94.4769 73.9734L76.2851 59.5884L82.9927 46.4382Z" fill="#9F9F9F"/>
+                                    <rect x="91.9688" y="79.6333" width="8.65294" height="6.65611" transform="rotate(119.588 91.9688 79.6333)" fill="#9F9F9F"/>
+                                    <rect x="85.5811" y="74.9075" width="8.65294" height="16.4184" transform="rotate(119.588 85.5811 74.9075)" fill="#9F9F9F"/>
+                                    <path d="M69.0361 65.6414L64.7637 73.166L58.4932 69.6056L48.8593 78.9336L41.015 75.8829L56.1991 58.3525L69.0361 65.6414Z" fill="#9F9F9F"/>
+                                    <path class="path" d="M24.339 92.9111L68.2056 1L122.517 31.08C66.7015 148.726 38.2648 195.963 31.0233 204.876C29.6307 198.052 22.835 180.728 6.79232 166.022C-9.25035 151.316 11.8056 111.154 24.339 92.9111Z" fill="black" fill-opacity="0.3" stroke="#1C1917" stroke-width="0.835556"/>
+                                </svg>
+                                    
+                                <svg class="p-absolute map-13" width="11rem" height="13rem" viewBox="0 0 176 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="73.8022" y="99.6423" width="25.1827" height="4.14387" transform="rotate(-62.8261 73.8022 99.6423)" fill="#9F9F9F"/>
+                                    <path d="M44.5225 71.396L48.5735 63.5049L53.1674 65.8632L49.1165 73.7543L54.4862 76.8706L52.299 81.7309L42.0924 75.8986L44.5225 71.396Z" fill="#9F9F9F"/>
+                                    <rect x="97.6323" y="70.8242" width="25.1827" height="4.14387" transform="rotate(-62.8261 97.6323 70.8242)" fill="#9F9F9F"/>
+                                    <path d="M68.3526 42.5779L72.4035 34.6867L76.9975 37.0451L72.9465 44.9362L78.3163 48.0525L76.1291 52.9128L65.9225 47.0805L68.3526 42.5779Z" fill="#9F9F9F"/>
+                                    <path d="M84.0147 50.0957L88.0657 42.2046L92.6596 44.5629L88.6086 52.454L93.9784 55.5703L91.7912 60.4306L81.5846 54.5983L84.0147 50.0957Z" fill="#9F9F9F"/>
+                                    <path d="M45.1729 142.814L49.2239 134.923L53.8178 137.282L49.7668 145.173L55.1366 148.289L52.9494 153.149L42.7428 147.317L45.1729 142.814Z" fill="#9F9F9F"/>
+                                    <path d="M60.8355 150.332L64.8865 142.441L69.4804 144.799L65.4294 152.691L70.7992 155.807L68.612 160.667L58.4054 154.835L60.8355 150.332Z" fill="#9F9F9F"/>
+                                    <rect x="54.4058" y="55.7888" width="25.1827" height="4.14387" transform="rotate(-62.8261 54.4058 55.7888)" fill="#9F9F9F"/>
+                                    <path d="M68.3526 70.143L72.4035 62.2519L76.9975 64.6102L72.9465 72.5014L78.3163 75.6177L76.1291 80.478L65.9225 74.6456L68.3526 70.143Z" fill="#9F9F9F"/>
+                                    <rect x="54.4058" y="83.3538" width="25.1827" height="4.14387" transform="rotate(-62.8261 54.4058 83.3538)" fill="#9F9F9F"/>
+                                    <path d="M149.795 21.2776L153.846 13.3864L158.44 15.7448L154.389 23.6359L159.759 26.7522L157.572 31.6125L147.365 25.7802L149.795 21.2776Z" fill="#9F9F9F"/>
+                                    <rect x="135.847" y="34.4888" width="25.1827" height="4.14387" transform="rotate(-62.8261 135.847 34.4888)" fill="#9F9F9F"/>
+                                    <path d="M50.8135 85.5343L61.6374 89.5281L55.2265 102.416L49.8146 100.419L47.3953 106.976L73.3304 120.33L70.0278 129.28L27.8144 106.846L32.5379 94.0448L46.0901 98.3357L50.8135 85.5343Z" fill="#9F9F9F"/>
+                                    <rect x="98.917" y="106.001" width="25.1827" height="6.65611" transform="rotate(-62.8261 98.917 106.001)" fill="#9F9F9F"/>
+                                    <rect x="85.103" y="133.566" width="25.1827" height="6.65611" transform="rotate(-62.8261 85.103 133.566)" fill="#9F9F9F"/>
+                                    <rect x="127.108" y="74.5833" width="25.1827" height="6.65611" transform="rotate(-62.8261 127.108 74.5833)" fill="#9F9F9F"/>
+                                    <rect x="113.294" y="102.148" width="25.1827" height="6.65611" transform="rotate(-62.8261 113.294 102.148)" fill="#9F9F9F"/>
+                                    <rect x="140.37" y="44.6465" width="16.4184" height="6.65611" transform="rotate(131.031 140.37 44.6465)" fill="#9F9F9F"/>
+                                    <rect x="60.3652" y="173.909" width="8.65294" height="6.65611" transform="rotate(10.6138 60.3652 173.909)" fill="#9F9F9F"/>
+                                    <path d="M55.8305 161.704L64.5489 163.338L63.5978 168.413L54.8793 166.779L53.4227 172.815L48.1407 172.104L50.822 160.658L55.8305 161.704Z" fill="#9F9F9F"/>
+                                    <rect x="83.022" y="179.08" width="16.4184" height="6.65611" transform="rotate(-155.529 83.022 179.08)" fill="#9F9F9F"/>
+                                    <circle cx="18.5096" cy="122.159" r="5.21395" transform="rotate(87.3202 18.5096 122.159)" fill="#9F9F9F"/>
+                                    <path class="path" d="M1 139.702L15.2044 107.116L63.6667 16.8756L122.991 47.3733L146.387 1L174.796 16.8756L85.3911 207.382H70.7689C43.3627 198.024 32.0548 166.719 29.8267 152.236L1 139.702Z" fill="black" fill-opacity="0.3" stroke="#1C1917" stroke-width="0.835556"/>
+                                </svg>
+                                    
+                                <svg class="p-absolute map-12" width="8.563rem" height="8.5rem" viewBox="0 0 137 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="87.0576" y="112.98" width="25.1827" height="4.14387" transform="rotate(-62.8261 87.0576 112.98)" fill="#9F9F9F"/>
+                                    <rect x="68.8896" y="119.872" width="25.1827" height="4.14387" transform="rotate(-62.8261 68.8896 119.872)" fill="#9F9F9F"/>
+                                    <rect x="30.6748" y="84.1624" width="25.1827" height="4.14387" transform="rotate(-62.8261 30.6748 84.1624)" fill="#9F9F9F"/>
+                                    <path d="M50.2608 75.9634L54.3118 68.0722L58.9057 70.4305L54.8547 78.3217L60.2245 81.438L58.0373 86.2983L47.8307 80.466L50.2608 75.9634Z" fill="#9F9F9F"/>
+                                    <path d="M99.1261 56.5425L103.177 48.6513L107.771 51.0097L103.72 58.9008L109.09 62.0171L106.903 66.8774L96.6959 61.0451L99.1261 56.5425Z" fill="#9F9F9F"/>
+                                    <path d="M105.692 40.5562L108.298 35.478L111.255 36.9957L108.648 42.0738L112.103 44.0793L110.696 47.207L104.128 43.4537L105.692 40.5562Z" fill="#9F9F9F"/>
+                                    <rect x="49.4692" y="38.1333" width="8.65294" height="6.65611" transform="rotate(-62.8261 49.4692 38.1333)" fill="#9F9F9F"/>
+                                    <path d="M36.4786 39.0012L40.5295 31.1101L45.1234 33.4684L41.0725 41.3595L46.4422 44.4759L44.2551 49.3362L34.0484 43.5038L36.4786 39.0012Z" fill="#9F9F9F"/>
+                                    <rect x="60.8828" y="17.8899" width="16.4184" height="6.65611" transform="rotate(131.031 60.8828 17.8899)" fill="#9F9F9F"/>
+                                    <path d="M11.4185 84.7339L15.4695 76.8427L20.0634 79.2011L16.0125 87.0922L21.3822 90.2085L19.195 95.0688L8.98837 89.2365L11.4185 84.7339Z" fill="#9F9F9F"/>
+                                    <rect x="35.8237" y="63.6228" width="16.4184" height="6.65611" transform="rotate(131.031 35.8237 63.6228)" fill="#9F9F9F"/>
+                                    <rect x="78.2871" y="51.2893" width="8.65294" height="6.65611" transform="rotate(-62.8261 78.2871 51.2893)" fill="#9F9F9F"/>
+                                    <path d="M65.296 52.1572L69.3469 44.2661L73.9408 46.6244L69.8899 54.5155L75.2596 57.6319L73.0725 62.4922L62.8658 56.6598L65.296 52.1572Z" fill="#9F9F9F"/>
+                                    <rect x="89.7012" y="31.0459" width="16.4184" height="6.65611" transform="rotate(131.031 89.7012 31.0459)" fill="#9F9F9F"/>
+                                    <circle cx="47.4037" cy="103.547" r="5.21395" transform="rotate(87.3202 47.4037 103.547)" fill="#9F9F9F"/>
+                                    <path class="path" d="M1 91.24L45.7022 1L135.524 45.7022L89.5689 134.689L1 91.24Z" fill="black" fill-opacity="0.3" stroke="#1C1917" stroke-width="0.835556"/>
+                                </svg>                                    
+
+                                <svg class="p-absolute map-11" width="5.75rem" height="7.625rem" viewBox="0 0 92 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.4387 70.1616L9.69321 65.8387L12.2099 61.3296L19.9553 65.6525L23.2566 60.3944L28.0378 62.7493L21.854 72.7469L17.4387 70.1616Z" fill="#9F9F9F"/>
+                                    <rect x="7.13623" y="95.6208" width="25.1827" height="4.14387" transform="rotate(-62.8261 7.13623 95.6208)" fill="#9F9F9F"/>
+                                    <rect x="64.772" y="50.8445" width="8.65294" height="6.65611" transform="rotate(-62.8261 64.772 50.8445)" fill="#9F9F9F"/>
+                                    <path d="M51.7808 51.7124L55.8318 43.8213L60.4257 46.1796L56.3748 54.0707L61.7445 57.187L59.5573 62.0473L49.3507 56.215L51.7808 51.7124Z" fill="#9F9F9F"/>
+                                    <rect x="76.1855" y="30.6013" width="16.4184" height="6.65611" transform="rotate(131.031 76.1855 30.6013)" fill="#9F9F9F"/>
+                                    <rect x="30.9419" y="35.1826" width="8.65294" height="6.65611" transform="rotate(-62.8261 30.9419 35.1826)" fill="#9F9F9F"/>
+                                    <path d="M17.9508 36.0505L22.0017 28.1594L26.5956 30.5177L22.5447 38.4088L27.9144 41.5252L25.7273 46.3855L15.5206 40.5531L17.9508 36.0505Z" fill="#9F9F9F"/>
+                                    <rect x="42.3555" y="14.9392" width="16.4184" height="6.65611" transform="rotate(131.031 42.3555 14.9392)" fill="#9F9F9F"/>
+                                    <rect x="37.833" y="94.698" width="8.65294" height="6.65611" transform="rotate(-62.8261 37.833 94.698)" fill="#9F9F9F"/>
+                                    <path d="M24.8424 95.5659L28.8933 87.6748L33.4872 90.0331L29.4363 97.9242L34.806 101.041L32.6189 105.901L22.4122 100.068L24.8424 95.5659Z" fill="#9F9F9F"/>
+                                    <rect x="49.2471" y="74.4546" width="16.4184" height="6.65611" transform="rotate(131.031 49.2471 74.4546)" fill="#9F9F9F"/>
+                                    <circle cx="7.33749" cy="78.4315" r="5.21395" fill="#9F9F9F"/>
+                                    <path class="path" d="M0 61.5778L33.0044 1L91.0756 28.9911L45.12 120.484L0 99.1778V61.5778Z" fill="black" fill-opacity="0.3" stroke="#1C1917" stroke-width="0.835556"/>
+                                </svg>
+                                    
+                                <svg class="p-absolute map-10" width="11.438rem" height="8.125rem" viewBox="0 0 183 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M121.653 64.1L132.477 68.0938L126.066 80.982L120.654 78.9851L118.235 85.542L144.17 98.8953L140.868 107.846L98.6543 85.4118L103.378 72.6104L116.93 76.9014L121.653 64.1Z" fill="#9F9F9F"/>
+                                    <rect x="37.2324" y="33.0645" width="8.65294" height="6.65611" transform="rotate(10.6138 37.2324 33.0645)" fill="#9F9F9F"/>
+                                    <path d="M32.6977 20.8597L41.4161 22.4935L40.4649 27.569L31.7465 25.9352L30.2899 31.9705L25.0078 31.2593L27.6892 19.8137L32.6977 20.8597Z" fill="#9F9F9F"/>
+                                    <rect x="59.8896" y="38.2351" width="16.4184" height="6.65611" transform="rotate(-155.529 59.8896 38.2351)" fill="#9F9F9F"/>
+                                    <rect x="53.5215" y="61.8826" width="8.65294" height="6.65611" transform="rotate(10.6138 53.5215 61.8826)" fill="#9F9F9F"/>
+                                    <path d="M48.9862 49.6778L57.7046 51.3116L56.7535 56.3871L48.0351 54.7534L46.5785 60.7886L41.2964 60.0774L43.9778 48.6318L48.9862 49.6778Z" fill="#9F9F9F"/>
+                                    <rect x="76.1782" y="67.0532" width="16.4184" height="6.65611" transform="rotate(-155.529 76.1782 67.0532)" fill="#9F9F9F"/>
+                                    <rect x="91.7363" y="58.75" width="8.65294" height="6.65611" transform="rotate(10.6138 91.7363 58.75)" fill="#9F9F9F"/>
+                                    <path d="M87.2021 46.5452L95.9205 48.179L94.9693 53.2546L86.2509 51.6208L84.7943 57.656L79.5122 56.9449L82.1936 45.4992L87.2021 46.5452Z" fill="#9F9F9F"/>
+                                    <rect x="114.393" y="63.9207" width="16.4184" height="6.65611" transform="rotate(-155.529 114.393 63.9207)" fill="#9F9F9F"/>
+                                    <circle cx="147.609" cy="83.4285" r="5.21395" transform="rotate(169.513 147.609 83.4285)" fill="#9F9F9F"/>
+                                    <g filter="url(#filter0_f_1261_3459)">
+                                    <path d="M7 49.6133L28.7244 7L175.364 78.8578L153.222 122.307L7 49.6133Z" stroke="#E820E5" stroke-width="1.67111"/>
+                                    </g>
+                                    <path class="path" d="M7 49.6133L28.7244 7L175.364 78.8578L153.222 122.307L7 49.6133Z" fill="#E820E5" fill-opacity="0.2" stroke="#E820E5" stroke-width="1.67111"/>
+                                    <defs>
+                                    <filter id="filter0_f_1261_3459" x="0.0231814" y="0.0388064" width="182.32" height="129.233" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                    <feGaussianBlur stdDeviation="2.92444" result="effect1_foregroundBlur_1261_3459"/>
+                                    </filter>
+                                    </defs>
+                                </svg>
+                                    
+                                <svg class="p-absolute map-9" width="14.5rem" height="9.563rem" viewBox="0 0 232 153" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="21.5327" y="46.7932" width="8.65294" height="6.65611" transform="rotate(-150.833 21.5327 46.7932)" fill="#9F9F9F"/>
+                                    <rect x="39.146" y="52.8918" width="11.4334" height="6.65611" transform="rotate(-150.833 39.146 52.8918)" fill="#9F9F9F"/>
+                                    <path d="M54.5724 58.1519L46.827 53.8289L49.3437 49.3198L57.0891 53.6427L60.3903 48.3847L65.1716 50.7395L58.9878 60.7372L54.5724 58.1519Z" fill="#9F9F9F"/>
+                                    <path d="M27.4128 24.3108L19.6673 19.9879L22.184 15.4787L29.9294 19.8017L33.2307 14.5436L38.012 16.8985L31.8281 26.8961L27.4128 24.3108Z" fill="#9F9F9F"/>
+                                    <path d="M44.3268 34.9609L36.5814 30.638L39.0981 26.1289L46.8435 30.4518L50.1447 25.1937L54.926 27.5486L48.7422 37.5462L44.3268 34.9609Z" fill="#9F9F9F"/>
+                                    <rect x="183.126" y="119.309" width="25.1827" height="4.14387" transform="rotate(-62.8261 183.126 119.309)" fill="#9F9F9F"/>
+                                    <path d="M171.389 107.978L175.44 100.086L180.034 102.445L175.983 110.336L181.352 113.452L179.165 118.312L168.959 112.48L171.389 107.978Z" fill="#9F9F9F"/>
+                                    <rect x="157.44" y="121.188" width="25.1827" height="4.14387" transform="rotate(-62.8261 157.44 121.188)" fill="#9F9F9F"/>
+                                    <rect x="111.081" y="82.677" width="8.65294" height="6.65611" transform="rotate(-62.8261 111.081 82.677)" fill="#9F9F9F"/>
+                                    <path d="M98.0904 83.5447L102.141 75.6535L106.735 78.0118L102.684 85.903L108.054 89.0193L105.867 93.8796L95.6602 88.0473L98.0904 83.5447Z" fill="#9F9F9F"/>
+                                    <rect x="122.496" y="62.4336" width="16.4184" height="6.65611" transform="rotate(131.031 122.496 62.4336)" fill="#9F9F9F"/>
+                                    <rect x="87.9014" y="72.0269" width="8.65294" height="6.65611" transform="rotate(-62.8261 87.9014 72.0269)" fill="#9F9F9F"/>
+                                    <path d="M74.9112 72.8948L78.9621 65.0036L83.5561 67.3619L79.5051 75.2531L84.8749 78.3694L82.6877 83.2297L72.481 77.3974L74.9112 72.8948Z" fill="#9F9F9F"/>
+                                    <rect x="99.3159" y="51.7837" width="16.4184" height="6.65611" transform="rotate(131.031 99.3159 51.7837)" fill="#9F9F9F"/>
+                                    <rect x="202.547" y="128.41" width="8.65294" height="6.65611" transform="rotate(-62.8261 202.547 128.41)" fill="#9F9F9F"/>
+                                    <path d="M189.556 129.278L193.607 121.386L198.201 123.745L194.15 131.636L199.52 134.752L197.333 139.613L187.126 133.78L189.556 129.278Z" fill="#9F9F9F"/>
+                                    <rect x="213.961" y="108.167" width="16.4184" height="6.65611" transform="rotate(131.031 213.961 108.167)" fill="#9F9F9F"/>
+                                    <rect x="156.509" y="88.3271" width="8.65294" height="6.65611" transform="rotate(10.6138 156.509 88.3271)" fill="#9F9F9F"/>
+                                    <path d="M151.975 76.1222L160.693 77.7559L159.742 82.8315L151.023 81.1977L149.567 87.2329L144.285 86.5218L146.966 75.0761L151.975 76.1222Z" fill="#9F9F9F"/>
+                                    <rect x="179.167" y="93.4978" width="16.4184" height="6.65611" transform="rotate(-155.529 179.167 93.4978)" fill="#9F9F9F"/>
+                                    <circle cx="142.2" cy="104.323" r="5.21395" fill="#9F9F9F"/>
+                                    <circle cx="74.5294" cy="52.4056" r="5.21395" fill="#9F9F9F"/>
+                                    <circle cx="56.7799" cy="41.9776" r="5.21395" fill="#9F9F9F"/>
+                                    <path class="path" d="M230.778 105.027L24.8133 1L1 45.7022L209.471 152.236L230.778 105.027Z" fill="black" fill-opacity="0.3" stroke="#1C1917" stroke-width="0.835556"/>
+                                </svg>
+                                    
+                                <svg class="p-absolute map-8" width="10.438rem" height="10.5rem" viewBox="0 0 167 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="19.396" y="107.751" width="11.4334" height="6.65611" transform="rotate(-62.8261 19.396 107.751)" fill="#9F9F9F"/>
+                                    <rect x="83.1382" y="44.4998" width="25.1827" height="6.65611" transform="rotate(27.6148 83.1382 44.4998)" fill="#9F9F9F"/>
+                                    <rect x="56.9375" y="29.9199" width="25.1827" height="6.65611" transform="rotate(27.6148 56.9375 29.9199)" fill="#9F9F9F"/>
+                                    <path d="M90.8006 32.8517L98.6603 36.9633L96.2667 41.5389L88.407 37.4274L85.2494 42.7729L80.4061 40.5485L86.3168 30.387L90.8006 32.8517Z" fill="#9F9F9F"/>
+                                    <rect x="63.0903" y="93.365" width="25.1827" height="6.65611" transform="rotate(27.6148 63.0903 93.365)" fill="#9F9F9F"/>
+                                    <rect x="36.8901" y="78.7852" width="25.1827" height="6.65611" transform="rotate(27.6148 36.8901 78.7852)" fill="#9F9F9F"/>
+                                    <path d="M70.7532 81.717L78.613 85.8285L76.2194 90.4041L68.3597 86.2926L65.2021 91.6382L60.3587 89.4137L66.2695 79.2522L70.7532 81.717Z" fill="#9F9F9F"/>
+                                    <rect x="127.743" y="44.6375" width="25.1827" height="6.65611" transform="rotate(-153.412 127.743 44.6375)" fill="#9F9F9F"/>
+                                    <rect x="154.201" y="58.7454" width="25.1827" height="6.65611" transform="rotate(-153.412 154.201 58.7454)" fill="#9F9F9F"/>
+                                    <path d="M120.291 56.421L112.359 52.451L114.67 47.8332L122.602 51.8032L125.663 46.4019L130.546 48.5393L124.818 58.805L120.291 56.421Z" fill="#9F9F9F"/>
+                                    <rect x="40.8335" y="116.264" width="16.4184" height="6.65611" transform="rotate(131.031 40.8335 116.264)" fill="#9F9F9F"/>
+                                    <rect x="58.2373" y="125.292" width="11.4334" height="6.65611" transform="rotate(-62.8261 58.2373 125.292)" fill="#9F9F9F"/>
+                                    <rect x="79.6753" y="133.806" width="16.4184" height="6.65611" transform="rotate(131.031 79.6753 133.806)" fill="#9F9F9F"/>
+                                    <rect x="38.8164" y="132.81" width="11.4334" height="6.65611" transform="rotate(-62.8261 38.8164 132.81)" fill="#9F9F9F"/>
+                                    <rect x="60.2544" y="141.323" width="16.4184" height="6.65611" transform="rotate(131.031 60.2544 141.323)" fill="#9F9F9F"/>
+                                    <rect x="43.8286" y="62.6445" width="11.4334" height="6.65611" transform="rotate(-62.8261 43.8286 62.6445)" fill="#9F9F9F"/>
+                                    <rect x="65.2661" y="71.1577" width="16.4184" height="6.65611" transform="rotate(131.031 65.2661 71.1577)" fill="#9F9F9F"/>
+                                    <path class="path" d="M1 132.182L67.8444 1L165.604 48.6267L148.058 92.4933L111.293 75.7822L69.9333 163.933L63.6667 166.858L1 132.182Z" fill="black" fill-opacity="0.3" stroke="#1C1917" stroke-width="0.835556"/>
+                                </svg>
+                                    
+                                <svg class="p-absolute map-7" width="7.938rem" height="10.438rem" viewBox="0 0 127 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="36.9849" y="118.121" width="8.65294" height="6.65611" transform="rotate(10.6138 36.9849 118.121)" fill="#9F9F9F"/>
+                                    <path d="M32.4496 105.917L41.168 107.55L40.2169 112.626L31.4985 110.992L30.0419 117.027L24.7598 116.316L27.4411 104.871L32.4496 105.917Z" fill="#9F9F9F"/>
+                                    <rect x="59.6416" y="123.292" width="16.4184" height="6.65611" transform="rotate(-155.529 59.6416 123.292)" fill="#9F9F9F"/>
+                                    <rect x="57.647" y="130.724" width="8.65294" height="6.65611" transform="rotate(103.182 57.647 130.724)" fill="#9F9F9F"/>
+                                    <rect x="51.4663" y="153.126" width="16.4184" height="6.65611" transform="rotate(-62.9607 51.4663 153.126)" fill="#9F9F9F"/>
+                                    <rect x="40.145" y="135.988" width="8.65294" height="6.65611" transform="rotate(-165.067 40.145 135.988)" fill="#9F9F9F"/>
+                                    <rect x="17.9419" y="129.125" width="16.4184" height="6.65611" transform="rotate(28.79 17.9419 129.125)" fill="#9F9F9F"/>
+                                    <path d="M69.1525 36.9173L66.6055 45.4139L61.6591 43.9311L64.2061 35.4345L58.3589 33.3475L59.6249 28.1703L70.7226 32.0476L69.1525 36.9173Z" fill="#9F9F9F"/>
+                                    <rect x="80.4624" y="21.3887" width="25.1827" height="4.14387" transform="rotate(106.687 80.4624 21.3887)" fill="#9F9F9F"/>
+                                    <path d="M102.857 32.8033L105.964 24.4949L110.801 26.3033L107.694 34.6117L113.39 37.0829L111.782 42.1644L100.967 37.5578L102.857 32.8033Z" fill="#9F9F9F"/>
+                                    <rect x="90.54" y="47.5457" width="25.1827" height="4.14387" transform="rotate(-69.5003 90.54 47.5457)" fill="#9F9F9F"/>
+                                    <path d="M55.4973 90.2451L51.3049 98.062L46.7542 95.6213L50.9465 87.8044L45.6338 84.5919L47.9081 79.7717L58.0081 85.787L55.4973 90.2451Z" fill="#9F9F9F"/>
+                                    <rect x="69.6802" y="77.2874" width="25.1827" height="4.14387" transform="rotate(118.206 69.6802 77.2874)" fill="#9F9F9F"/>
+                                    <circle cx="75.3158" cy="12.4923" r="5.21395" transform="rotate(169.513 75.3158 12.4923)" fill="#9F9F9F"/>
+                                    <path d="M82.3419 77.0034L86.3928 69.1123L90.9867 71.4706L86.9358 79.3617L92.3055 82.4781L90.1184 87.3384L79.9117 81.506L82.3419 77.0034Z" fill="#9F9F9F"/>
+                                    <rect x="68.3945" y="90.2144" width="25.1827" height="4.14387" transform="rotate(-62.8261 68.3945 90.2144)" fill="#9F9F9F"/>
+                                    <circle cx="53.1534" cy="73.3492" r="5.21395" fill="#9F9F9F"/>
+                                    <path class="path" d="M1 137.196L69.9333 1L125.916 29.4089L59.4889 165.604L1 137.196Z" fill="black" fill-opacity="0.3" stroke="#1C1917" stroke-width="0.835556"/>
+                                </svg>
+                                    
+                                <svg class="p-absolute map-6" width="6.625rem" height="8.875rem" viewBox="0 0 106 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="49.9658" y="60.4807" width="25.1827" height="4.14387" transform="rotate(-62.8261 49.9658 60.4807)" fill="#9F9F9F"/>
+                                    <rect x="55.1152" y="32.9561" width="16.4184" height="6.65611" transform="rotate(131.031 55.1152 32.9561)" fill="#9F9F9F"/>
+                                    <rect x="24.3442" y="46.7544" width="25.1827" height="4.14387" transform="rotate(67.2971 24.3442 46.7544)" fill="#9F9F9F"/>
+                                    <rect x="42.0728" y="68.4294" width="16.4184" height="6.65611" transform="rotate(-98.8459 42.0728 68.4294)" fill="#9F9F9F"/>
+                                    <path d="M35.1611 38.2474L29.8543 40.2577L25.6634 23.2543L13.8656 28.1772L12.1477 22.9345L23.6984 18.0672L29.0052 16.0569L35.1611 38.2474Z" fill="#9F9F9F"/>
+                                    <circle cx="39.1263" cy="81.0218" r="5.21395" transform="rotate(169.513 39.1263 81.0218)" fill="#9F9F9F"/>
+                                    <rect x="81.8081" y="59.9895" width="25.1827" height="4.14387" transform="rotate(118.206 81.8081 59.9895)" fill="#9F9F9F"/>
+                                    <rect x="80.5225" y="72.9163" width="25.1827" height="4.14387" transform="rotate(-62.8261 80.5225 72.9163)" fill="#9F9F9F"/>
+                                    <rect x="65.5195" y="94.4458" width="25.1827" height="4.14387" transform="rotate(118.206 65.5195 94.4458)" fill="#9F9F9F"/>
+                                    <rect x="64.2339" y="107.373" width="25.1827" height="4.14387" transform="rotate(-62.8261 64.2339 107.373)" fill="#9F9F9F"/>
+                                    <path class="path" d="M105.027 51.9689L1 1L39.8533 117.56L34.0044 128.422L61.5778 140.956L105.027 51.9689Z" fill="black" fill-opacity="0.3" stroke="#1C1917" stroke-width="0.835556"/>
+                                </svg>                                    
+
+                                <svg class="p-absolute map-5" width="8.625rem" height="12.563rem" viewBox="0 0 138 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="33.1997" y="126.717" width="8.65294" height="6.65611" transform="rotate(-62.8261 33.1997 126.717)" fill="#9F9F9F"/>
+                                    <rect x="48.8618" y="144.885" width="8.65294" height="6.65611" transform="rotate(-62.8261 48.8618 144.885)" fill="#9F9F9F"/>
+                                    <rect x="55.1265" y="130.772" width="25.1827" height="6.65611" transform="rotate(-62.8261 55.1265 130.772)" fill="#9F9F9F"/>
+                                    <path d="M20.2081 127.585L24.259 119.694L28.8529 122.052L24.802 129.943L30.1717 133.06L27.9846 137.92L17.7779 132.088L20.2081 127.585Z" fill="#9F9F9F"/>
+                                    <rect x="80.812" y="113.324" width="25.1827" height="4.14387" transform="rotate(-62.8261 80.812 113.324)" fill="#9F9F9F"/>
+                                    <rect x="85.9614" y="85.8" width="16.4184" height="6.65611" transform="rotate(131.031 85.9614 85.8)" fill="#9F9F9F"/>
+                                    <rect x="44.6138" y="106.474" width="16.4184" height="6.65611" transform="rotate(131.031 44.6138 106.474)" fill="#9F9F9F"/>
+                                    <circle cx="97.5379" cy="132.613" r="5.21395" transform="rotate(169.513 97.5379 132.613)" fill="#9F9F9F"/>
+                                    <circle cx="106.309" cy="148.275" r="5.21395" transform="rotate(169.513 106.309 148.275)" fill="#9F9F9F"/>
+                                    <rect x="106.378" y="163.262" width="25.1827" height="4.14387" transform="rotate(-144.709 106.378 163.262)" fill="#9F9F9F"/>
+                                    <rect x="93.7085" y="160.392" width="25.1827" height="4.14387" transform="rotate(34.2592 93.7085 160.392)" fill="#9F9F9F"/>
+                                    <rect x="63.6973" y="57.1016" width="25.1827" height="4.14387" transform="rotate(-64.1189 63.6973 57.1016)" fill="#9F9F9F"/>
+                                    <rect x="64.4575" y="44.1331" width="25.1827" height="4.14387" transform="rotate(114.849 64.4575 44.1331)" fill="#9F9F9F"/>
+                                    <g filter="url(#filter0_f_1261_3461)">
+                                    <path d="M131.08 181.378L71.3378 8L7 135.004L125.649 193.076L131.08 181.378Z" fill="#00F69D" fill-opacity="0.2"/>
+                                    <path d="M131.08 181.378L71.3378 8L7 135.004L125.649 193.076L131.08 181.378Z" stroke="#00F69D" stroke-width="1.67111"/>
+                                    </g>
+                                    <path class="path" d="M131.08 181.378L71.3378 8L7 135.004L125.649 193.076L131.08 181.378Z" fill="#00F69D" fill-opacity="0.2" stroke="#00F69D" stroke-width="1.67111"/>
+                                    <defs>
+                                    <filter id="filter0_f_1261_3461" x="0.0226932" y="0.0124393" width="137.806" height="200.037" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                    <feGaussianBlur stdDeviation="2.92444" result="effect1_foregroundBlur_1261_3461"/>
+                                    </filter>
+                                    </defs>
+                                </svg>
+                                    
+                                <svg class="p-absolute map-4" width="9.688rem" height="9.375rem" viewBox="0 0 155 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M108.92 31.4215L119.744 35.4153L113.333 48.3036L107.922 46.3067L105.502 52.8635L131.437 66.2168L128.135 75.1674L85.9214 52.7334L90.6448 39.932L104.197 44.2229L108.92 31.4215Z" fill="#9F9F9F"/>
+                                    <circle cx="23.9896" cy="132.818" r="5.21395" transform="rotate(169.513 23.9896 132.818)" fill="#9F9F9F"/>
+                                    <path d="M71.3292 23.1687L75.3801 15.2776L79.974 17.6359L75.9231 25.527L81.2928 28.6433L79.1057 33.5036L68.899 27.6713L71.3292 23.1687Z" fill="#9F9F9F"/>
+                                    <rect x="57.3823" y="36.3796" width="25.1827" height="4.14387" transform="rotate(-62.8261 57.3823 36.3796)" fill="#9F9F9F"/>
+                                    <path d="M60.6396 53.4881L56.1171 61.1188L51.6748 58.4859L56.1973 50.8553L51.0266 47.4187L53.5048 42.7002L63.3386 49.1414L60.6396 53.4881Z" fill="#9F9F9F"/>
+                                    <rect x="75.3633" y="41.1484" width="25.1827" height="4.14387" transform="rotate(120.654 75.3633 41.1484)" fill="#9F9F9F"/>
+                                    <path d="M47.2403 70.3945L52.2809 63.0957L56.53 66.0302L51.4894 73.3289L56.4093 77.1157L53.61 81.6511L44.2464 74.5437L47.2403 70.3945Z" fill="#9F9F9F"/>
+                                    <rect x="31.6963" y="81.6838" width="25.1827" height="4.14387" transform="rotate(-55.3705 31.6963 81.6838)" fill="#9F9F9F"/>
+                                    <path d="M24.3438 115.261L28.3948 107.37L32.9887 109.728L28.9377 117.62L34.3075 120.736L32.1203 125.596L21.9137 119.764L24.3438 115.261Z" fill="#9F9F9F"/>
+                                    <rect x="10.396" y="128.472" width="25.1827" height="4.14387" transform="rotate(-62.8261 10.396 128.472)" fill="#9F9F9F"/>
+                                    <path class="path" d="M1 133.853L66.5911 1L153.907 42.36L135.107 85.8089L71.6044 57.8178L27.32 149.311L1 133.853Z" fill="black" fill-opacity="0.3" stroke="#1C1917" stroke-width="0.835556"/>
+                                </svg>
+                                    
+                                <svg class="p-absolute map-3" width="10rem" height="10.625rem" viewBox="0 0 160 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="104.011" y="40.8147" width="25.1827" height="6.65611" transform="rotate(-62.8261 104.011 40.8147)" fill="#9F9F9F"/>
+                                    <rect x="88.9756" y="35.5066" width="8.65294" height="6.65611" transform="rotate(-62.8261 88.9756 35.5066)" fill="#9F9F9F"/>
+                                    <rect x="90.1973" y="68.3799" width="25.1827" height="6.65611" transform="rotate(-62.8261 90.1973 68.3799)" fill="#9F9F9F"/>
+                                    <rect x="83.3516" y="49.2568" width="11.4334" height="6.65611" transform="rotate(-62.8261 83.3516 49.2568)" fill="#9F9F9F"/>
+                                    <path d="M78.4903 60.8071L82.5412 52.916L87.1352 55.2743L83.0842 63.1654L88.454 66.2818L86.2668 71.1421L76.0601 65.3097L78.4903 60.8071Z" fill="#9F9F9F"/>
+                                    <path d="M60.3247 49.0126L71.1487 53.0064L64.7378 65.8946L59.3258 63.8977L56.9065 70.4546L82.8416 83.8079L79.539 92.7585L37.3257 70.3244L42.0491 57.523L55.6013 61.814L60.3247 49.0126Z" fill="#9F9F9F"/>
+                                    <path d="M31.7907 113.729L26.632 111.365L35.7885 96.4369L23.9969 91.4991L26.5212 86.5935L38.0997 91.3944L43.2584 93.7589L31.7907 113.729Z" fill="#9F9F9F"/>
+                                    <path d="M24.8539 98.5485L29.514 101.787L17.8649 114.863L28.599 121.805L25.248 126.188L14.6995 119.418L10.0394 116.179L24.8539 98.5485Z" fill="#9F9F9F"/>
+                                    <rect x="73.8208" y="137.206" width="25.1827" height="4.14387" transform="rotate(-144.709 73.8208 137.206)" fill="#9F9F9F"/>
+                                    <rect x="61.1514" y="134.335" width="25.1827" height="4.14387" transform="rotate(34.2592 61.1514 134.335)" fill="#9F9F9F"/>
+                                    <rect x="102.558" y="93.0659" width="25.1827" height="4.14387" transform="rotate(-64.1189 102.558 93.0659)" fill="#9F9F9F"/>
+                                    <rect x="103.318" y="80.0977" width="25.1827" height="4.14387" transform="rotate(114.849 103.318 80.0977)" fill="#9F9F9F"/>
+                                    <rect x="121.352" y="58.6099" width="25.1827" height="4.14387" transform="rotate(-64.1189 121.352 58.6099)" fill="#9F9F9F"/>
+                                    <rect x="122.112" y="45.6414" width="25.1827" height="4.14387" transform="rotate(114.849 122.112 45.6414)" fill="#9F9F9F"/>
+                                    <path class="path" d="M74.9467 46.12L48.2089 33.5867L1 123.409L89.9867 169.364L158.92 31.4978L98.76 1L74.9467 46.12Z" fill="black" fill-opacity="0.3" stroke="#1C1917" stroke-width="0.835556"/>
+                                </svg>
+                                    
+                                <svg class="p-absolute map-2" width="6.313rem" height="8.125rem" viewBox="0 0 101 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="33.7402" y="76.3047" width="25.1827" height="4.14387" transform="rotate(-144.709 33.7402 76.3047)" fill="#9F9F9F"/>
+                                    <rect x="21.0708" y="73.4346" width="25.1827" height="4.14387" transform="rotate(34.2592 21.0708 73.4346)" fill="#9F9F9F"/>
+                                    <rect x="34.9131" y="37.1772" width="25.1827" height="4.14387" transform="rotate(-64.1189 34.9131 37.1772)" fill="#9F9F9F"/>
+                                    <rect x="35.6724" y="24.2087" width="25.1827" height="4.14387" transform="rotate(114.849 35.6724 24.2087)" fill="#9F9F9F"/>
+                                    <g filter="url(#filter0_f_1261_3466)">
+                                    <path d="M47.9422 122.396L23.7111 110.28L7 60.1467L34.9911 5L93.48 33.4089L47.9422 122.396Z" stroke="#FFFF26" stroke-width="1.67111"/>
+                                    </g>
+                                    <path class="path" d="M47.9422 122.396L23.7111 110.28L7 60.1467L34.9911 5L93.48 33.4089L47.9422 122.396Z" fill="#FFFF26" fill-opacity="0.2" stroke="#FFFF26" stroke-width="1.67111"/>
+                                    <defs>
+                                    <filter id="filter0_f_1261_3466" x="0.248279" y="-1.95924" width="100.213" height="131.321" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                    <feGaussianBlur stdDeviation="2.92444" result="effect1_foregroundBlur_1261_3466"/>
+                                    </filter>
+                                    </defs>
+                                </svg>
+                                    
+                                <svg class="p-absolute map-1 empty-block" width="11.875rem" height="15rem" viewBox="0 0 190 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="71.1548" y="65.4453" width="8.65294" height="6.65611" transform="rotate(-62.8261 71.1548 65.4453)" fill="#9F9F9F"/>
+                                    <rect x="85.5635" y="71.71" width="8.65294" height="6.65611" transform="rotate(-62.8261 85.5635 71.71)" fill="#9F9F9F"/>
+                                    <rect x="12.2656" y="183.85" width="8.65294" height="6.65611" transform="rotate(-62.8261 12.2656 183.85)" fill="#9F9F9F"/>
+                                    <rect x="72.3765" y="98.3181" width="25.1827" height="6.65611" transform="rotate(-62.8261 72.3765 98.3181)" fill="#9F9F9F"/>
+                                    <rect x="44.2158" y="123.377" width="25.1827" height="4.14387" transform="rotate(-62.8261 44.2158 123.377)" fill="#9F9F9F"/>
+                                    <rect x="57.999" y="124.63" width="25.1827" height="6.65611" transform="rotate(-62.8261 57.999 124.63)" fill="#9F9F9F"/>
+                                    <rect x="95.5874" y="98.9448" width="25.1827" height="6.65611" transform="rotate(-62.8261 95.5874 98.9448)" fill="#9F9F9F"/>
+                                    <rect x="26.6748" y="157.833" width="25.1827" height="6.65611" transform="rotate(-62.8261 26.6748 157.833)" fill="#9F9F9F"/>
+                                    <rect x="65.5303" y="79.1951" width="11.4334" height="6.65611" transform="rotate(-62.8261 65.5303 79.1951)" fill="#9F9F9F"/>
+                                    <rect x="50.481" y="141.843" width="11.4334" height="6.65611" transform="rotate(-62.8261 50.481 141.843)" fill="#9F9F9F"/>
+                                    <rect x="87.4429" y="144.677" width="25.1827" height="6.65611" transform="rotate(-62.8261 87.4429 144.677)" fill="#9F9F9F"/>
+                                    <rect x="81.1787" y="126.51" width="25.1827" height="6.65611" transform="rotate(-62.8261 81.1787 126.51)" fill="#9F9F9F"/>
+                                    <path d="M60.67 90.7456L64.7209 82.8545L69.3149 85.2128L65.2639 93.1039L70.6336 96.2202L68.4465 101.081L58.2398 95.2482L60.67 90.7456Z" fill="#9F9F9F"/>
+                                    <rect x="91.2021" y="192.916" width="25.1827" height="4.14387" transform="rotate(-62.8261 91.2021 192.916)" fill="#9F9F9F"/>
+                                    <rect x="121.272" y="146.557" width="25.1827" height="4.14387" transform="rotate(-62.8261 121.272 146.557)" fill="#9F9F9F"/>
+                                    <rect x="103.731" y="118.365" width="25.1827" height="4.14387" transform="rotate(-62.8261 103.731 118.365)" fill="#9F9F9F"/>
+                                    <path d="M107.655 160.285L111.706 152.394L116.3 154.752L112.249 162.643L117.619 165.759L115.432 170.62L105.225 164.787L107.655 160.285Z" fill="#9F9F9F"/>
+                                    <rect x="72.4082" y="139.369" width="8.65294" height="6.65611" transform="rotate(-62.8261 72.4082 139.369)" fill="#9F9F9F"/>
+                                    <rect x="73.6299" y="172.242" width="25.1827" height="6.65611" transform="rotate(-62.8261 73.6299 172.242)" fill="#9F9F9F"/>
+                                    <rect x="66.7837" y="153.12" width="11.4334" height="6.65611" transform="rotate(-62.8261 66.7837 153.12)" fill="#9F9F9F"/>
+                                    <path d="M153.254 75.0835L157.305 67.1924L161.899 69.5507L157.848 77.4418L163.218 80.5581L161.031 85.4184L150.824 79.5861L153.254 75.0835Z" fill="#9F9F9F"/>
+                                    <rect x="146.958" y="67.9187" width="11.4334" height="6.65611" transform="rotate(-62.8261 146.958 67.9187)" fill="#9F9F9F"/>
+                                    <path d="M164.532 56.2893L168.583 48.3982L173.177 50.7565L169.126 58.6476L174.495 61.7639L172.308 66.6242L162.102 60.7919L164.532 56.2893Z" fill="#9F9F9F"/>
+                                    <rect x="158.235" y="49.1243" width="11.4334" height="6.65611" transform="rotate(-62.8261 158.235 49.1243)" fill="#9F9F9F"/>
+                                    <path d="M61.9229 164.67L65.9739 156.779L70.5678 159.137L66.5168 167.028L71.8866 170.145L69.6994 175.005L59.4928 169.173L61.9229 164.67Z" fill="#9F9F9F"/>
+                                    <path d="M68.2134 178.808L79.0374 182.802L72.6264 195.691L67.2145 193.694L64.7952 200.25L90.7303 213.604L87.4277 222.554L45.2143 200.12L49.9378 187.319L63.49 191.61L68.2134 178.808Z" fill="#9F9F9F"/>
+                                    <path d="M147.332 113.767L142.025 115.778L137.834 98.7743L126.036 103.697L124.318 98.4545L135.869 93.5872L141.176 91.5769L147.332 113.767Z" fill="#9F9F9F"/>
+                                    <path d="M135.002 39.3745L139.052 31.4834L143.646 33.8417L139.595 41.7328L144.965 44.8492L142.778 49.7094L132.571 43.8771L135.002 39.3745Z" fill="#9F9F9F"/>
+                                    <rect x="121.054" y="52.5852" width="25.1827" height="4.14387" transform="rotate(-62.8261 121.054 52.5852)" fill="#9F9F9F"/>
+                                    <circle cx="105.813" cy="35.7203" r="5.21395" fill="#9F9F9F"/>
+                                    <g filter="url(#filter0_f_1261_3464)">
+                                    <path d="M152.804 33.32L95.1511 7L7 185.809L95.1511 232.6L182.884 52.5378L165.756 9.50667L152.804 33.32Z" stroke="#00F2F6" stroke-width="1.67111"/>
+                                    </g>
+                                    <path class="path" d="M152.804 33.32L95.1511 7L7 185.809L95.1511 232.6L182.884 52.5378L165.756 9.50667L152.804 33.32Z" fill="#00F2F6" fill-opacity="0.2" stroke="#00F2F6" stroke-width="1.67111"/>
+                                    <defs>
+                                    <filter id="filter0_f_1261_3464" x="0.043201" y="0.0541873" width="189.603" height="239.538" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                    <feGaussianBlur stdDeviation="2.92444" result="effect1_foregroundBlur_1261_3464"/>
+                                    </filter>
+                                    </defs>
+                                </svg>
+                                          
+                                <svg class="vector" width="42.25rem" height="46.313rem" viewBox="0 0 676 741" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.3463 458.968L-1.72852 440.225V437.758L31.3193 456.009L51.0494 435.785L54.5021 424.44C3.204 392.478 -3.04385 350.946 0.244489 334.176L14.5488 340.588L34.7721 296.195L8.62976 284.85L0.244489 300.141V291.756L72.2592 141.808L49.5696 130.956L0.244489 229.606V223.194L47.1034 128.983L26.3868 119.118L0.244489 169.43V163.017L23.9205 117.145L0.244489 105.307V101.854L74.7254 138.848L142.301 0.73774H145.754L175.842 15.042L181.761 0.73774H186.2L178.308 16.0285L205.93 29.8396L214.809 10.1095L211.356 0.73774H214.809L217.275 6.65675L219.741 0.73774H222.701L218.261 10.1095L228.62 41.6776L236.019 45.1303L258.215 -0.742013L288.303 14.0555L295.209 0.73774H298.661L291.756 16.0285L318.885 28.8531L333.189 0.73774H337.135L321.844 30.8261L349.466 44.6371L373.142 -1.72852L530.983 77.6849L507.8 123.557C523.584 131.12 559.098 148.516 574.882 157.592C592.524 167.736 588.476 175.119 580.721 189.263L580.719 189.266C579.802 190.939 578.833 192.707 577.842 194.585C570.46 208.571 569.505 209.094 560.997 213.746C558.703 215 555.859 216.555 552.193 218.755C538.382 227.041 537.888 243.911 539.368 251.309C586.227 271.533 620.261 310.006 628.153 320.858C634.467 329.539 662.352 354.399 675.505 365.744L671.066 372.156L672.546 376.595C655.94 363.277 617.696 333.485 597.572 320.858C577.447 308.23 550.384 280.411 539.368 268.08C534.238 264.923 526.379 269.724 523.091 272.519L511.746 302.114C511.887 306.497 512.018 310.647 512.143 314.58L512.179 315.707L512.182 315.807L512.185 315.902C513.822 367.568 514.253 381.158 518.114 393.691C519.492 398.165 521.308 402.503 523.771 408.391C526.558 415.054 530.176 423.701 534.929 436.772C552.291 484.518 555.645 512.239 555.152 520.131C550.367 529.701 549.89 540.681 549.426 551.343C548.695 568.161 547.998 584.187 530.49 592.639C507.603 603.688 492.345 588.035 487.577 578.828C480.671 563.537 464.788 529.404 456.502 515.199C448.215 500.993 432.333 501.716 425.427 503.854L402.244 516.678L387.94 531.476L383.994 537.888L358.838 573.896L347.493 588.693L341.081 601.518L337.551 626.673C340.625 634.283 342.591 642.866 343.923 648.683L343.924 648.684C344.352 650.553 344.714 652.136 345.027 653.309C346.605 659.228 367.059 678.465 377.088 687.343L442.198 741.108H425.92L351.439 680.931L337.628 661.201L325.297 625.687L320.858 618.288L271.533 566.497C232.467 581.492 201.655 570.443 191.133 563.044L146.247 534.435L31.3193 460.448L27.3733 464.394L0.244489 450.583V449.103L27.3733 462.421L29.3463 458.968ZM10.6028 280.904L34.7721 291.756L56.9684 251.309L31.8126 238.485L10.6028 280.904ZM40.6911 293.729L60.4211 254.269L90.0162 265.614L68.8064 308.526L40.6911 293.729ZM37.7316 299.155L17.5083 341.081L45.1303 355.385L65.8469 312.472L37.7316 299.155ZM79.1647 363.277L68.8064 366.237L48.0899 356.865L70.2862 313.952L97.415 328.257L79.1647 363.277ZM93.469 267.587L71.7659 310.006L97.415 324.31L119.118 280.904L93.469 267.587ZM101.361 324.31L121.584 282.877L149.206 296.195L128.49 338.615L101.361 324.31ZM99.8812 328.257L84.0972 360.811L132.436 345.027L99.8812 328.257ZM78.1782 372.156L81.1377 366.237L121.584 353.412L103.334 384.98L78.1782 372.156ZM2.71074 337.628C1.06657 352.097 9.41896 388.532 55.9819 418.521L64.3671 407.67L73.2457 403.231C81.6309 402.08 99.388 397.608 103.334 388.926L2.71074 337.628ZM127.503 350.946L138.848 347.493L157.098 357.852L134.902 399.778L108.266 384.98L127.503 350.946ZM269.066 563.044C252.789 569.128 212.441 575.474 181.268 552.193C150.094 528.911 103.827 500.401 84.5904 489.056L76.6984 472.286V452.556C74.561 442.855 67.8199 423.158 57.9549 421.974L66.8334 410.629L76.6984 405.697C82.1242 405.204 93.8636 403.329 97.415 399.778C100.966 396.227 104.814 391.721 106.293 389.913L133.916 403.231L118.625 434.306L152.166 450.583C151.837 453.214 152.363 460.053 157.098 466.367C161.834 472.68 180.446 493.989 189.16 503.854C185.871 507.636 182.254 516.678 194.092 522.597H200.998C202.806 522.269 207.015 520.526 209.383 516.185L251.803 524.077C249.83 531.312 250.52 549.233 269.066 563.044ZM122.571 432.333L135.889 405.697L164.497 419.015L152.166 447.13L122.571 432.333ZM53.5156 435.785L34.2788 457.982L76.6984 486.097L70.7794 472.286C70.4506 458.31 67.0307 429.768 55.9819 427.4L53.5156 435.785ZM167.95 420.988L222.208 448.117C219.84 454.036 220.235 461.105 220.728 463.901L216.782 470.806L201.491 499.908C198.334 498.33 193.27 499.908 191.133 500.894L170.416 476.725C152.659 460.152 154.797 445.815 158.085 440.718L167.95 420.988ZM182.747 312.472L138.848 401.258L195.572 430.853L239.965 341.081L182.747 312.472ZM225.66 445.157L290.769 310.006L265.614 296.195L199.025 432.333L225.66 445.157ZM222.208 470.806L204.45 500.894C206.423 502.703 210.172 507.701 209.383 513.226L251.803 521.611C250.816 515.692 246.574 502.078 237.498 494.975C228.422 487.873 223.523 475.903 222.208 470.806ZM264.134 519.145C270.447 519.145 283.535 494.153 289.29 481.658L356.865 343.054L301.621 314.445L257.722 405.697C244.075 425.098 221.912 467.452 242.431 481.658C262.95 495.863 265.449 512.568 264.134 519.145ZM264.134 523.091C268.08 535.093 277.057 559.591 281.398 561.564C286.823 564.031 319.378 567.977 313.952 540.354C309.612 518.257 292.085 504.84 283.864 500.894C278.931 508.293 268.08 523.091 264.134 523.091ZM315.925 529.503C312.374 520.822 294.058 504.512 285.344 497.442L339.601 386.46L360.318 345.027L424.934 377.088C425.328 385.375 429.373 385.474 431.346 384.487C439.238 424.736 426.085 448.281 418.521 455.022C393.201 448.117 345.027 443.776 354.892 481.658C364.757 519.539 333.025 529.339 315.925 529.503ZM316.912 533.942C320.693 545.123 333.288 565.609 353.412 558.112C360.976 549.726 377.384 532.265 382.514 529.503C387.644 526.741 396.49 516.843 400.271 512.239C398.956 500.566 400.271 473.864 416.055 460.448C412.274 456.009 398.989 449.103 376.102 456.995C369.196 460.119 356.076 471.891 358.838 493.989C362.291 521.611 340.588 531.476 316.912 533.942ZM285.344 565.51L303.594 567.483L315.925 559.591L318.391 544.3C322.009 550.219 332.4 562.255 345.027 563.044L320.858 604.93C310.059 593.532 293.907 575.315 285.344 565.51ZM323.324 607.51C325.745 610.017 327.781 612.04 329.243 613.356C331.464 615.355 333.385 618.103 335.051 621.248L340.095 592.639L347.493 582.281L382.514 533.942L354.892 561.564L347.493 563.044L323.324 607.51ZM416.055 466.86C421.58 461.73 431.839 440.06 436.279 429.866C441.549 432.981 444.144 438.306 446.548 443.243C449.095 448.47 451.428 453.26 456.502 454.529C464.394 456.502 471.957 470.806 474.752 477.712L511.253 555.645C501.782 563.537 509.609 571.429 514.705 574.389V592.639C509.576 594.612 503.361 590.502 500.894 588.2C493.496 586.227 479.191 558.112 471.299 536.409C464.986 519.046 454.2 507.471 449.596 503.854C432.628 493.594 412.602 505.169 404.71 512.239C398.791 499.415 409.15 473.272 416.055 466.86ZM492.016 428.386C482.644 434.799 463.407 448.314 461.434 451.076C457.653 449.761 449.399 445.256 446.637 437.758C443.875 430.261 438.58 427.729 436.279 427.4C437.265 415.398 438.252 390.012 434.306 384.487C436.114 382.679 439.041 377.976 436.279 373.636L458.968 321.351L492.016 428.386ZM527.037 537.888L493.496 432.333L463.407 453.049C472.878 456.206 501.552 522.104 514.705 554.659H520.624L527.037 537.888ZM517.172 574.389L518.158 592.639C524.796 593.461 539.22 590.469 543.807 571.923C546.487 561.088 547.093 550.684 547.633 541.416C548.248 530.854 548.777 521.767 552.193 515.199C547.26 492.345 536.113 444.96 530.983 438.252C527.43 433.605 519.182 433.654 511.694 433.698C505.668 433.733 500.134 433.765 497.935 431.346L530.983 537.888L523.091 557.125C525.228 559.92 528.517 566.595 524.57 570.936C520.625 575.277 517.994 575.047 517.172 574.389ZM496.455 427.4L529.996 433.812C517.119 411.368 514.945 396.884 513.443 386.878C512.931 383.47 512.498 380.581 511.746 378.075C509.378 370.183 508.129 323.16 507.8 300.634L476.725 286.33L460.448 316.418L496.455 427.4ZM539.368 258.215C562.058 281.562 612.568 330.525 633.086 339.601C615.822 317.569 572.909 270.447 539.368 258.215ZM509.773 297.182L526.543 256.242L430.853 206.917L411.616 247.857L509.773 297.182ZM408.656 251.309L387.447 294.222L452.063 326.777L472.779 283.864L408.656 251.309ZM434.306 369.69L449.596 330.723L384.487 297.182L363.771 339.601L426.907 373.636C428.091 371.663 432.333 370.183 434.306 369.69ZM325.79 269.56L380.541 295.702L360.318 338.615L303.594 311.486L325.79 269.56ZM404.71 249.336L348.973 223.687L327.763 264.627L384.487 291.756L404.71 249.336ZM141.808 346.014L165.977 338.615L158.578 353.412L141.808 346.014ZM169.43 332.696L138.848 343.054L131.449 340.588L154.139 298.168L179.788 311.486L169.43 332.696ZM176.335 251.309L261.668 294.222L242.431 338.615L154.139 294.222L176.335 251.309ZM34.7721 232.073L55.4886 191.133L170.416 250.323L149.206 291.756L34.7721 232.073ZM168.936 191.133L147.233 232.566L293.236 305.074L313.952 262.161L168.936 191.133ZM86.5634 201.491L154.139 68.3131L209.383 96.9217L143.781 232.073L86.5634 201.491ZM124.051 53.5156L56.9684 185.707L83.1107 199.518L150.193 66.3401L124.051 53.5156ZM203.957 34.7721L145.754 6.65675L125.53 47.1033L181.761 76.6984L203.957 34.7721ZM214.809 16.0285L230.1 54.9954L213.329 91.496L186.2 78.1782L214.809 16.0285ZM239.471 45.1303L260.681 5.177L315.925 32.7991L297.675 73.7389L239.471 45.1303ZM236.019 52.0359L234.046 56.4751L252.296 111.226L272.519 121.584L293.236 79.6579L236.019 52.0359ZM193.599 138.355L231.579 62.3941L246.377 102.841L220.235 152.659L193.599 138.355ZM193.599 145.26L170.416 186.693L197.545 199.518L218.755 157.592L193.599 145.26ZM250.323 115.665L244.404 111.226L200.998 201.491L228.62 215.302L260.681 146.74L250.323 115.665ZM255.749 119.118L293.236 232.566L331.709 156.112L255.749 119.118ZM232.073 215.302L261.668 152.659L290.769 236.512L286.33 245.39L232.073 215.302ZM334.669 158.085L290.769 247.857L315.925 258.708L358.838 170.909L334.669 158.085ZM306.553 138.355L327.763 96.9217L382.514 123.557L360.811 164.497L306.553 138.355ZM297.675 81.6309L276.465 121.584L302.114 135.889L324.31 95.442L297.675 81.6309ZM300.141 76.2052L320.365 35.2653L350.453 50.0629L374.622 3.69725L429.373 32.7991L386.46 119.118L300.141 76.2052ZM440.225 36.7451L396.325 121.584L422.467 135.889L464.887 48.0899L440.225 36.7451ZM425.92 138.355L446.637 96.9217L472.286 111.226L453.049 150.686L425.92 138.355ZM505.827 121.584L446.637 93.469L467.847 50.0629L525.557 79.1647L505.827 121.584ZM534.929 140.328L476.725 111.226L455.515 152.659L513.226 183.241L534.929 140.328ZM536.902 142.794L516.185 184.72L542.328 198.038L563.537 155.619L536.902 142.794ZM545.78 200.504L566.497 157.592C582.281 161.538 584.254 171.731 583.267 176.335C578.927 192.908 564.688 206.917 558.112 211.849C556.928 207.903 549.397 202.642 545.78 200.504ZM453.049 159.565C459.133 162.853 470.905 174.461 469.326 194.585L460.448 213.329L402.737 184.72L422.467 143.781L453.049 159.565ZM478.698 198.038C477.12 185.411 471.793 172.06 469.326 166.963C483.959 174.527 516.777 191.034 530.983 196.558C545.188 202.083 553.015 209.712 555.152 212.836C544.892 217.571 533.778 237.169 529.503 246.377C513.226 235.525 480.277 210.665 478.698 198.038ZM470.806 198.038L462.914 214.315L489.55 229.113L470.806 198.038ZM425.92 204.944L370.676 176.335L350.453 219.248L406.19 246.377L425.92 204.944ZM394.352 129.97L374.622 169.43L399.778 183.241L420.001 142.794L394.352 129.97ZM510.266 564.031C509.477 560.085 513.883 558.44 516.185 558.112C517.172 558.112 519.638 558.802 521.611 561.564C524.077 565.017 520.625 569.456 518.158 570.936C515.692 572.416 511.253 568.963 510.266 564.031ZM195.079 503.854C192.612 504.779 188.173 508.146 190.146 514.212C192.119 520.279 199.189 520.028 202.477 519.145C205.766 513.555 208.89 502.67 195.079 503.854ZM428.88 378.568C428.485 376.99 430.031 375.609 430.853 375.115C431.346 375.115 432.628 375.411 433.812 376.595C435.292 378.075 433.319 380.541 432.332 381.034C431.346 381.528 429.373 380.541 428.88 378.568Z" fill="#C2C2C2"/>
+                                    <path d="M370.676 176.335L425.92 204.944L406.19 246.377L350.453 219.248L370.676 176.335Z" fill="white"/>
+                                    <path d="M348.973 223.687L404.71 249.336L384.487 291.756L327.763 264.627L348.973 223.687Z" fill="white"/>
+                                    <path d="M526.543 256.242L509.773 297.182L411.616 247.857L430.853 206.917L526.543 256.242Z" fill="white"/>
+                                    <path d="M408.656 251.309L387.447 294.222L452.063 326.777L472.779 283.864L408.656 251.309Z" fill="white"/>
+                                    <path d="M449.596 330.723L434.306 369.69C432.333 370.183 428.091 371.663 426.907 373.636L363.771 339.601L384.487 297.182L449.596 330.723Z" fill="white"/>
+                                    <path d="M325.79 269.56L380.541 295.702L360.318 338.615L303.594 311.486L325.79 269.56Z" fill="white"/>
+                                    <path d="M289.29 481.658C283.535 494.153 270.447 519.145 264.134 519.145C265.449 512.568 262.95 495.863 242.431 481.658C221.912 467.452 244.075 425.098 257.722 405.697L301.621 314.445L356.865 343.054L289.29 481.658Z" fill="white"/>
+                                    <path d="M290.769 310.006L225.66 445.157L199.025 432.333L265.614 296.195L290.769 310.006Z" fill="white"/>
+                                    <path d="M176.335 251.309L261.668 294.222L242.431 338.615L154.139 294.222L176.335 251.309Z" fill="white"/>
+                                    <path d="M182.747 312.472L138.848 401.258L195.572 430.853L239.965 341.081L182.747 312.472Z" fill="white"/>
+                                    <path d="M138.848 347.493L127.503 350.946L108.266 384.98L134.902 399.778L157.098 357.852L138.848 347.493Z" fill="white"/>
+                                    <path d="M167.95 420.988L158.085 440.718C154.797 445.815 152.659 460.152 170.416 476.725L191.133 500.894C193.27 499.908 198.334 498.33 201.491 499.908L216.782 470.806L220.728 463.901C220.235 461.105 219.84 454.036 222.208 448.117L167.95 420.988Z" fill="white"/>
+                                    <path d="M394.352 129.97L374.622 169.43L399.778 183.241L420.001 142.794L394.352 129.97Z" fill="white"/>
+                                    <path d="M440.225 36.7451L396.325 121.584L422.467 135.889L464.887 48.0899L440.225 36.7451Z" fill="white"/>
+                                    <path d="M505.827 121.584L446.637 93.469L467.847 50.0629L525.557 79.1647L505.827 121.584Z" fill="white"/>
+                                    <path d="M320.365 35.2653L300.141 76.2052L386.46 119.118L429.373 32.7991L374.622 3.69725L350.453 50.0629L320.365 35.2653Z" fill="white"/>
+                                    <path d="M327.763 96.9217L306.553 138.355L360.811 164.497L382.514 123.557L327.763 96.9217Z" fill="white"/>
+                                    <path d="M297.675 81.6309L276.465 121.584L302.114 135.889L324.31 95.442L297.675 81.6309Z" fill="white"/>
+                                    <path d="M255.749 119.118L293.236 232.566L331.709 156.112L255.749 119.118Z" fill="white"/>
+                                    <path d="M334.669 158.085L290.769 247.857L315.925 258.708L358.838 170.909L334.669 158.085Z" fill="white"/>
+                                    <path d="M168.936 191.133L147.233 232.566L293.236 305.074L313.952 262.161L168.936 191.133Z" fill="white"/>
+                                    <path d="M55.4886 191.133L34.7721 232.073L149.206 291.756L170.416 250.323L55.4886 191.133Z" fill="white"/>
+                                    <path d="M121.584 282.877L101.361 324.31L128.49 338.615L149.206 296.195L121.584 282.877Z" fill="white"/>
+                                    <path d="M138.848 343.054L169.43 332.696L179.788 311.486L154.139 298.168L131.449 340.588L138.848 343.054Z" fill="white"/>
+                                    <path d="M68.8064 366.237L79.1647 363.277L97.415 328.257L70.2862 313.952L48.0899 356.865L68.8064 366.237Z" fill="white"/>
+                                    <path d="M261.668 152.659L232.073 215.302L286.33 245.39L290.769 236.512L261.668 152.659Z" fill="white"/>
+                                    <path d="M244.404 111.226L250.323 115.665L260.681 146.74L228.62 215.302L200.998 201.491L244.404 111.226Z" fill="white"/>
+                                    <path d="M231.579 62.3941L193.599 138.355L220.235 152.659L246.377 102.841L231.579 62.3941Z" fill="white"/>
+                                    <path d="M145.754 6.65675L203.957 34.7721L181.761 76.6984L125.53 47.1033L145.754 6.65675Z" fill="white"/>
+                                    <path d="M214.809 16.0285L230.1 54.9954L213.329 91.496L186.2 78.1782L214.809 16.0285Z" fill="white"/>
+                                    <path d="M154.139 68.3131L86.5634 201.491L143.781 232.073L209.383 96.9217L154.139 68.3131Z" fill="white"/>
+                                    <path d="M193.599 145.26L170.416 186.693L197.545 199.518L218.755 157.592L193.599 145.26Z" fill="white"/>
+                                    <path d="M124.051 53.5156L56.9684 185.707L83.1107 199.518L150.193 66.3401L124.051 53.5156Z" fill="white"/>
+                                    <path d="M60.4211 254.269L40.6911 293.729L68.8064 308.526L90.0162 265.614L60.4211 254.269Z" fill="white"/>
+                                    <path d="M93.469 267.587L71.7659 310.006L97.415 324.31L119.118 280.904L93.469 267.587Z" fill="white"/>
+                                    <path d="M37.7316 299.155L17.5083 341.081L45.1303 355.385L65.8469 312.472L37.7316 299.155Z" fill="white"/>
+                                    <path d="M10.6028 280.904L34.7721 291.756L56.9684 251.309L31.8126 238.485L10.6028 280.904Z" fill="white"/>
+                                    <path d="M2.71074 337.628C1.06657 352.097 9.41896 388.532 55.9819 418.521L64.3671 407.67L73.2457 403.231C81.6309 402.08 99.388 397.608 103.334 388.926L2.71074 337.628Z" fill="white"/>
+                                    <path d="M8.62976 284.85L0.244489 300.141V334.176L14.5488 340.588L34.7721 296.195L8.62976 284.85Z" fill="white"/>
+                                </svg>
+                                <svg class="vector-fon" width="42.375rem" height="46.313rem" viewBox="0 0 678 741" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M476.619 741.601H339.466L327.752 731.729L312.133 722.845L296.514 710.506L279.431 694.711L268.693 684.839H261.86L250.634 688.788H237.455L227.694 684.839L226.229 682.372H227.694L230.134 679.904L226.229 671.019L224.765 661.148L164.242 609.815L134.469 587.111L89.5647 554.534L76.8745 541.701L70.0412 540.714L64.1842 536.766L62.2318 531.336L0.244629 497.279V0.737793H471.738L479.059 6.66075L496.63 9.12865L509.809 14.558L518.594 21.9617L531.284 23.936L538.118 24.9232L539.582 29.859L544.951 35.782L553.248 37.2627L563.01 45.6536L566.427 52.5637L574.724 51.0829L585.462 54.538L590.831 57.9931L592.784 64.4096L597.664 67.3711L602.545 72.8004C602.545 74.9393 602.643 79.4144 603.033 80.2041C603.424 80.9939 609.704 88.1014 612.795 91.5565L620.116 107.351L632.319 139.927L650.866 181.882L662.092 211.003L663.068 243.579L650.378 300.341L648.426 306.264L651.842 313.667L660.628 331.93L664.533 340.321L672.83 350.686L677.223 358.583L675.27 365L670.878 372.403L672.83 376.846V425.71V442.492L668.437 482.472L662.092 495.798L651.354 509.125L634.271 517.022L627.438 530.843L624.021 565.393L616.212 600.437L611.819 620.674V630.052V636.962L608.402 642.885L601.081 644.859L598.153 647.327L596.688 654.237L589.855 666.083L579.117 667.071L572.772 668.551L564.963 672.994L560.082 676.942H553.737L545.927 672.994L539.582 668.551L527.38 663.122L500.535 649.302L482.476 633.507L473.69 617.713V609.322L465.881 596.982L448.309 574.771L440.5 568.355L429.762 565.393H419.024L389.251 570.329L368.263 590.072L349.228 611.296L346.787 633.507L354.597 649.302L366.799 658.68L389.251 672.994L414.631 693.724C418.699 696.192 426.931 701.325 427.322 702.115C427.712 702.904 440.175 715.277 446.357 721.364L469.297 735.185L476.619 741.601Z" fill="#E1F3CA"/>
+                                </svg> 
+                            </div>
+                            
+                            <!-- <img class="empty-block" src="/src/assets/img/Frame 409.png" alt=""> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="/src/scripts/lib/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script type="module" src="../src/scripts/app.js"></script>
+</html>

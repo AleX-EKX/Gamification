@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/src/scripts/lib/swiper/swiper.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body class="theme-light">
+    <header>
+        <div class="header-section rose-clip">
+            <div class="header-section__info-block">
+                <div class="header-logo">
+                    <svg width="2.875rem" height="2.875rem" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.34731 1.34731C0 2.69462 0 4.86308 0 9.2V36.8C0 41.1369 0 43.3054 1.34731 44.6527C2.69462 46 4.86308 46 9.2 46L20.9091 46V31.7738L8.36361 24.5307L10.4545 20.9091L20.834 26.9017V14.6364H25.0158L25.0158 26.9017L35.3953 20.9091L37.4862 24.5307L25.0909 31.6871V46L36.8 46C41.1369 46 43.3054 46 44.6527 44.6527C46 43.3054 46 41.1369 46 36.8V9.2C46 4.86308 46 2.69462 44.6527 1.34731C43.3054 0 41.1369 0 36.8 0H9.2C4.86308 0 2.69462 0 1.34731 1.34731Z" fill="white"/>
+                        </svg>                               
+                    <span class="text-logo">GAMiF</span>        
+                </div>
+                <label class="search-form">
+                    <input type="text" class="input input_search" placeholder="Поиск">
+                    <svg width="1.5rem" height="1.5rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.4">
+                        <path d="M21 21L17.5001 17.5M20 11.5C20 16.1944 16.1944 20 11.5 20C6.80558 20 3 16.1944 3 11.5C3 6.80558 6.80558 3 11.5 3C16.1944 3 20 6.80558 20 11.5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                    </svg>
+                </label>
+                
+            </div>
+            <div class="icon icon_message">
+                <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                    <path d="M21.875 15.625C21.875 16.1775 21.6555 16.7074 21.2648 17.0981C20.8741 17.4888 20.3442 17.7083 19.7917 17.7083H7.29167L3.125 21.875V5.2083C3.125 4.65577 3.34449 4.12586 3.73519 3.73516C4.12589 3.34446 4.6558 3.12497 5.20833 3.12497H19.7917C20.3442 3.12497 20.8741 3.34446 21.2648 3.73516C21.6555 4.12586 21.875 4.65577 21.875 5.2083V15.625Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg width="2.125rem" height="2.125rem" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg task-svg">
+                    <g filter="url(#filter0_f_543_5709)">
+                    <path d="M28.25 20.75C28.25 21.413 27.9866 22.0489 27.5178 22.5178C27.0489 22.9866 26.413 23.25 25.75 23.25H10.75L5.75 28.25V8.25C5.75 7.58696 6.01339 6.95107 6.48223 6.48223C6.95107 6.01339 7.58696 5.75 8.25 5.75H25.75C26.413 5.75 27.0489 6.01339 27.5178 6.48223C27.9866 6.95107 28.25 7.58696 28.25 8.25V20.75Z" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <path d="M28.25 20.75C28.25 21.413 27.9866 22.0489 27.5178 22.5178C27.0489 22.9866 26.413 23.25 25.75 23.25H10.75L5.75 28.25V8.25C5.75 7.58696 6.01339 6.95107 6.48223 6.48223C6.95107 6.01339 7.58696 5.75 8.25 5.75H25.75C26.413 5.75 27.0489 6.01339 27.5178 6.48223C27.9866 6.95107 28.25 7.58696 28.25 8.25V20.75Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <defs>
+                    <filter id="filter0_f_543_5709" x="-2" y="-2" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                    <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5709"/>
+                    </filter>
+                    </defs>
+                </svg>
+            </div>
+            <div class="burger-block mobile">
+                <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.8242 21.5322L18.3243 18.0322M20.8242 12.0322C20.8242 16.7266 17.0186 20.5322 12.3242 20.5322C7.6298 20.5322 3.82422 16.7266 3.82422 12.0322C3.82422 7.33781 7.6298 3.53223 12.3242 3.53223C17.0186 3.53223 20.8242 7.33781 20.8242 12.0322Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                <svg width="1.5rem" height="1.5rem" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.99072 13.0322H21.6574" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4.99072 6.78223H21.6574" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4.99072 19.2822H21.6574" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="header-section__polosa-tr polosa polosa_rose"></div>
+            <div class="header-section__polosa-bl polosa polosa_rose"></div>
+        </div>
+        <div class="header-nav">
+            <nav class="header-nav__nav-panel">
+                <ul>
+                    <li>
+                        <div class="icon icon_user">
+                            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                                <path d="M19.7916 21.875V19.7917C19.7916 18.6866 19.3526 17.6268 18.5712 16.8454C17.7898 16.064 16.73 15.625 15.6249 15.625H9.37492C8.26985 15.625 7.21004 16.064 6.42864 16.8454C5.64724 17.6268 5.20825 18.6866 5.20825 19.7917V21.875" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.4999 11.4583C14.8011 11.4583 16.6666 9.59287 16.6666 7.29168C16.6666 4.9905 14.8011 3.12502 12.4999 3.12502C10.1987 3.12502 8.33325 4.9905 8.33325 7.29168C8.33325 9.59287 10.1987 11.4583 12.4999 11.4583Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg width="1.875rem" height="2.125rem" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                                <g filter="url(#filter0_f_543_5712)">
+                                <path d="M23.75 28.25V25.75C23.75 24.4239 23.2232 23.1521 22.2855 22.2145C21.3479 21.2768 20.0761 20.75 18.75 20.75H11.25C9.92392 20.75 8.65215 21.2768 7.71447 22.2145C6.77678 23.1521 6.25 24.4239 6.25 25.75V28.25" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 15.75C17.7614 15.75 20 13.5114 20 10.75C20 7.98858 17.7614 5.75 15 5.75C12.2386 5.75 10 7.98858 10 10.75C10 13.5114 12.2386 15.75 15 15.75Z" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <path d="M23.75 28.25V25.75C23.75 24.4239 23.2232 23.1521 22.2855 22.2145C21.3479 21.2768 20.0761 20.75 18.75 20.75H11.25C9.92392 20.75 8.65215 21.2768 7.71447 22.2145C6.77678 23.1521 6.25 24.4239 6.25 25.75V28.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 15.75C17.7614 15.75 20 13.5114 20 10.75C20 7.98858 17.7614 5.75 15 5.75C12.2386 5.75 10 7.98858 10 10.75C10 13.5114 12.2386 15.75 15 15.75Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                 <filter id="filter0_f_543_5712" x="-4" y="-2" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5712"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <a class="link-page" href="profile.html">Профиль</a>
+                    </li>
+                    <li>
+                        <div class="icon icon_map">
+                            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                                <path d="M3.125 6.25L9.375 3.125L15.625 6.25L21.875 3.125V18.75L15.625 21.875L9.375 18.75L3.125 21.875V6.25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.375 3.125V18.75" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.625 6.25V21.875" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg width="2.125rem" height="2.125rem" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                                <g filter="url(#filter0_f_543_5715)">
+                                <path d="M5.75 9.5L13.25 5.75L20.75 9.5L28.25 5.75V24.5L20.75 28.25L13.25 24.5L5.75 28.25V9.5Z" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.25 5.75V24.5" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20.75 9.5V28.25" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <path d="M5.75 9.5L13.25 5.75L20.75 9.5L28.25 5.75V24.5L20.75 28.25L13.25 24.5L5.75 28.25V9.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.25 5.75V24.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M20.75 9.5V28.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                <filter id="filter0_f_543_5715" x="-2" y="-2" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5715"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <a class="link-page" href="map.html">Карта</a>
+                    </li>
+                    <li>
+                        <div class="icon icon_shop">
+                            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                                <g clip-path="url(#clip0_371_1665)">
+                                <path d="M8.33341 22.9167C8.90871 22.9167 9.37508 22.4503 9.37508 21.875C9.37508 21.2997 8.90871 20.8333 8.33341 20.8333C7.75812 20.8333 7.29175 21.2997 7.29175 21.875C7.29175 22.4503 7.75812 22.9167 8.33341 22.9167Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19.7917 22.9167C20.367 22.9167 20.8333 22.4503 20.8333 21.875C20.8333 21.2997 20.367 20.8333 19.7917 20.8333C19.2164 20.8333 18.75 21.2997 18.75 21.875C18.75 22.4503 19.2164 22.9167 19.7917 22.9167Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2.1355 2.13541H4.21883L6.98966 15.0729C7.09131 15.5467 7.35495 15.9703 7.7352 16.2707C8.11545 16.5711 8.58852 16.7295 9.073 16.7187H19.2605C19.7346 16.718 20.1943 16.5555 20.5637 16.2582C20.933 15.9608 21.1898 15.5464 21.2917 15.0833L23.0105 7.34374H5.33341" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_371_1665">
+                                <rect width="25" height="25" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <svg width="2.25rem" height="2.25rem" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                                <g filter="url(#filter0_f_543_5718)">
+                                <path d="M13 30.5C13.6904 30.5 14.25 29.9404 14.25 29.25C14.25 28.5596 13.6904 28 13 28C12.3096 28 11.75 28.5596 11.75 29.25C11.75 29.9404 12.3096 30.5 13 30.5Z" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M26.75 30.5C27.4404 30.5 28 29.9404 28 29.25C28 28.5596 27.4404 28 26.75 28C26.0596 28 25.5 28.5596 25.5 29.25C25.5 29.9404 26.0596 30.5 26.75 30.5Z" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.5625 5.5625H8.0625L11.3875 21.0875C11.5095 21.6561 11.8258 22.1643 12.2821 22.5248C12.7384 22.8853 13.3061 23.0754 13.8875 23.0625H26.1125C26.6815 23.0616 27.2331 22.8666 27.6763 22.5098C28.1195 22.153 28.4277 21.6557 28.55 21.1L30.6125 11.8125H9.4" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <path d="M13 30.5C13.6904 30.5 14.25 29.9404 14.25 29.25C14.25 28.5596 13.6904 28 13 28C12.3096 28 11.75 28.5596 11.75 29.25C11.75 29.9404 12.3096 30.5 13 30.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M26.75 30.5C27.4404 30.5 28 29.9404 28 29.25C28 28.5596 27.4404 28 26.75 28C26.0596 28 25.5 28.5596 25.5 29.25C25.5 29.9404 26.0596 30.5 26.75 30.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.5625 5.5625H8.0625L11.3875 21.0875C11.5095 21.6561 11.8258 22.1643 12.2821 22.5248C12.7384 22.8853 13.3061 23.0754 13.8875 23.0625H26.1125C26.6815 23.0616 27.2331 22.8666 27.6763 22.5098C28.1195 22.153 28.4277 21.6557 28.55 21.1L30.6125 11.8125H9.4" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                <filter id="filter0_f_543_5718" x="-1" y="-1" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5718"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <a class="link-page" href="store.html">Магазин</a>
+                    </li>
+                    <li>
+                        <div class="icon icon_wallet">
+                            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                                <path d="M20.8334 12.5V8.33332H6.25008C5.69755 8.33332 5.16764 8.11383 4.77694 7.72313C4.38624 7.33243 4.16675 6.80252 4.16675 6.24999C4.16675 5.10416 5.10425 4.16666 6.25008 4.16666H18.7501V8.33332" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.16675 6.24998V18.75C4.16675 19.8958 5.10425 20.8333 6.25008 20.8333H20.8334V16.6667" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18.7501 12.5C18.1975 12.5 17.6676 12.7195 17.2769 13.1102C16.8862 13.5009 16.6667 14.0308 16.6667 14.5833C16.6667 15.7292 17.6042 16.6667 18.7501 16.6667H22.9167V12.5H18.7501Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg width="2.125rem" height="2rem" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                                <g filter="url(#filter0_f_543_5721)">
+                                <path d="M26 16V11H8.5C7.83696 11 7.20107 10.7366 6.73223 10.2678C6.26339 9.79893 6 9.16304 6 8.5C6 7.125 7.125 6 8.5 6H23.5V11" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 8.5V23.5C6 24.875 7.125 26 8.5 26H26V21" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23.5 16C22.837 16 22.2011 16.2634 21.7322 16.7322C21.2634 17.2011 21 17.837 21 18.5C21 19.875 22.125 21 23.5 21H28.5V16H23.5Z" stroke="#E820E5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <path d="M26 16V11H8.5C7.83696 11 7.20107 10.7366 6.73223 10.2678C6.26339 9.79893 6 9.16304 6 8.5C6 7.125 7.125 6 8.5 6H23.5V11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 8.5V23.5C6 24.875 7.125 26 8.5 26H26V21" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23.5 16C22.837 16 22.2011 16.2634 21.7322 16.7322C21.2634 17.2011 21 17.837 21 18.5C21 19.875 22.125 21 23.5 21H28.5V16H23.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                <filter id="filter0_f_543_5721" x="-3" y="-3" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5721"/>
+                                </filter>
+                                </defs>
+                            </svg>              
+                        </div>
+                        <a class="link-page" href="exchanges.html">Биржа</a>
+                    </li>
+                    <li>
+                        <div class="icon icon_users">
+                            <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                                <path d="M16.6666 21.875V19.7917C16.6666 18.6866 16.2276 17.6268 15.4462 16.8454C14.6648 16.064 13.605 15.625 12.4999 15.625H6.24992C5.14485 15.625 4.08504 16.064 3.30364 16.8454C2.52224 17.6268 2.08325 18.6866 2.08325 19.7917V21.875" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.37492 11.4583C11.6761 11.4583 13.5416 9.59285 13.5416 7.29167C13.5416 4.99048 11.6761 3.125 9.37492 3.125C7.07373 3.125 5.20825 4.99048 5.20825 7.29167C5.20825 9.59285 7.07373 11.4583 9.37492 11.4583Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22.9167 21.8749V19.7915C22.9161 18.8683 22.6088 17.9715 22.0432 17.2419C21.4776 16.5122 20.6856 15.9911 19.7917 15.7603" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16.6667 3.26028C17.563 3.48976 18.3574 4.01101 18.9247 4.74186C19.492 5.4727 19.7999 6.37157 19.7999 7.29674C19.7999 8.22192 19.492 9.12078 18.9247 9.85163C18.3574 10.5825 17.563 11.1037 16.6667 11.3332" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg width="2.25rem" height="2.125rem" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                                <g filter="url(#filter0_f_543_5724)">
+                                <path d="M23 28.25V25.75C23 24.4239 22.4732 23.1521 21.5355 22.2145C20.5979 21.2768 19.3261 20.75 18 20.75H10.5C9.17392 20.75 7.90215 21.2768 6.96447 22.2145C6.02678 23.1521 5.5 24.4239 5.5 25.75V28.25" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.25 15.75C17.0114 15.75 19.25 13.5114 19.25 10.75C19.25 7.98858 17.0114 5.75 14.25 5.75C11.4886 5.75 9.25 7.98858 9.25 10.75C9.25 13.5114 11.4886 15.75 14.25 15.75Z" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M30.5 28.2499V25.7499C30.4992 24.642 30.1304 23.5658 29.4517 22.6902C28.773 21.8147 27.8227 21.1893 26.75 20.9124" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23 5.91235C24.0755 6.18773 25.0288 6.81323 25.7095 7.69024C26.3903 8.56725 26.7598 9.64589 26.7598 10.7561C26.7598 11.8663 26.3903 12.945 25.7095 13.822C25.0288 14.699 24.0755 15.3245 23 15.5999" stroke="#00F69D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <path d="M23 28.25V25.75C23 24.4239 22.4732 23.1521 21.5355 22.2145C20.5979 21.2768 19.3261 20.75 18 20.75H10.5C9.17392 20.75 7.90215 21.2768 6.96447 22.2145C6.02678 23.1521 5.5 24.4239 5.5 25.75V28.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.25 15.75C17.0114 15.75 19.25 13.5114 19.25 10.75C19.25 7.98858 17.0114 5.75 14.25 5.75C11.4886 5.75 9.25 7.98858 9.25 10.75C9.25 13.5114 11.4886 15.75 14.25 15.75Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M30.5 28.2499V25.7499C30.4992 24.642 30.1304 23.5658 29.4517 22.6902C28.773 21.8147 27.8227 21.1893 26.75 20.9124" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23 5.91235C24.0755 6.18773 25.0288 6.81323 25.7095 7.69024C26.3903 8.56725 26.7598 9.64589 26.7598 10.7561C26.7598 11.8663 26.3903 12.945 25.7095 13.822C25.0288 14.699 24.0755 15.3245 23 15.5999" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                <filter id="filter0_f_543_5724" x="-1" y="-2" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5724"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <a class="link-page" href="players.html">Игроки</a>
+                    </li>
+                </ul>
+                <a class="header-nav__undo-btn">
+                    <div class="icon icon_undo">
+                        <svg width="1.5rem" height="1.5rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="def-svg">
+                            <path d="M9.37508 14.5833L4.16675 9.37499L9.37508 4.16666" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.16675 9.375H15.1042C15.8566 9.375 16.6016 9.52319 17.2967 9.81111C17.9918 10.099 18.6234 10.521 19.1554 11.053C19.6874 11.585 20.1094 12.2166 20.3973 12.9117C20.6852 13.6068 20.8334 14.3518 20.8334 15.1042C20.8334 15.8565 20.6852 16.6015 20.3973 17.2966C20.1094 17.9917 19.6874 18.6233 19.1554 19.1553C18.6234 19.6873 17.9918 20.1093 17.2967 20.3972C16.6016 20.6851 15.8566 20.8333 15.1042 20.8333H11.4584" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg width="2rem" height="2rem" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="neon-svg">
+                            <g filter="url(#filter0_f_543_5729)">
+                            <path d="M12.25 18.5L6 12.25L12.25 6" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 12.25H19.125C20.0278 12.25 20.9218 12.4278 21.7559 12.7733C22.5901 13.1188 23.348 13.6252 23.9864 14.2636C24.6248 14.902 25.1312 15.6599 25.4767 16.4941C25.8222 17.3282 26 18.2222 26 19.125C26 20.0278 25.8222 20.9218 25.4767 21.7559C25.1312 22.5901 24.6248 23.348 23.9864 23.9864C23.348 24.6248 22.5901 25.1312 21.7559 25.4767C20.9218 25.8222 20.0278 26 19.125 26H14.75" stroke="#00F2F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <path d="M12.25 18.5L6 12.25L12.25 6" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 12.25H19.125C20.0278 12.25 20.9218 12.4278 21.7559 12.7733C22.5901 13.1188 23.348 13.6252 23.9864 14.2636C24.6248 14.902 25.1312 15.6599 25.4767 16.4941C25.8222 17.3282 26 18.2222 26 19.125C26 20.0278 25.8222 20.9218 25.4767 21.7559C25.1312 22.5901 24.6248 23.348 23.9864 23.9864C23.348 24.6248 22.5901 25.1312 21.7559 25.4767C20.9218 25.8222 20.0278 26 19.125 26H14.75" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                            <filter id="filter0_f_543_5729" x="-3" y="-3" width="2.375rem" height="2.375rem" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_543_5729"/>
+                            </filter>
+                            </defs>
+                        </svg>                
+                    </div>
+                    <span>Выход</span>
+                </a>
+            </nav>
+            <div class="header-nav__polosa-bl polosa polosa_rose"></div>
+        </div>
+    </header>
+    
+    <div class="sidebar-block">
+        <div class="sidebar-block__info-block">
+            <div class="sidebar-block__info-block__mobile-block mobile">
+                <span class="title">Мои задачи</span>
+                <div class="sidebar-mobile-block">
+                    <span class="sidebar-mobile-block__name">Название проекта</span>
+                    <div class="sidebar-mobile-block__info-block">
+                        <span class="text">Участники</span>
+                        <div class="sidebar-mobile-block__info-block__participants">
+                            <div class="user-block">
+                                <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                </svg> 
+                                <span class="name-user">Участник</span>
+                            </div>
+                            <div class="user-block">
+                                <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                </svg> 
+                                <span class="name-user">Участник</span>
+                            </div>
+                            <div class="user-block">
+                                <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                </svg> 
+                                <span class="name-user">Участник</span>
+                            </div>
+                            <div class="user-block">
+                                <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                </svg> 
+                                <span class="name-user">Участник</span>
+                            </div>
+                            <div class="user-block">
+                                <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                </svg> 
+                                <span class="name-user">Участник</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="shadow">
+                <div class="sidebar-block__info-block__header rose-clip rose-clip_blue">
+                    <svg class="return-svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.75 17.5L25 11.25L18.75 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25 11.25H11.875C10.0516 11.25 8.30295 11.9743 7.01364 13.2636C5.72433 14.553 5 16.3016 5 18.125C5 19.0278 5.17783 19.9218 5.52333 20.7559C5.86883 21.5901 6.37524 22.348 7.01364 22.9864C8.30295 24.2757 10.0516 25 11.875 25H16.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                
+                    <span class="">Мои задачи</span>
+                    <svg width="1.875rem" height="1.875rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 16.25C15.6904 16.25 16.25 15.6904 16.25 15C16.25 14.3096 15.6904 13.75 15 13.75C14.3096 13.75 13.75 14.3096 13.75 15C13.75 15.6904 14.3096 16.25 15 16.25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 7.5C15.6904 7.5 16.25 6.94036 16.25 6.25C16.25 5.55964 15.6904 5 15 5C14.3096 5 13.75 5.55964 13.75 6.25C13.75 6.94036 14.3096 7.5 15 7.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 25C15.6904 25 16.25 24.4404 16.25 23.75C16.25 23.0596 15.6904 22.5 15 22.5C14.3096 22.5 13.75 23.0596 13.75 23.75C13.75 24.4404 14.3096 25 15 25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                
+                </div>
+            </div>
+            <div class="sidebar-block__info-block__body">
+                <div class="sidebar-block__info-block__body__tasks">
+                    <div class="task-block">
+                        <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.6257 2.58325H9.37565C8.80035 2.58325 8.33398 3.04962 8.33398 3.62492V5.70825C8.33398 6.28355 8.80035 6.74992 9.37565 6.74992H15.6257C16.2009 6.74992 16.6673 6.28355 16.6673 5.70825V3.62492C16.6673 3.04962 16.2009 2.58325 15.6257 2.58325Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.668 4.66675H18.7513C19.3038 4.66675 19.8337 4.88624 20.2244 5.27694C20.6151 5.66764 20.8346 6.19755 20.8346 6.75008V21.3334C20.8346 21.8859 20.6151 22.4159 20.2244 22.8066C19.8337 23.1973 19.3038 23.4167 18.7513 23.4167H6.2513C5.69877 23.4167 5.16886 23.1973 4.77816 22.8066C4.38746 22.4159 4.16797 21.8859 4.16797 21.3334V6.75008C4.16797 6.19755 4.38746 5.66764 4.77816 5.27694C5.16886 4.88624 5.69877 4.66675 6.2513 4.66675H8.33464" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.5 11.9583H16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.5 17.1667H16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.33398 11.9583H8.34398" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.33398 17.1667H8.34398" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                        
+                        <div class="task-block__info-block">
+                            <div class="task-block__info-block__description">
+                                <div class="task-block__info-block__description__title">
+                                    <span>Название задачи</span>
+                                    <svg class="message-svg" width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.875 11.9792C21.8786 13.3541 21.5574 14.7103 20.9375 15.9375C20.2025 17.4081 19.0727 18.645 17.6744 19.5097C16.2762 20.3744 14.6648 20.8327 13.0208 20.8334C11.646 20.8369 10.2897 20.5157 9.0625 19.8959L3.125 21.875L5.10417 15.9375C4.4843 14.7103 4.16308 13.3541 4.16667 11.9792C4.1673 10.3352 4.62564 8.72383 5.49033 7.3256C6.35503 5.92737 7.59193 4.7975 9.0625 4.06253C10.2897 3.44267 11.646 3.12145 13.0208 3.12503H13.5417C15.7129 3.24481 17.7636 4.16124 19.3012 5.69884C20.8388 7.23644 21.7552 9.28717 21.875 11.4584V11.9792Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </div>
+                                <div class="task-block__info-block__description__profit">
+                                    <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12.5" cy="12.5" r="11.5" stroke="white" stroke-width="2"/>
+                                        <path d="M7 13.5789L10.3249 17.0311C10.7898 17.5138 11.5887 17.4115 11.917 16.8272L18 6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                    </svg> 
+                                    <div class="task-block__info-block__description__profit__content">
+                                        <div class="departments-block b-rose">
+                                            <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.5013 20.8334C14.7114 20.8334 16.8311 19.9554 18.3939 18.3926C19.9567 16.8298 20.8346 14.7102 20.8346 12.5001C20.8346 10.2899 19.9567 8.17033 18.3939 6.60752C16.8311 5.04472 14.7114 4.16675 12.5013 4.16675C10.2912 4.16675 8.17155 5.04472 6.60875 6.60752C5.04594 8.17033 4.16797 10.2899 4.16797 12.5001C4.16797 14.7102 5.04594 16.8298 6.60875 18.3926C8.17155 19.9554 10.2912 20.8334 12.5013 20.8334Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12.5013 14.5834C13.0538 14.5834 13.5837 14.3639 13.9744 13.9732C14.3651 13.5825 14.5846 13.0526 14.5846 12.5001C14.5846 11.9475 14.3651 11.4176 13.9744 11.0269C13.5837 10.6362 13.0538 10.4167 12.5013 10.4167C11.9488 10.4167 11.4189 10.6362 11.0282 11.0269C10.6375 11.4176 10.418 11.9475 10.418 12.5001C10.418 13.0526 10.6375 13.5825 11.0282 13.9732C11.4189 14.3639 11.9488 14.5834 12.5013 14.5834Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12.5 2.08325V4.16659" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12.5 22.9166V20.8333" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.7096 21.5208L16.668 19.7188" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M11.4596 10.698L7.29297 3.47925" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M21.5208 17.7084L19.7188 16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M3.47852 7.29175L5.2806 8.33341" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M14.584 12.5H22.9173" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M2.08398 12.5H4.16732" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M21.5208 7.29175L19.7188 8.33341" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M3.47852 17.7084L5.2806 16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.7096 3.47925L16.668 5.28133" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M11.4596 14.302L7.29297 21.5208" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span class="departments-block__text">Дизайн</span>                                       
+                                        </div>
+                                        <div class="departments-block b-yellow">
+                                            <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                            </svg>                                              
+                                            <span class="departments-block__text">25 TP</span>                                       
+                                        </div>
+                                    </div>                                   
+                                </div>
+                            </div>
+                            <div class="task-block__info-block__other">
+                                <svg width="1.563rem" height="1.563rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 16.25C15.6904 16.25 16.25 15.6904 16.25 15C16.25 14.3096 15.6904 13.75 15 13.75C14.3096 13.75 13.75 14.3096 13.75 15C13.75 15.6904 14.3096 16.25 15 16.25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 7.5C15.6904 7.5 16.25 6.94036 16.25 6.25C16.25 5.55964 15.6904 5 15 5C14.3096 5 13.75 5.55964 13.75 6.25C13.75 6.94036 14.3096 7.5 15 7.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 25C15.6904 25 16.25 24.4404 16.25 23.75C16.25 23.0596 15.6904 22.5 15 22.5C14.3096 22.5 13.75 23.0596 13.75 23.75C13.75 24.4404 14.3096 25 15 25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>     
+                                <div class="circle">
+                                    <svg class="circle-one" width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                    </svg> 
+                                    <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                    </svg> 
+                                </div>                           
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-block">
+                        <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.6257 2.58325H9.37565C8.80035 2.58325 8.33398 3.04962 8.33398 3.62492V5.70825C8.33398 6.28355 8.80035 6.74992 9.37565 6.74992H15.6257C16.2009 6.74992 16.6673 6.28355 16.6673 5.70825V3.62492C16.6673 3.04962 16.2009 2.58325 15.6257 2.58325Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16.668 4.66675H18.7513C19.3038 4.66675 19.8337 4.88624 20.2244 5.27694C20.6151 5.66764 20.8346 6.19755 20.8346 6.75008V21.3334C20.8346 21.8859 20.6151 22.4159 20.2244 22.8066C19.8337 23.1973 19.3038 23.4167 18.7513 23.4167H6.2513C5.69877 23.4167 5.16886 23.1973 4.77816 22.8066C4.38746 22.4159 4.16797 21.8859 4.16797 21.3334V6.75008C4.16797 6.19755 4.38746 5.66764 4.77816 5.27694C5.16886 4.88624 5.69877 4.66675 6.2513 4.66675H8.33464" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.5 11.9583H16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.5 17.1667H16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.33398 11.9583H8.34398" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.33398 17.1667H8.34398" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                        
+                        <div class="task-block__info-block">
+                            <div class="task-block__info-block__description">
+                                <div class="task-block__info-block__description__title">
+                                    <span>Название задачи</span>
+                                    <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.875 11.9792C21.8786 13.3541 21.5574 14.7103 20.9375 15.9375C20.2025 17.4081 19.0727 18.645 17.6744 19.5097C16.2762 20.3744 14.6648 20.8327 13.0208 20.8334C11.646 20.8369 10.2897 20.5157 9.0625 19.8959L3.125 21.875L5.10417 15.9375C4.4843 14.7103 4.16308 13.3541 4.16667 11.9792C4.1673 10.3352 4.62564 8.72383 5.49033 7.3256C6.35503 5.92737 7.59193 4.7975 9.0625 4.06253C10.2897 3.44267 11.646 3.12145 13.0208 3.12503H13.5417C15.7129 3.24481 17.7636 4.16124 19.3012 5.69884C20.8388 7.23644 21.7552 9.28717 21.875 11.4584V11.9792Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </div>
+                                <div class="task-block__info-block__description__profit">
+                                    <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12.5" cy="12.5" r="11.5" stroke="white" stroke-width="2"/>
+                                        <path d="M7 13.5789L10.3249 17.0311C10.7898 17.5138 11.5887 17.4115 11.917 16.8272L18 6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                    </svg> 
+                                    <div class="task-block__info-block__description__profit__content">
+                                        <div class="departments-block b-rose">
+                                            <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.5013 20.8334C14.7114 20.8334 16.8311 19.9554 18.3939 18.3926C19.9567 16.8298 20.8346 14.7102 20.8346 12.5001C20.8346 10.2899 19.9567 8.17033 18.3939 6.60752C16.8311 5.04472 14.7114 4.16675 12.5013 4.16675C10.2912 4.16675 8.17155 5.04472 6.60875 6.60752C5.04594 8.17033 4.16797 10.2899 4.16797 12.5001C4.16797 14.7102 5.04594 16.8298 6.60875 18.3926C8.17155 19.9554 10.2912 20.8334 12.5013 20.8334Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12.5013 14.5834C13.0538 14.5834 13.5837 14.3639 13.9744 13.9732C14.3651 13.5825 14.5846 13.0526 14.5846 12.5001C14.5846 11.9475 14.3651 11.4176 13.9744 11.0269C13.5837 10.6362 13.0538 10.4167 12.5013 10.4167C11.9488 10.4167 11.4189 10.6362 11.0282 11.0269C10.6375 11.4176 10.418 11.9475 10.418 12.5001C10.418 13.0526 10.6375 13.5825 11.0282 13.9732C11.4189 14.3639 11.9488 14.5834 12.5013 14.5834Z" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12.5 2.08325V4.16659" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12.5 22.9166V20.8333" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.7096 21.5208L16.668 19.7188" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M11.4596 10.698L7.29297 3.47925" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M21.5208 17.7084L19.7188 16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M3.47852 7.29175L5.2806 8.33341" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M14.584 12.5H22.9173" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M2.08398 12.5H4.16732" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M21.5208 7.29175L19.7188 8.33341" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M3.47852 17.7084L5.2806 16.6667" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.7096 3.47925L16.668 5.28133" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M11.4596 14.302L7.29297 21.5208" stroke="white" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            <span class="departments-block__text">Дизайн</span>                                       
+                                        </div>
+                                        <div class="departments-block b-yellow">
+                                            <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                            </svg>                                              
+                                            <span class="departments-block__text">25 TP</span>                                       
+                                        </div>
+                                    </div>                                   
+                                </div>
+                            </div>
+                            <div class="task-block__info-block__other">
+                                <svg width="1.563rem" height="1.563rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 16.25C15.6904 16.25 16.25 15.6904 16.25 15C16.25 14.3096 15.6904 13.75 15 13.75C14.3096 13.75 13.75 14.3096 13.75 15C13.75 15.6904 14.3096 16.25 15 16.25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 7.5C15.6904 7.5 16.25 6.94036 16.25 6.25C16.25 5.55964 15.6904 5 15 5C14.3096 5 13.75 5.55964 13.75 6.25C13.75 6.94036 14.3096 7.5 15 7.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 25C15.6904 25 16.25 24.4404 16.25 23.75C16.25 23.0596 15.6904 22.5 15 22.5C14.3096 22.5 13.75 23.0596 13.75 23.75C13.75 24.4404 14.3096 25 15 25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>     
+                                <div class="circle">
+                                    <svg class="circle-one" width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                    </svg> 
+                                    <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                    </svg> 
+                                </div>                           
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="manager.html" class="link-project button button_size_other button_tasks">К задачам</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="chat-block">
+        <div class="sidebar-block__info-block jc-sb">
+            <div class="shadow">
+                <div class="sidebar-block__info-block__header rose-clip rose-clip_blue">
+                    <svg class="return-svg" width="1.875rem" height="1.875rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.75 17.5L25 11.25L18.75 5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25 11.25H11.875C10.0516 11.25 8.30295 11.9743 7.01364 13.2636C5.72433 14.553 5 16.3016 5 18.125C5 19.0278 5.17783 19.9218 5.52333 20.7559C5.86883 21.5901 6.37524 22.348 7.01364 22.9864C8.30295 24.2757 10.0516 25 11.875 25H16.25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                
+                    <span class="">Чат</span>
+                    <svg width="1.875rem" height="1.875rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 16.25C15.6904 16.25 16.25 15.6904 16.25 15C16.25 14.3096 15.6904 13.75 15 13.75C14.3096 13.75 13.75 14.3096 13.75 15C13.75 15.6904 14.3096 16.25 15 16.25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 7.5C15.6904 7.5 16.25 6.94036 16.25 6.25C16.25 5.55964 15.6904 5 15 5C14.3096 5 13.75 5.55964 13.75 6.25C13.75 6.94036 14.3096 7.5 15 7.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 25C15.6904 25 16.25 24.4404 16.25 23.75C16.25 23.0596 15.6904 22.5 15 22.5C14.3096 22.5 13.75 23.0596 13.75 23.75C13.75 24.4404 14.3096 25 15 25Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                
+                </div>
+            </div>   
+            <div class="sidebar-block__info-block__message">
+                <svg width="1.875rem" height="1.875rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5 16.25C13.0368 16.9676 13.7217 17.5614 14.5082 17.9911C15.2947 18.4208 16.1644 18.6764 17.0583 18.7404C17.9522 18.8044 18.8495 18.6754 19.6892 18.3622C20.5289 18.049 21.2914 17.5588 21.925 16.925L25.675 13.175C26.8135 11.9962 27.4435 10.4174 27.4292 8.7787C27.415 7.13997 26.7577 5.57239 25.5989 4.41359C24.4401 3.25479 22.8725 2.59748 21.2338 2.58324C19.595 2.569 18.0163 3.19897 16.8375 4.33746L14.6875 6.47496" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17.4998 13.75C16.9629 13.0324 16.2781 12.4386 15.4916 12.0089C14.7051 11.5792 13.8354 11.3236 12.9414 11.2596C12.0475 11.1956 11.1503 11.3246 10.3106 11.6378C9.47088 11.951 8.70837 12.4412 8.07476 13.075L4.32476 16.825C3.18627 18.0038 2.55631 19.5826 2.57055 21.2213C2.58479 22.86 3.24209 24.4276 4.4009 25.5864C5.5597 26.7452 7.12727 27.4025 8.766 27.4168C10.4047 27.431 11.9835 26.801 13.1623 25.6625L15.2998 23.525" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <label class="search-form label-message" for="message">
+                    <input type="text" class="input input_search" placeholder="Напишите текст">
+                    <div class="label-message__info-block">
+                        <svg width="1.875rem" height="1.875rem" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 17.5C10 17.5 11.875 20 15 20C18.125 20 20 17.5 20 17.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.25 11.25H11.2625" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18.75 11.25H18.7625" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <svg class="send-svg neon-svg" width="1.875rem" height="1.875rem" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 17.7795C1.44772 17.7795 1 18.2273 1 18.7795V29.4664C1 30.1887 1.74229 30.6728 2.40326 30.3815L26.6542 19.6946C27.6442 19.2584 27.3328 17.7795 26.251 17.7795H2Z" stroke="white" stroke-width="2"/>
+                            <path d="M1 13.2203V2.53347C1 1.81117 1.74229 1.32711 2.40326 1.61839L26.6542 12.3053C27.6442 12.7415 27.3328 14.2203 26.251 14.2203H2C1.44772 14.2203 1 13.7726 1 13.2203Z" stroke="white" stroke-width="2"/>
+                        </svg>                        
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="manager-section">
+            <div class="manager-section__container container_v2">
+                <div class="manager-section__container__project-block">
+                    <button class="link-project button button_size_other button_tasks button_tasks_bg">Бригадир</button>
+                    <button class="link-project button button_size_other button_use button_use_bg">Геймфикация</button>
+                    <button class="link-project button button_size_other button_look button_look_bg">PocketBi</button>
+                    <svg class="add-project" width="1.563rem" height="1.563rem" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12.5" cy="13" r="11.5" stroke="white" stroke-width="2"/>
+                        <path d="M12.8125 8V13.1562M12.8125 18.3125V13.1562M12.8125 13.1562H17.5M17.5 13.1562H7.5M17.5 13.1562H17.8125" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>                        
+                </div>
+                <div class="manager-section__container__info-block">
+                    <div class="task-block">
+                        <div class="task-block__bt"></div>
+                        <div class="task-block__title">
+                            <div class="task-block__title__description">
+                                <span class="">Backlog</span>
+                                <svg width="1.25rem" height="1.25rem" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.99935 10.8333C10.4596 10.8333 10.8327 10.4602 10.8327 9.99996C10.8327 9.53972 10.4596 9.16663 9.99935 9.16663C9.53911 9.16663 9.16602 9.53972 9.16602 9.99996C9.16602 10.4602 9.53911 10.8333 9.99935 10.8333Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.99935 5.00004C10.4596 5.00004 10.8327 4.62694 10.8327 4.16671C10.8327 3.70647 10.4596 3.33337 9.99935 3.33337C9.53911 3.33337 9.16602 3.70647 9.16602 4.16671C9.16602 4.62694 9.53911 5.00004 9.99935 5.00004Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.99935 16.6667C10.4596 16.6667 10.8327 16.2936 10.8327 15.8333C10.8327 15.3731 10.4596 15 9.99935 15C9.53911 15 9.16602 15.3731 9.16602 15.8333C9.16602 16.2936 9.53911 16.6667 9.99935 16.6667Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>      
+                            </div>
+                            <button class="task-block__title__add-task">+ Добавить задачу</button>
+                        </div>
+                    </div>
+                    <div class="task-block">
+                        <div class="task-block__bt"></div>
+                        <div class="task-block__title">
+                            <div class="task-block__title__description">
+                                <span class="">Backlog</span>
+                                <svg width="1.25rem" height="1.25rem" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.99935 10.8333C10.4596 10.8333 10.8327 10.4602 10.8327 9.99996C10.8327 9.53972 10.4596 9.16663 9.99935 9.16663C9.53911 9.16663 9.16602 9.53972 9.16602 9.99996C9.16602 10.4602 9.53911 10.8333 9.99935 10.8333Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.99935 5.00004C10.4596 5.00004 10.8327 4.62694 10.8327 4.16671C10.8327 3.70647 10.4596 3.33337 9.99935 3.33337C9.53911 3.33337 9.16602 3.70647 9.16602 4.16671C9.16602 4.62694 9.53911 5.00004 9.99935 5.00004Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.99935 16.6667C10.4596 16.6667 10.8327 16.2936 10.8327 15.8333C10.8327 15.3731 10.4596 15 9.99935 15C9.53911 15 9.16602 15.3731 9.16602 15.8333C9.16602 16.2936 9.53911 16.6667 9.99935 16.6667Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>      
+                            </div>
+                            <button class="task-block__title__add-task">+ Добавить задачу</button>
+                            <div class="task-block__title__additions">
+                                <span>Задание</span>
+                                <div class="task-block__title__additions__info-block">
+                                    <div class="task-block__title__additions__info-block__content">
+                                        <div class="departments-block">
+                                            <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.5013 20.8333C14.7114 20.8333 16.8311 19.9553 18.3939 18.3925C19.9567 16.8297 20.8346 14.7101 20.8346 12.5C20.8346 10.2898 19.9567 8.17021 18.3939 6.6074C16.8311 5.0446 14.7114 4.16663 12.5013 4.16663C10.2912 4.16663 8.17155 5.0446 6.60875 6.6074C5.04594 8.17021 4.16797 10.2898 4.16797 12.5C4.16797 14.7101 5.04594 16.8297 6.60875 18.3925C8.17155 19.9553 10.2912 20.8333 12.5013 20.8333Z" stroke="black" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12.5013 14.5833C13.0538 14.5833 13.5837 14.3638 13.9744 13.9731C14.3651 13.5824 14.5846 13.0525 14.5846 12.5C14.5846 11.9474 14.3651 11.4175 13.9744 11.0268C13.5837 10.6361 13.0538 10.4166 12.5013 10.4166C11.9488 10.4166 11.4189 10.6361 11.0282 11.0268C10.6375 11.4175 10.418 11.9474 10.418 12.5C10.418 13.0525 10.6375 13.5824 11.0282 13.9731C11.4189 14.3638 11.9488 14.5833 12.5013 14.5833Z" stroke="black" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12.5 2.08325V4.16659" stroke="black" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M12.5 22.9166V20.8333" stroke="black" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.7096 21.5208L16.668 19.7188" stroke="black" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M11.4596 10.6979L7.29297 3.47913" stroke="black" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M21.5208 17.7083L19.7188 16.6666" stroke="black" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M3.47852 7.29163L5.2806 8.33329" stroke="black" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M14.584 12.5H22.9173" stroke="black" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M2.08398 12.5H4.16732" stroke="black" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M21.5208 7.29163L19.7188 8.33329" stroke="black" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M3.47852 17.7083L5.2806 16.6666" stroke="black" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M17.7096 3.47913L16.668 5.28121" stroke="black" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M11.4596 14.302L7.29297 21.5208" stroke="black" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>     
+                                            <span class="departments-block__text">Дизайн</span>                                       
+                                        </div>
+                                        <div class="departments-block">
+                                            <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                            </svg>                                              
+                                            <span class="departments-block__text">25 TP</span>                                       
+                                        </div>
+                                    </div>
+                                    <div class="circle mobile">
+                                        <svg class="circle-one" width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                        </svg> 
+                                        <svg width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                        </svg> 
+                                    </div>
+                                </div>
+                                <div class="circle desktop">
+                                    <svg class="circle-one" width="1.563rem" height="1.563rem" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                    </svg> 
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12.5" cy="12.5" r="12.5" fill="#D9D9D9"/>
+                                    </svg> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task-block">
+                        <div class="task-block__bt"></div>
+                        <div class="task-block__title">
+                            <div class="task-block__title__description">
+                                <span class="">Backlog</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.99935 10.8333C10.4596 10.8333 10.8327 10.4602 10.8327 9.99996C10.8327 9.53972 10.4596 9.16663 9.99935 9.16663C9.53911 9.16663 9.16602 9.53972 9.16602 9.99996C9.16602 10.4602 9.53911 10.8333 9.99935 10.8333Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.99935 5.00004C10.4596 5.00004 10.8327 4.62694 10.8327 4.16671C10.8327 3.70647 10.4596 3.33337 9.99935 3.33337C9.53911 3.33337 9.16602 3.70647 9.16602 4.16671C9.16602 4.62694 9.53911 5.00004 9.99935 5.00004Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.99935 16.6667C10.4596 16.6667 10.8327 16.2936 10.8327 15.8333C10.8327 15.3731 10.4596 15 9.99935 15C9.53911 15 9.16602 15.3731 9.16602 15.8333C9.16602 16.2936 9.53911 16.6667 9.99935 16.6667Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>      
+                            </div>
+                            <button class="task-block__title__add-task">+ Добавить задачу</button>
+                        </div>
+                    </div>
+                    <div class="task-block">
+                        <div class="task-block__bt"></div>
+                        <div class="task-block__title">
+                            <div class="task-block__title__description">
+                                <span class="">Backlog</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.99935 10.8333C10.4596 10.8333 10.8327 10.4602 10.8327 9.99996C10.8327 9.53972 10.4596 9.16663 9.99935 9.16663C9.53911 9.16663 9.16602 9.53972 9.16602 9.99996C9.16602 10.4602 9.53911 10.8333 9.99935 10.8333Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.99935 5.00004C10.4596 5.00004 10.8327 4.62694 10.8327 4.16671C10.8327 3.70647 10.4596 3.33337 9.99935 3.33337C9.53911 3.33337 9.16602 3.70647 9.16602 4.16671C9.16602 4.62694 9.53911 5.00004 9.99935 5.00004Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.99935 16.6667C10.4596 16.6667 10.8327 16.2936 10.8327 15.8333C10.8327 15.3731 10.4596 15 9.99935 15C9.53911 15 9.16602 15.3731 9.16602 15.8333C9.16602 16.2936 9.53911 16.6667 9.99935 16.6667Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>      
+                            </div>
+                            <button class="task-block__title__add-task">+ Добавить задачу</button>
+                        </div>
+                    </div>
+                    <div class="task-block">
+                        <div class="task-block__bt"></div>
+                        <div class="task-block__title">
+                            <div class="task-block__title__description">
+                                <span class="">Backlog</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.99935 10.8333C10.4596 10.8333 10.8327 10.4602 10.8327 9.99996C10.8327 9.53972 10.4596 9.16663 9.99935 9.16663C9.53911 9.16663 9.16602 9.53972 9.16602 9.99996C9.16602 10.4602 9.53911 10.8333 9.99935 10.8333Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.99935 5.00004C10.4596 5.00004 10.8327 4.62694 10.8327 4.16671C10.8327 3.70647 10.4596 3.33337 9.99935 3.33337C9.53911 3.33337 9.16602 3.70647 9.16602 4.16671C9.16602 4.62694 9.53911 5.00004 9.99935 5.00004Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.99935 16.6667C10.4596 16.6667 10.8327 16.2936 10.8327 15.8333C10.8327 15.3731 10.4596 15 9.99935 15C9.53911 15 9.16602 15.3731 9.16602 15.8333C9.16602 16.2936 9.53911 16.6667 9.99935 16.6667Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>      
+                            </div>
+                            <button class="task-block__title__add-task">+ Добавить задачу</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="/src/scripts/lib/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script type="module" src="../src/scripts/app.js"></script>
+</html>

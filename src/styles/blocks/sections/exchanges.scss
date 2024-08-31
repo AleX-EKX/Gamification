@@ -1,0 +1,18 @@
+.exchanges-section{
+    &__container{
+        @include df_fdc;
+        gap: 2.5rem;
+        &__canvas-block{
+            max-width: 105.313rem;
+            width: 100%;
+            position: relative;
+            max-height: 27.813rem;
+            .canvas{
+                width: 100% !important;
+                height: 100% !important;
+                max-height: 27.813rem;
+               
+            }
+        }
+    }
+}

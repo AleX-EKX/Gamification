@@ -1,0 +1,26 @@
+.container{
+    margin: 0 15rem;
+    @include mobile {
+      margin: 0 1rem;
+    }
+    @include grid(4, 1.25rem);
+    @include mobile {
+      @include grid(2, 1rem);
+    }
+    &_grid6 {
+      @include grid(6, 1.25rem);
+      @include mobile {
+        @include grid(2, 1rem);
+      }
+    }
+}
+.container_v2{
+  padding: 2.1rem 2.5rem 0.75rem 9rem;
+  @include mobile{
+    padding: 3.333rem 1.042rem;
+  }
+  // max-width: 1660px;
+}
+.mw-1660{
+  max-width: 103.75rem;
+}

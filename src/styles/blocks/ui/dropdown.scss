@@ -1,0 +1,50 @@
+.dropdown-item {
+    position: relative;
+    transition: all 0.3s ease-out;
+    background-color: $white;
+    cursor: pointer;
+    padding: .625rem .75rem;
+    max-width: 11.875rem;
+    @include wh_100;
+    opacity: .5;
+    z-index: 2;
+    a {
+        @include text_1;
+        @include df_ac;
+        justify-content: space-between;
+        svg {
+            max-width: 1.5rem;
+            max-height: .75rem;
+            @include wh_100;
+            transition: all .3s ease-out;
+        }
+    }
+    &__content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transition: all 0.3s ease-out;
+        background-color: $white;
+        opacity: 1;
+        width: 100%;
+        a {
+            @include text_1;
+            padding: .625rem .75rem;
+        }
+        hr {
+            opacity: .5;
+        }
+    }
+    &:hover {
+        a {
+            svg {
+                transform: rotate(180deg);
+                transition: all .3s ease-out;
+            }
+        }
+        .dropdown-item__content {
+            @include df_fdc;
+        }
+    }
+}

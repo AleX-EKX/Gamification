@@ -1,0 +1,313 @@
+.icon-skills-block{
+    filter: drop-shadow(0px 0px 5px #00F69D);
+    position: relative;
+    @include df_ac_jcc;
+    &__info-block{
+        border: 2px solid #00F69D;
+        color: white;
+        max-width: 35.5rem;
+        width: 100%;
+        clip-path: polygon(0 0, 12% 0, 16% 4%, 64% 4%, 71% 0, 100% 0, 100% 85%, 87% 100%, 0 100%, 0 92%, 2% 86%, 2% 50%, 0 44%);
+        &::before{
+            background: rgba(88, 70, 204, 1);
+            clip-path: polygon(0 0, 12% 0, 16% 4%, 64% 4%, 71% 0, 100% 0, 100% 85%, 87% 100%, 0 100%, 0 92%, 2% 86%, 2% 50%, 0 44%);
+        }
+        &__header{
+            padding:  3rem 4.25rem;
+            @include df_fdc;
+            gap: 2.188rem;
+            .name-skills-block{
+                display: flex;
+                gap: 0.625rem;
+                img{
+                    max-width: 2.813rem;
+                    width: 100%;
+                }
+                &__info-block{
+                    @include df_fdc;
+                    gap: 0.313rem;
+                    &__name{
+                        @include heading_3;
+                    }
+                    &__level{
+                        @include text_1;
+                    }
+                }
+            }
+            .description-skills-block{
+                @include df_fdc;
+                gap: 0.813rem;
+                &__info-block{
+                    display: flex;
+                    gap: 2.5rem;
+                    &__text{
+                        @include text_1;
+                        &:nth-child(1){
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+        &__spend{
+            display: flex;
+            justify-content: center;
+            @include text_1;
+            &__btn-block{
+                @include df_ac;
+                gap: 1.875rem;
+                .currency{
+                    @include df_ac;
+                    gap: 0.625rem;
+                }
+            }
+        }
+        &__polosa-t{
+            transform: scale(1, 1);
+            width: 4.3rem;
+            top: 1.3rem;
+            right: 12.5rem;
+            &::after{
+                width: 2rem;
+                top: 0;
+                right: 0;
+                transform: rotate(155deg);
+            }
+            &::before{
+                width: 1.5rem;
+                top: -0.8rem;
+                right: -1.8rem;
+                transform: rotate(180deg);
+            }
+        }
+        &__polosa-tr{
+            transform: scale(1, -1);
+            width: 3rem;
+            top: 0.5rem;
+            right: 0.5rem;
+            &::after{
+                width: 3rem;
+                top: 0;
+                right: 0;
+                transform: rotate(90deg);
+            }
+        }
+        &__polosa-br{
+            width: 5rem;
+            bottom: 2rem;
+            right: 0.3rem;
+            transform: rotate(-35deg);
+            &::after{
+                width: 1.5rem;
+                top: 0;
+                right: 0;
+                transform: rotate(125deg);
+            }
+            &::before{
+                width: 1.5rem;
+                top: 0px;
+                left: -1.5rem;
+                transform: rotate(35deg);
+            }
+        }
+    }
+}
+.inventory-icons-block {
+    filter: drop-shadow(0px 0px 5px #00F69D);
+    &__info-block{
+        padding: 1rem .5rem;
+        color: white;
+        @include df_fdc;
+        gap: 1.25rem;
+        max-width: 18.75rem;
+        clip-path: polygon(13% 0, 100% 0, 100% 100%, 25% 100%, 19% 96%, 13% 96%, 7% 100%, 0 100%, 0 10%);
+        &::before{
+            background: rgba(88, 70, 204, 1);
+            clip-path: polygon(13% 0, 100% 0, 100% 100%, 25% 100%, 19% 96%, 12% 96%, 6% 100%, 0 100%, 0 10%);
+        }
+        .header-block{
+            display: flex;
+            gap: 0.625rem;
+            padding: 0.625rem;
+            img{
+                max-width: 3.125rem;
+                max-height: 3.125rem;
+                width: 100%;
+                height: 100%;
+            }
+            &__info-block{
+                @include df_fdc;
+                gap: 0.625rem;
+                .potion{
+                    @include heading_3;
+                }
+                .quantity{
+                    @include text_1;
+                }
+            }
+        }
+        .description-block{
+            @include df_fdc;
+            align-items: center;
+            gap: 1.25rem;
+            .decrementBtn,.incrementBtn{
+                cursor: pointer;
+            }
+            &__title{
+
+            }
+            &__counter-block{
+                border: 1px solid #FFFFFF;
+                @include text_1;
+                color: white;
+                @include df_ac;
+                gap: 0.813rem;
+                padding: 0.313rem 0.938rem;
+
+            }
+        }
+        &__polosa-tl{
+            transform: scale(1, 1);
+            width: 2.5rem;
+            bottom: 0.5rem;
+            right: 0.5rem;
+            &::after{
+                width: 2rem;
+                top: 0;
+                right: 0;
+                transform: rotate(90deg);
+            }
+        }
+        &__polosa-br{
+            width: 2.5rem;
+            top: 1rem;
+            left: 0.3rem;
+            transform: rotate(-214deg);
+            &::after{
+                width: 1.5rem;
+                top: 0;
+                right: 0;
+                transform: rotate(125deg);
+            }
+            &::before{
+                width: 1.5rem;
+                top: 0px;
+                left: -1.5rem;
+                transform: rotate(35deg);
+            }
+        }
+    }
+}
+
+.store-card-block{
+    @include df_jcc;
+    padding: 1rem;
+    @include mobile{
+        max-width: 23rem;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    img{
+        max-width: 28rem;
+        width: 100%;
+    }
+    &__info-block{
+        background: #5846CCE5;
+        padding: 0.625rem;
+        @include df_fdc_jcsb;
+        color: white;
+        &__description{
+            @include df_fdc;
+            gap: 1.25rem;
+            
+            &__title{
+                @include heading_2;
+            }
+            &__text{
+                @include heading_3;
+                @include mobile{
+                    @include text_1;
+                }
+            }
+            .color-block{
+                @include df_fdc;
+                gap: 0.625rem;
+                &__color{
+                    @include text_1;
+                }
+                &__info-block{
+                    @include df_ac;
+                    gap: 1.25rem;
+                }
+            }
+        }
+        &__buy{
+            @include df_jb_ac;
+        }
+    }
+
+}
+
+.popup-project{
+    max-width: 18.75rem;
+    width: 100%;
+    filter: drop-shadow(0px 0px 5px #FFFF26);
+    display: none;
+    &__info-block{
+        padding: 1.438rem;
+        padding-top: 2.375rem;
+        @include df_fdc;
+        gap: 0.938rem !important;
+        color: white;
+        max-width: 15.875rem;
+        width: 100%;
+        clip-path: polygon(0 0, 78% 0, 100% 15%, 100% 86%, 88% 100%, 0 100%);
+        &::before{
+            clip-path: polygon(0 0, 78% 0, 100% 15%, 100% 86%, 88% 100%, 0 100%);
+            background: rgba(88, 70, 204, 1);
+        }
+        
+        .title{
+            @include heading_2;
+            text-align: center;
+            &:nth-child(4){
+                @include text_1;
+            }
+        }
+        .parallelogram-container{
+            border: 1px solid #FFFF26 !important;
+            max-width: 13.85rem !important;
+            box-shadow: 0px 0px 1.25rem -0.438rem yellow !important;
+        }
+        &__polosa-tl{
+            transform: scale(-1, -1);
+            width: 2.5rem;
+            top: 0.25rem;
+            left: 0.25rem;
+            &::after{
+                width: 2rem;
+                top: 0;
+                right: 0;
+                transform: rotate(90deg);
+            }
+        }
+        &__polosa-tr{
+            width: 4.5rem;
+            top: 1.3rem;
+            right: 0rem;
+            transform: rotate(-150deg);
+            &::after{
+                width: 1.5rem;
+                top: 0;
+                right: 0;
+                transform: rotate(150deg);
+            }
+            &::before{
+                width: 1.5rem;
+                top: 0px;
+                left: -1.5rem;
+                transform: rotate(60deg);
+            }
+        }
+    }
+}

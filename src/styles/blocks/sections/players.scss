@@ -1,0 +1,62 @@
+.players-section{
+    &__container{
+        @include df_fdc;
+        gap: 2.5rem;
+        &__info-block{
+            display: flex;
+            gap: 2.688rem;
+            @include mobile{
+                flex-direction: column
+            }
+            .departments-block{
+                @include df_fdc;
+                gap: 1.25rem;
+                padding: 1.25rem;
+                background: #5846CC80;
+                border: 2px solid #00F2F6;
+                        
+                &:nth-child(2) {
+                    border: 2px solid #FFFF26;
+                    .title-departments{
+                        color: #FFFF26;;
+                    }
+                }
+                &:nth-child(3) {
+                    border: 2px solid #00F69D;
+                    .title-departments{
+                        color: #00F69D;;
+                    }
+                }
+            
+                &:nth-child(4) {
+                    border: 2px solid #E820E5;
+                    .title-departments{
+                        color: #E820E5;;
+                    }
+                }
+            
+                &__title {
+                    @include heading_3;
+                    color: #00F2F6;
+                }
+                &__info-block{
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(0, auto));
+                    gap: 1.125rem;
+                    @include text_1;
+                    justify-content: space-between;
+                    .player-name{
+                        color: white;
+                        white-space: nowrap;
+                        @include mobile{
+                            white-space: wrap;
+                        }
+                    }
+                    .prescription{
+                        color: #C2C2C2;
+                    }
+                }
+            }
+        }
+    }
+}

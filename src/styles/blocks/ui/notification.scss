@@ -1,0 +1,80 @@
+.notification-icon {
+    max-height: 3.125rem;
+    max-width: 3.125rem;
+    aspect-ratio: 1 / 1;
+    @include wh_100;
+    padding: 1.25rem;
+    background-color: $white;
+    @include df_ac_jcc;
+    &__icon {
+        max-width: .625rem;
+        max-height: 2.5rem;
+        svg {
+            width: .625rem;
+            height: 2.5rem;
+        }
+    }
+    &_gray {
+        border: 0.225rem solid $d-gray;
+    }
+    &_red {
+        border: 0.225rem solid $red;
+        .notification-icon__icon {
+            svg {
+                path {
+                    fill: $red;
+                }
+            }
+        }
+    }
+    &_pink {
+        border: 0.225rem solid $pink;
+        .notification-icon__icon {
+            svg {
+                path {
+                    fill: $pink;
+                }
+            }
+        }
+    }
+    &_green {
+        border: 0.225rem solid $green;
+        .notification-icon__icon {
+            svg {
+                path {
+                    fill: $green;
+                }
+            }
+        }
+    }
+    &_yellow {
+        border: 0.225rem solid $yellow;
+        .notification-icon__icon {
+            svg {
+                path {
+                    fill: $yellow;
+                }
+            }
+        }
+    }
+    &_l-blue {
+        border: 0.225rem solid $l-blue;
+        .notification-icon__icon {
+            svg {
+                path {
+                    fill: $l-blue;
+                }
+            }
+        }
+    }
+    &_blue {
+        border: 0.225rem solid $blue;
+        .notification-icon__icon {
+            svg {
+                path {
+                    fill: $blue;
+                }
+            }
+        }
+    }
+}

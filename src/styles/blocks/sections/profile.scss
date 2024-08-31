@@ -1,0 +1,525 @@
+.profile-section{
+    &__container{
+        @include df_fdc;
+        gap: 2rem;
+        &__info-block{
+            padding-bottom: .75rem;
+            display: flex;
+            gap: 2.5rem;
+            @include mobile{
+                flex-direction: column;
+            }
+            &__main-content{
+                @include df_fdc;
+                gap: 2.5rem;
+                .my-profil-block{
+                    display: flex;
+                    gap: 2.5rem;
+                    filter: drop-shadow(0px 0px 5px #DC1CD9);
+                    @include mobile{
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    &__content{
+                        max-width: 40.375rem;
+                        width: 100%;
+                        @include df_fdc;
+                        gap: 0.938rem;
+                        padding: 3.125rem 2.625rem;
+                        clip-path: polygon(9% 0, 100% 0, 100% 84%, 91% 100%, 43% 100%, 43% 97%, 0 97%, 0 14%);
+                        @include mobile{
+                            width: auto;
+                        }
+                        &::before{
+                            clip-path: polygon(9% 0, 100% 0, 100% 84%, 91% 100%, 43.5% 100%, 43.5% 97%, 0 97%, 0 14%);
+                        }
+                        &__polosa-bl{
+                            transform: scale(-1, -1);
+                            width: 0rem;
+                            bottom: 0.5rem;
+                            left: 0.5rem;
+                            &::after{
+                                width: 3.25rem;
+                                top: 0;
+                                right: 0;
+                                transform: rotate(-90deg);
+                            }
+                        }
+                        &__polosa-tr{
+                            transform: scale(1, 1);
+                            width: 11rem;
+                            top: 0.5rem;
+                            right: 0.5rem;
+                            &::after{
+                                width: 8.25rem;
+                                top: 0;
+                                right: 0;
+                                transform: rotate(-90deg);
+                            }
+                            &::before{
+                                width: 1.25rem;
+                                top: 0px;
+                                right: 0;
+                                transform: rotate(-223deg);
+                            }
+                        }
+                        &__info-block{
+                            display: flex;
+                            gap: 0.938rem;
+                            @include mobile{
+                                @include df_fdc_ac;
+                            }
+                            .blocks-edit{
+                                @include grid(2,0.938rem);
+                            }
+                            img{
+                                max-width: 14.125rem;
+                                width: 100%;
+                            }
+                        }
+                        &__btn{
+                            @include df_ac;
+                            justify-content: end;
+                            gap: 0.313rem;
+                            border-bottom: 1px solid white;
+                            max-width: 7.063rem;
+                            width: 100%;
+                            margin-left: auto;
+                            color: white;
+                            &__text-btn{
+                                @include text_1;
+                            }
+                            &:hover{
+                                svg{
+                                    path{
+                                        stroke: #DC1CD9;
+                                        transition: all 0.3s;
+                                    }
+                                }
+                                color: #DC1CD9;
+                                transition: all 0.3s;
+                                border-color: #DC1CD9;
+                                
+                            }
+                        }
+                        
+                    }
+                    &__additions{
+                        @include df_fdc;
+                            gap: 2.5rem;
+                        &__level-block{
+                            padding: 0.938rem 1.875rem;
+                            @include df_fdc;
+                            gap: 0.938rem;
+                            clip-path: polygon(0 0, 55% 0, 55% 5%, 94% 5%, 100% 15%, 100% 100%, 8% 100%, 0 88%);
+                            &::before{
+                                clip-path: polygon(0 0, 54% 0, 54% 5%, 94% 5%, 100% 15%, 100% 100%, 8% 100%, 0 88%);
+                            }
+                            @include mobile{
+                                width: -webkit-fill-available;
+                                max-width: 29.167rem;
+                            }
+                            &__polosa-tr{
+                                width: 1.75rem;
+                                top: 1.5rem;
+                                right: 0.5rem;
+                                transform: rotate(33deg);
+                                &::after{
+                                    width: 0.8rem;
+                                    top: 0;
+                                    right: 0;
+                                    transform: rotate(-130deg);
+                                }
+                                &::before{
+                                    width: 0.8rem;
+                                    top: 0rem;
+                                    right: 1.75rem;
+                                    transform: rotate(-40deg);
+                                }
+                            }
+                            &__polosa-t{
+                                transform: scale(1, 1);
+                                width: 1.25rem;
+                                top: 0.5rem;
+                                right: 14rem;
+                                &::after{
+                                    width: 0.5rem;
+                                    top: 0;
+                                    right: 0;
+                                    transform: rotate(-90deg);
+                                }
+                                &::before{
+                                    width: 1.25rem;
+                                    top: 0.5rem;
+                                    right: 0;
+                                    transform: rotate(-180deg);
+                                }
+                            }
+                            .info-level{
+                                @include text_1;
+                                color: white;
+                            }
+                            &__info-block{
+                                @include df_fdc;
+                                gap: 0.938rem;
+                                
+                            }
+                        }
+                        &__skills{
+                            @include grid(2,0.938rem);
+                            padding: 1.125rem 1.563rem;
+                            clip-path: polygon(0 0, 92% 0, 100% 14%, 100% 100%, 48% 100%, 48% 97%, 7% 95%, 0 83%);
+                            &::before{
+                                clip-path: polygon(0 0, 92% 0, 100% 14%, 100% 100%, 49% 100%, 49% 97%, 7% 95%, 0 83%);
+                            }
+                            &__polosa-bl{
+                                width: 1.75rem;
+                                bottom: 1.75rem;
+                                left: 0.5rem;
+                                transform: rotate(222deg);
+                                &::after{
+                                    width: 1rem;
+                                    top: 0;
+                                    right: 0;
+                                    transform: rotate(-130deg);
+                                }
+                                &::before{
+                                    width: 1rem;
+                                    top: 0rem;
+                                    right: 1.75rem;
+                                    transform: rotate(-40deg);
+                                }
+                            }
+                            &__polosa-b{
+                                transform: scale(1, 1);
+                                width: 1.25rem;
+                                bottom: 0.8rem;
+                                right: 14rem;
+                                &::after{
+                                    width: 0.5rem;
+                                    top: 0;
+                                    right: 0;
+                                    transform: rotate(-90deg);
+                                }
+                                &::before{
+                                    width: 1.25rem;
+                                    top: 0.5rem;
+                                    right: 0;
+                                    transform: rotate(-180deg);
+                                }
+                            }
+                            &__text{
+                                @include heading_3;
+                                color: white;
+                            }
+                            &__info-block{
+                                display: flex;
+                                gap: 0.313rem;
+                                cursor: pointer;
+                                .description-block{
+                                    @include df_fdc;
+                                    gap: 0.313rem;
+                                    color: white;
+                                    pointer-events: none;
+                                    &__level{
+                                        text-align: end;
+                                    }
+                                }
+                                img{
+                                    max-width: 2.5rem;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .achievements-block{
+                    display: flex;
+                    gap: 2.5rem;
+                    filter: drop-shadow(0px 0px 5px #00F2F6);
+                    @include mobile{
+                        flex-direction: column-reverse;
+                        align-items: center;
+                    }
+                    &__info-block{
+                        max-width: 41.06rem;
+                        width: 100%;
+                        padding: 3.219rem 2.125rem;
+                        @include mobile{
+                            width: -webkit-fill-available;
+                            max-width: 29.167rem;
+                        }
+                        clip-path: polygon(0 10%, 8% 0, 92% 1%, 100% 10%, 100% 100%, 94% 100%, 92% 96%, 80% 96%, 78% 100%, 0 100%, 0 75%, 2% 71%, 2% 54%, 0 50%);
+                        &::before{
+                            clip-path: polygon(0 10%, 8% 0, 92% 1%, 100% 10%, 100% 100%, 94.5% 100%, 92.5% 96%, 80% 96%, 78% 100%, 0 100%, 0 75%, 2% 71%, 2% 54%, 0 50%);
+                        }
+                        &__polosa-br{
+                            transform: scale(1, 1);
+                            width: 13.25rem;
+                            bottom: 2rem;
+                            right: 2.5rem;
+                            &::after{
+                                width: 2.5rem;
+                                top: 0;
+                                right: 0;
+                                transform: rotate(90deg);
+                            }
+                            &::before{
+                                width: 3rem;
+                                top: 0;
+                                right: 0;
+                                transform: rotate(-140deg);
+                            }
+                        }
+                        &__text{
+                            @include heading_3;
+                            color: white;
+                        }
+                        .swiper-achievements{
+                            padding-top: 1.563rem;;
+                        }
+                        &__content{
+                            @include df_fdc_ac;
+                            gap: 0.688rem;  
+                            &__text{
+                                color: white;
+                                @include heading_3;
+                                &:nth-child(3) {
+                                    @include text_1;
+                                }  
+                            }
+                            img{
+                                max-width: 8.125rem;
+                                width: 100%;
+                            }        
+                                     
+                        }
+                    }
+                    &__inventory-block{
+                        clip-path: polygon(0 9%, 8% 0, 52% 0, 57% 3%, 79% 3%, 84% 0, 100% 0, 100% 93%, 94% 100%, 0 100%);
+                        &::before{
+                            clip-path: polygon(0 9%, 8% 0, 52% 0, 57% 3%, 79% 3%, 84% 0, 100% 0, 100% 93%, 94% 100%, 0 100%);
+                        }
+                        &__polosa-bl{
+                            transform: scale(-1, 1);
+                            width: 11.25rem;
+                            bottom: 0.5rem;
+                            left: 0.5rem;
+                            &::after{
+                                width: 2.5rem;
+                                top: 0;
+                                right: 0;
+                                transform: rotate(90deg);
+                            }
+                            &::before{
+                                width: 1rem;
+                                top: 0;
+                                right: 0;
+                                transform: rotate(-140deg);
+                            }
+                        }
+                        &__polosa-t{
+                            transform: scale(1, 1);
+                            width: 6.3rem;
+                            top: 1.3rem;
+                            right: 6rem;
+                            &::after{
+                                width: 1.5rem;
+                                top: 0;
+                                right: 0;
+                                transform: rotate(150deg);
+                            }
+                            &::before{
+                                width: 1.5rem;
+                                top: 0px;
+                                left: -1.5rem;
+                                transform: rotate(30deg);
+                            }
+                        }
+                        &__polosa-tl{
+                            width: 2.25rem;
+                            top: 3.75rem;
+                            left: -0.5rem;
+                            transform: rotate(-90deg);
+                            &::after{
+                                width: 2.5rem;
+                                top: 0;
+                                right: 0;
+                                transform: rotate(225deg);
+                            }
+                            
+                        }
+                        @include df_fdc;
+                        gap: 1.25rem;
+                        padding: 2.1rem 1.25rem;
+                        
+                        &__title{
+                            @include heading_3;
+                            color: white;
+                            text-align: center;
+                        }
+                        &__elements{
+                            @include grid(8,0);
+                            
+                            img{
+                                max-width: 3.125rem;
+                                width: 100%;
+                                max-height: 3.125rem;
+                                height: 100%;
+                            }
+                            .empty-block{
+                                border: 1px solid white;
+                                cursor: pointer;
+                                // padding: 2px;
+                                width: 3.125rem;
+                                height: 3.125rem;
+                                @include mobile{
+                                    width: 2.75rem;
+                                    height: 2.75rem;
+                                }
+                            }
+
+                        }
+
+                    }
+                }
+            }
+            &__other{
+                flex: 1;
+                @include df_fdc;
+                gap: 2.5rem;
+                max-width: 25rem;
+                width: 100%;
+                
+            }
+            .quantity-played-block{
+                @include df_ac_jcsb;
+                padding: 1.25rem 1.563rem;
+                clip-path: polygon(0 91%, 2% 83%, 2% 13%, 8% 0, 100% 0, 100% 73%, 94% 100%, 0 100%);
+                    &::before{
+                        clip-path: polygon(0 93%, 2% 85%, 2% 13%, 8% 0, 100% 0, 100% 73%, 94% 100%, 0 100%);
+                    }
+                &__text{
+                    color: white;
+                    @include heading_3;
+                }
+                &__info-block{
+                    @include df_ac;
+                    gap: 0.625rem;
+                    color: white;
+                    @include heading_3;
+                }
+            }
+        }
+
+    }
+}
+.experience-block{
+    @include df_ac;
+    gap: 0.438rem;
+    &__text{
+        @include text_1;
+        color: white;
+        text-transform: uppercase;
+        position: relative;
+        height: 100%;
+        transform: skewX(-20deg);
+        transform-origin: bottom left;
+        padding: 0 0.75rem;
+        @include df_ac_jcc;
+        @include mobile{
+            font-size: 1rem;
+            padding: 0.2rem 0.5rem;
+        }
+    }
+    .parallelogram-container {
+        display: flex;
+        gap: 0.125rem;
+        max-width: 20.75rem;
+        width: 100%;
+        height: 1.063rem;
+        position: relative;
+        overflow: hidden;
+        padding: 2px;
+        transform: skewX(-20deg);
+        transform-origin: bottom left;
+        @include mobile{
+            height: 1.167rem;
+        }
+    }
+    .parallelogram {
+        flex: 1; 
+        position: relative;
+        height: 100%;
+        transform: skewX(0deg);
+        transform-origin: bottom left;
+    }
+    .exp{
+        background-color: #E820E5;
+        box-shadow: 0px 0px 1.25rem -0.438rem #E820E5;
+    }
+    .hp{
+        background-color: #00F2F6;
+        box-shadow: 0px 0px 1.25rem -0.438rem #00F2F6;
+    }
+    .tp{
+        background-color: #00F69D;
+        box-shadow: 0px 0px 1.25rem -0.438rem #00F69D;
+    }
+    .project{
+        background-color: #FFFF26;
+        box-shadow: 0px 0px 1.25rem -0.438rem #FFFF26;
+    }
+}
+.experience-block:nth-child(1) .parallelogram-container {
+    border: 1px solid #E820E5;
+    box-shadow: 0px 0px 1.25rem -0.438rem #E820E5;
+}
+
+.experience-block:nth-child(2) .parallelogram-container {
+    border: 1px solid #00F2F6;
+    box-shadow: 0px 0px 1.25rem -0.438rem #00F2F6;
+}
+
+.experience-block:nth-child(3) .parallelogram-container {
+    border: 1px solid #00F69D;
+    box-shadow: 0px 0px 1.25rem -0.438rem #00F69D;
+}
+
+
+.span-2{
+    grid-column: span 2;
+}
+.title-block{
+    @include df_jb;
+    &__contnent{
+        @include df_ac_jcsb;
+        max-width: 103.75rem;
+        width: 100%;
+        @include mobile{
+            @include df_fdc;
+            align-items: baseline;
+            gap: 2.5rem;
+        }
+        .text-title{
+            @include heading_1;
+            color: white;
+        }
+        &__info-block{
+            gap: 0.625rem;
+            @include df_ac;
+            img{
+                max-width: 2.188rem;
+                width: 100%;
+            }
+            .balance{
+                color: white;
+                @include heading_2;
+                .factor{
+                    color: #FFFF26;
+                }
+            }
+        }
+    }
+    
+}

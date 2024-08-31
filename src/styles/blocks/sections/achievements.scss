@@ -1,0 +1,78 @@
+.achievements-section{
+    &__contaainer{
+        @include df_fdc;
+        gap: 2.5rem;
+        @include mobile{
+            gap: 3.333rem;
+        }
+        &__title-block{
+            @include df_jb;
+            @include heading_1;
+            color: white;
+            .quantity-block{
+                @include df_ac;
+                gap: 0.5rem;
+                @include heading_2;
+                @include mobile{
+                    @include text_1;
+                }
+            }
+            @include mobile{
+                flex-direction: column;
+                gap: 2.5rem;
+            }
+        }
+        &__entering-game{
+            color: white;
+            @include df_fdc;
+            gap: 1.25rem;
+            padding-right: 4.688rem;
+            @include mobile{
+                padding-right: 0;
+                gap: 3.333rem;
+            }
+            .title{
+                @include heading_3;
+                text-decoration: dotted;
+            }
+            .swiper-achievementsItem{
+                max-width: 105.313rem;
+                @include mobile{
+                    max-width: -webkit-fill-available;
+                }
+            }
+            .quantity-achievements{
+                // display: flex;
+                // gap: 4rem;
+                &__info-block{
+                    @include df_fdc;
+                    gap: 0.688rem;
+                    align-items: center;
+                    width: 100%;
+                    &__text{
+                        @include heading_3;
+                        max-width: 8.688rem;
+                        width: 100%;
+                        text-align: center;
+                        &:nth-child(3) {
+                            @include text_1;
+                        }  
+                    }
+                    img{
+                        max-width: 8.125rem;
+                        width: 100%;
+                    } 
+                }
+            }
+            .messages-block{
+                // gap: 2.266rem;
+                img{
+                    max-width: 9.688rem;
+                }
+            }
+        }
+        &__messages{
+
+        }
+    }
+}

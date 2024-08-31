@@ -1,0 +1,273 @@
+.map-section{
+    &__container{
+        @include df_fdc;
+        gap: 2.5rem;
+        @include mobile{
+            padding: 0 !important
+        }
+        &__info-block{
+            @include df_jb;
+            gap: 1rem;
+            .show-map{
+                @include mobile{
+                    display: none;
+                }
+            }
+            &__projects{
+                @include heading_3;
+                gap: 1.25rem;
+                display: grid;
+                width: 30%;
+                grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
+                max-height: 8.75rem;
+                
+                .project-block{
+                    position: relative;
+                    min-height: 8.75rem;
+                    height: 100%;
+                    @include df_ac_jcc;
+                    .new-project{
+                        padding: 1.25rem;
+                        border-radius: 9999px;
+                        @include heading_1;
+                        line-height: 62%;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .text{
+                        color: black;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        z-index: 1;
+                        max-width: 80%;
+                        width: 100%;
+                        text-align: center;
+                        clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+                    }
+                    
+                }
+
+                .add-project{
+                    @include df_fdc_jcc;
+                    align-items: center;
+                    border: 0.125rem dashed #C2C2C2;
+                    &__text{
+                        text-align: center;
+                        color: white;
+                    }
+                }
+                
+            }
+            &__task-block{
+                height: max-content;
+                filter: drop-shadow(0px 0px 5px #FFFF26);
+                .project-block{
+                    clip-path: polygon(0 2%, 3% 0, 27% 0, 32% 2%, 100% 2%, 100% 96%, 93% 100%, 0 100%);
+                    padding: 3.5rem 1.969rem;
+                    &::before{
+                        clip-path: polygon(0 2%, 3% 0, 27% 0, 32% 2%, 100% 2%, 100% 96%, 93% 100%, 0 100%);
+                    }
+                    .experience-block{
+                        align-items: baseline;
+                    }
+                    .parallelogram-container{
+                        border: 1px solid #FFFF26;
+                        box-shadow: 0px 0px 1.25rem -0.438rem #FFFF26;
+                    }
+                    &__polosa-tl{
+                        width: 3.2rem;
+                        top: 0.3rem;
+                        left: 1rem;
+                        transform: rotate(180deg);
+                        &::after{
+                            width: 1.5rem;
+                            top: 0;
+                            right: 0;
+                            transform: rotate(115deg);
+                        }
+                        &::before{
+                            width: 1.5rem;
+                            top: 0px;
+                            left: -1.5rem;
+                            transform: rotate(50deg);
+                        }
+                    }
+                    &__polosa-tr{
+                        transform: scale(1, -1);
+                        width: 2.5rem;
+                        top: 1.25rem;
+                        right: 0.25rem;
+                        &::after{
+                            width: 2rem;
+                            top: 0;
+                            right: 0;
+                            transform: rotate(90deg);
+                        }
+                    }
+                    &__polosa-bl{
+                        transform: scale(-1, 1);
+                        width: 2.5rem;
+                        bottom: 0.25rem;
+                        left: 0.25rem;
+                        &::after{
+                            width: 1rem;
+                            top: 0;
+                            right: 0;
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+            &__completed{
+                max-width: 23.75rem;
+                width: 100%;
+                color: white;
+                padding: 1.25rem 1rem;
+                background: #1C124F33;
+                border: 0.125rem solid #FFFFFF;
+                height: max-content;
+                @include df_fdc;
+                gap: 1.25rem;
+                .text{
+                    @include heading_2;
+                    &:nth-child(2){
+                        @include text_1;
+                    }
+                }
+            }
+            &__map{
+                height: max-content;
+                border: 2px solid#00F69D;
+                position: relative;
+                padding: 1.688rem 1.813rem;
+                box-shadow: 20px 20px 30px -20px #00F69D;
+                @include mobile{
+                    border: none;
+                    box-shadow: none;
+                    padding: 0;
+                }
+                &__polosa-t{
+                    width: 5.25rem;
+                    top: 3.5rem;
+                    left: -2rem;
+                    transform: rotate(-90deg);
+                    &::after{
+                        width: 25.5rem;
+                        top: 0;
+                        right: 0;
+                        transform: rotate(270deg);
+                    }
+                    
+                }
+                .map-block{
+                    img{
+                        max-width: 43.313rem;
+                        width: 100%;
+                        @include mobile{
+                        }
+                    }
+                    &__vector{
+                        position: relative;
+                    }
+                    .vector-fon{
+                        position: absolute;
+                        left: 0;
+                        z-index: -1;
+                    }
+                    .map-4{
+                        right: 9.3rem;
+                        top: 2.2rem;
+                    }
+                    .map-3{
+                        left: 17rem;
+                        top: 0rem;
+                    }
+                    .map-2{
+                        left: 14rem;
+                        top: 0rem;
+                    }
+                    .map-1{
+                        left: 3rem;
+                    }
+
+                    .map-5{
+                        top: 3.2rem;
+                        left: 10.3rem;
+                    }
+                    .map-6{
+                        left: 16rem;
+                        top: 7.4rem;
+                    }
+                    .map-7{
+                        right: 15.5rem;
+                        top: 11rem;
+                    }
+                    .map-8{
+                        right: 9.1rem;
+                        top: 12.92rem;
+                    }
+                    .map-9{
+                        left: 2rem;
+                        top: 11.9rem;
+                    }
+                    .map-10{
+                        left: 8.7rem;
+                        top: 11.5rem;
+                    }
+                    .map-11{
+                        top: 14.8rem;
+                    }
+                    .map-12{
+                        left: 2.9rem;
+                        top: 16.7rem;
+                    }
+                    .map-13{
+                        left: 7.5rem;
+                        bottom: 15rem;
+                    }
+                    .map-14{
+                        left: 14.7rem;
+                        bottom: 14.1rem;
+                    }
+                    .map-15{
+                        bottom: 20.3rem;
+                    }
+                    .path{
+                        pointer-events: none;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+.p-absolute{
+    position: absolute;
+}
+.project-management{
+    border: 2px solid#00F2F6;
+    .text,.new-project{
+        background: #00F2F6;
+    }
+}
+.project-sales{
+    border: 2px solid #FFFF26;
+    .text,.new-project{
+        background: #FFFF26;
+    }
+}
+.project-development{
+    border: 2px solid#00F69D;
+    .text,.new-project{
+        background: #00F69D;
+    }
+}
+.project-design{
+    border: 2px solid#E820E5;
+    .text,.new-project{
+        background: #E820E5;
+    }
+}

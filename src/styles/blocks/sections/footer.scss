@@ -1,0 +1,86 @@
+.footer-section{
+    margin-bottom: 3rem;
+    &__container{
+        
+        &__contacts-block{
+            @include df_fdc_jcsb;
+            height: 100%;
+            .contact-block{
+                @include df_fdc;
+                gap: .5rem;
+                .number{
+                    @include text_1;
+                    color: $text-accent;
+                }
+            }
+            .address{
+                @include heading_3;
+                color: $text-accent;
+            }
+            @include mobile{
+                row-gap: 4.5rem;
+            }
+        }
+        &__nav-block{
+            .nav{
+                @include df_jb;
+                @include mobile{
+                    flex-direction: column;
+                    row-gap: 5.917rem;
+                }
+                .footer-navigation{
+                    @include df_fdc;
+                    gap: .75rem;
+                    li{
+                        a{
+                            @include button_2;
+                            color: $text-accent;
+                        }
+                    }
+                    .navigation__menu{
+                        @include df_ac_jcc;
+                        gap: .75rem;
+                        
+                    }
+                }
+                .text{
+                    @include text_1;
+                    color: $text-accent-subdued-40;
+                    max-width: 20.625rem;
+                }
+            }
+            
+        }
+    }
+}
+.footer-background{
+    grid-column: span 2;
+    background-color: $bg-terteriary-subdued-40;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.footer-navigation{
+    @include mobile{
+        display: none;
+    }
+    // @include df_ac;
+    // gap: 2rem;
+    // @include button_2;
+    // &__menu{
+    //     @include df_ac_jcc;
+    //     gap: .75rem;
+    // }
+    // a{
+    //     color: $text-primary;
+    //     &:active{
+    //         color: black;
+    //     }
+    // }
+
+    
+}
+.footer-navigation li:hover .submenu{
+    @include df_fdc;
+    gap: 0.25rem;
+}
